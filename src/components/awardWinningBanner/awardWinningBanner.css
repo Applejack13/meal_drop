@@ -1,0 +1,35 @@
+.AwardWinningBanner {
+  display: inline-block;
+  width: 100%;
+  background-color: #e5f8bc;
+}
+
+.AwardWinningBanner > h2 {
+  display: block;
+  color: #000025;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 3.5rem;
+  letter-spacing: -0.13738rem;
+  margin: 7rem auto 0 3.5rem;
+}
+/* 
+.AwardWinningBanner > h2 > span {
+} */
+
+.AwardWinningBanner > button {
+  margin: 3.34rem 18.62rem 7.78rem 3.34rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  height: 3.5rem;
+  justify-content: center;
+  font-size: 1.25rem;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}

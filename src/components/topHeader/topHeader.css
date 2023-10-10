@@ -1,0 +1,28 @@
+.Top-header {
+  width: 100vw;
+  height: 4.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.Top-header > img:first-child {
+  margin-right: auto;
+  margin-left: 5rem;
+}
+
+.Top-header > img:last-child {
+  background-color: black;
+  padding: 16px;
+  border-radius: 4px;
+  margin-left: 1rem;
+  margin-right: 5rem;
+}
+
+.Top-header > button {
+  background-color: white;
+  border: 4px;
+  border-radius: 0.25rem;
+  padding: 0.825rem 1.5rem;
+  cursor: pointer;
+}
