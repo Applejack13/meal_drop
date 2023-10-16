@@ -1,46 +1,66 @@
 import "./../ourFavouritePicks/ourFavouritePicks.css"
-import React from "react"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import InfoInWindow from "./../infoInWindow/InfoInWindow"
 import image from "../../images/Image.png"
+import Carousel from "../carousel/Carousel"
 
 function OurFavouritePicks() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
   }
+
+  const customStyles = {
+    carouselContainer: "carousel-container_2",
+    carouselItem: "carousel-item_2",
+  }
+
+  const carouselItems = [
+    {
+      image: image,
+      alt: "Image 1",
+      description: "Mira",
+      description2: "★ 4.2  Very Good",
+      description3: "Nicest place for burgers",
+      description4: "Comfort food",
+    },
+    {
+      image: image,
+      alt: "Image 2",
+      description: "Kara Fin",
+      description2: "★ 4.2  Very Good",
+      description3: "Nicest place for burgers",
+      description4: "Comfort food",
+    },
+    {
+      image: image,
+      alt: "Image 1",
+      description: "‘T Kuyltje",
+      description2: "★ 4.2  Very Good",
+      description3: "Nicest place for burgers",
+      description4: "Comfort food",
+    },
+    {
+      image: image,
+      alt: "Image 1",
+      description: "Kara Fin",
+      description2: "★ 4.2  Very Good",
+      description3: "Nicest place for burgers",
+      description4: "Comfort food",
+    },
+  ]
 
   return (
     <div className="OurFavouritePicks">
-      <h2>Our favaurite picks</h2>
-      <Slider {...settings}>
-        <InfoInWindow
-          img={image}
-          h3={"Mira"}
-          title={"★ 4.2  Very Good"}
-          subtitle={"Nicest place for burgers"}
-          subtitle2={"Comfort food"}
-        />
-        <InfoInWindow
-          img={image}
-          h3={"Kara Fin"}
-          title={"★ 4.2  Very Good"}
-          subtitle={"Nicest place for burgers"}
-          subtitle2={"Comfort food"}
-        />
-        <InfoInWindow
-          img={image}
-          h3={"‘T Kuyltje"}
-          title={"★ 4.2  Very Good"}
-          subtitle={"Nicest place for burgers"}
-          subtitle2={"Comfort food"}
-        />
-      </Slider>
+      <h2>Our favourite picks</h2>
+      <Carousel
+        {...settings}
+        items={carouselItems}
+        customStyles={customStyles}
+      />
     </div>
   )
 }
