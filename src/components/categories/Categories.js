@@ -1,7 +1,5 @@
 import "./../categories/categories.css"
 import Carousel from "../carousel/Carousel"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
 import img1 from "../../images/food1.png"
 import img2 from "../../images/food2.png"
 import img3 from "../../images/food3.png"
@@ -11,16 +9,18 @@ import img6 from "../../images/food6.png"
 
 function Categories() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
   }
 
   const customStyles = {
-    carouselContainer: "carousel-container_2",
-    carouselItem: "carousel-item_2",
+    carouselContainer: "carousel-container",
+    carouselItem: "carousel-item",
   }
 
   const carouselItems = [
@@ -54,15 +54,13 @@ function Categories() {
     <div className="Categories">
       <h2>Categories</h2>
       <p>View all categories</p>
-      <div className="carousel-container_2">
-        <Carousel
-          settings={settings}
-          items={carouselItems}
-          customStyles={customStyles}
-        ></Carousel>
-      </div>
+      <Carousel
+        {...settings}
+        items={carouselItems}
+        customStyles={customStyles}
+      />
     </div>
   )
 }
 
-export default Categories
+// export default Categories

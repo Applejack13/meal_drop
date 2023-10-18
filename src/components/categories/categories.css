@@ -1,8 +1,24 @@
 .Categories {
-  display: block;
+  padding: 4.5rem 3.5rem;
 }
 
-.carousel-container_2 {
-  background-color: #f9f9f9;
-  border-radius: 0.5rem;
+.Categories > h2 {
+  float: left;
 }
+
+.Categories > p {
+  float: right;
+}
+
+.carousel-container {
+  clear: both;
+  background-color: #354683;
+}
+
+.carousel-item {
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+}
+/* fix all of these */

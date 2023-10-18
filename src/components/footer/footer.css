@@ -1,0 +1,39 @@
+.Footer {
+  background-color: #2c2c2c;
+  display: grid;
+  width: 100%;
+  height: 28rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: #fff;
+}
+
+.Footer > h2 {
+  padding-top: 3rem;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.40625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Footer > p {
+  color: #fff;
+  font-family: Hind;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Footer > img {
+  padding: 5.69rem 13rem 16rem;
+}
+
+.Footer > div {
+  padding-top: 3rem;
+}
+
+.discoverUs {
+  display: block;
+}

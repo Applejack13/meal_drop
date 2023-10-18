@@ -7,8 +7,8 @@ function Carousel({ items, customStyles, ...settings }) {
   return (
     <div className={customStyles.carouselContainer}>
       <Slider {...settings}>
-        {items.map((item) => (
-          <div key={item} className={customStyles.carouselItem}>
+        {items.map((item, index) => (
+          <div key={index} className={customStyles.carouselItem}>
             <img src={item.image} alt={item.alt} />
             <p>{item.description}</p>
             <p>{item.description2}</p>
