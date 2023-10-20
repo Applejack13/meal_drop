@@ -1,24 +1,20 @@
-.Categories {
-  padding: 4.5rem 3.5rem;
+.CategoriesWrapper {
+  padding: 0 5.5rem 4.5rem 5.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
-.Categories > h2 {
-  float: left;
+h2 {
+  grid-column: 1;
 }
 
-.Categories > p {
-  float: right;
+p {
+  grid-column: 2;
 }
 
-.carousel-container {
-  clear: both;
-  background-color: #354683;
+.Wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3.5rem;
 }
-
-.carousel-item {
-  border-radius: 0.5rem;
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 1.5rem 2.5rem;
-}
-/* fix all of these */

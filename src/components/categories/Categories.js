@@ -1,5 +1,5 @@
 import "./../categories/categories.css"
-import Carousel from "../carousel/Carousel"
+import FoodCategory from "../foodCategory/FoodCategory"
 import img1 from "../../images/food1.png"
 import img2 from "../../images/food2.png"
 import img3 from "../../images/food3.png"
@@ -8,57 +8,18 @@ import img5 from "../../images/food5.png"
 import img6 from "../../images/food6.png"
 
 function Categories() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-  }
-
-  const customStyles = {
-    carouselContainer: "carousel-container",
-    carouselItem: "carousel-item",
-  }
-
-  const carouselItems = [
-    {
-      image: img1,
-      description: "Pizza",
-    },
-    {
-      image: img2,
-      description: "Burgers",
-    },
-    {
-      image: img3,
-      description: "Desserts",
-    },
-    {
-      image: img4,
-      description: "Sushi",
-    },
-    {
-      image: img5,
-      description: "Asian",
-    },
-    {
-      image: img6,
-      description: "Comfort Food",
-    },
-  ]
-
   return (
-    <div className="Categories">
+    <div className="CategoriesWrapper">
       <h2>Categories</h2>
       <p>View all categories</p>
-      <Carousel
-        {...settings}
-        items={carouselItems}
-        customStyles={customStyles}
-      />
+      <div className="Wrapper">
+        <FoodCategory img={img1} alt="food1" title="Pizza" />
+        <FoodCategory img={img2} alt="food1" title="Burgers" />
+        <FoodCategory img={img3} alt="food1" title="Desserts" />
+        <FoodCategory img={img4} alt="food1" title="Sushi" />
+        <FoodCategory img={img5} alt="food1" title="Asian" />
+        <FoodCategory img={img6} alt="food1" title="Comfort food" />
+      </div>
     </div>
   )
 }
