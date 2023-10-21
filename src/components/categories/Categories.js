@@ -10,8 +10,10 @@ import img6 from "../../images/food6.png"
 function Categories() {
   return (
     <div className="CategoriesWrapper">
-      <h2>Categories</h2>
-      <p>View all categories</p>
+      <div className="textContainer">
+        <h2>Categories</h2>
+        <p>View all categories</p>
+      </div>
       <div className="Wrapper">
         <FoodCategory img={img1} alt="food1" title="Pizza" />
         <FoodCategory img={img2} alt="food1" title="Burgers" />

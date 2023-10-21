@@ -1,20 +1,27 @@
 .CategoriesWrapper {
   padding: 0 5.5rem 4.5rem 5.5rem;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   align-items: center;
-}
-
-h2 {
-  grid-column: 1;
-}
-
-p {
-  grid-column: 2;
+  flex-direction: column;
 }
 
 .Wrapper {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, auto);
   gap: 3.5rem;
+}
+
+.textContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+}
+
+.textContainer > h2 {
+  text-align: left;
+}
+
+.textContainer > p {
+  text-align: right;
 }
