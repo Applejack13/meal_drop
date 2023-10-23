@@ -1,0 +1,17 @@
+.categoriesWindowContainer {
+  display: flex;
+  position: relative;
+}
+
+.categoriesWindowContainer > h3 {
+  padding: 1rem;
+  background-color: #202020;
+  position: absolute;
+  transform: translate(25%, 0%);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.categoriesWindowContainer > img {
+  width: 100%;
+}

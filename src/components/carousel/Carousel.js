@@ -2,8 +2,6 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-// import arrowRight from "../../images/arrow-right 1.svg"
-import "./../carousel/carousel.css"
 
 function Carousel({ items, customStyles, ...settings }) {
   return (
@@ -19,9 +17,6 @@ function Carousel({ items, customStyles, ...settings }) {
           </div>
         ))}
       </Slider>
-      {/* <div className="arrow-right">
-        <img src={arrowRight} alt="arrow-right" />
-      </div> */}
     </div>
   )
 }

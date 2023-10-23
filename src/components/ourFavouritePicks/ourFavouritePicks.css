@@ -1,5 +1,5 @@
 .OurFavouritePicks {
-  padding: 4.5rem 3.5rem;
+  padding: 4.5rem 2.5rem 4.5rem 3.5rem;
 }
 
 .OurFavouritePicks > h2 {
@@ -10,15 +10,11 @@
   line-height: 3rem;
 }
 
-.carousel-container_2 > div:first-child {
-  background-color: #fff;
-}
-
 .slick-slide > div:first-child {
   background-color: #f9f9f9;
   border-radius: 0.5rem;
-  margin: 0 3.4rem;
-  /* fix it later */
+  margin-right: 1.5rem;
+  margin-left: 0.02rem;
 }
 
 .carousel-item_2 > p {
@@ -63,4 +59,8 @@
   width: 6rem;
   text-align: center;
   /* fix it later */
+}
+
+.OurFavouritePicks img {
+  width: 100%;
 }

@@ -1,0 +1,19 @@
+.categoriesPage > div:nth-child(2) {
+  display: flex;
+  background-color: #e5f8bc;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.categoriesPage > div:nth-child(3) {
+  margin-top: 5rem;
+}

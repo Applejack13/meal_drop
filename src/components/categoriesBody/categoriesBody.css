@@ -1,0 +1,19 @@
+.categoriesBody {
+  padding: 3.5rem;
+}
+
+.categoriesBody p {
+  width: 47rem;
+  color: #2c2c2c;
+  font-family: Hind;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.CategoriesBodyContainer2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 2rem;
+}

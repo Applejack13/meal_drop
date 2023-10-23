@@ -1,0 +1,25 @@
+.large-dark {
+  /* display: inline-flex; */
+  height: 4rem;
+  padding: 0.5rem 2rem;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 0.625rem;
+  flex-shrink: 0;
+  background-color: #ef4848;
+}
+
+.medium-dark {
+}
+
+.medium-green {
+}
+
+.medium-ghost {
+}
+
+.medium {
+}
+
+.large-green {
+}

@@ -9,15 +9,13 @@ import Footer from "./components/footer/Footer"
 function FirstPage() {
   return (
     <div className="FirstPage">
-      <header className="FirstPage-header">
-        <TopHeader />
-        <Banner />
-        <OurFavouritePicks />
-        <AwardWinningBanner />
-        <OurFavouritePicks />
-        <Categories />
-        <Footer />
-      </header>
+      <TopHeader />
+      <Banner />
+      <OurFavouritePicks />
+      <AwardWinningBanner />
+      <OurFavouritePicks />
+      <Categories />
+      <Footer />
     </div>
   )
 }
