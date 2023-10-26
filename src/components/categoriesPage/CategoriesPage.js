@@ -8,7 +8,7 @@ function CategoriesPage() {
   return (
     <div className="categoriesPage">
       <TopHeader />
-      <SecondHeader text="Categories" />
+      <SecondHeader text="Categories" className="secondHeader" />
       <CategoriesBody />
       <Footer />
     </div>

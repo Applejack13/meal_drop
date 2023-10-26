@@ -1,0 +1,95 @@
+.pizzaSecondHeader {
+  display: flex;
+  background-color: #1e3eb2;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.burgersSecondHeader {
+  display: flex;
+  background-color: #060a19;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.sushiSecondHeader {
+  display: flex;
+  background-color: #9f1872;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.dessertsSecondHeader {
+  display: flex;
+  background-color: #000413;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.asianSecondHeader {
+  display: flex;
+  background-color: #c1d20f;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.comfortSecondHeader {
+  display: flex;
+  background-color: #08ec95;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}

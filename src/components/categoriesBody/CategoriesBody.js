@@ -6,6 +6,7 @@ import dessert from "../../images/desserts1.png"
 import sushi from "../../images/sushi1.png"
 import asian from "../../images/asian1.png"
 import comfort from "../../images/comfort1.png"
+import { Link } from "react-router-dom"
 
 function CategoriesBody() {
   return (
@@ -19,12 +20,28 @@ function CategoriesBody() {
         </p>
       </div>
       <div className="CategoriesBodyContainer2">
-        <CategoriesWindow img={pizza} title="Pizza" />
-        <CategoriesWindow img={burger} title="Burgers" />
-        <CategoriesWindow img={dessert} title="Desserts" />
-        <CategoriesWindow img={sushi} title="Sushi" />
-        <CategoriesWindow img={asian} title="Asian" />
-        <CategoriesWindow img={comfort} title="Comfort" />
+        <Link to="/pizza">
+          <CategoriesWindow
+            img={pizza}
+            title="Pizza"
+            className="pizzaSecondHeader"
+          />
+        </Link>
+        <Link to="/burgers">
+          <CategoriesWindow img={burger} title="Burgers" />
+        </Link>
+        <Link to="/desserts">
+          <CategoriesWindow img={dessert} title="Desserts" />
+        </Link>
+        <Link to="/sushi">
+          <CategoriesWindow img={sushi} title="Sushi" />
+        </Link>
+        <Link to="/asian">
+          <CategoriesWindow img={asian} title="Asian" />
+        </Link>
+        <Link to="/comfort">
+          <CategoriesWindow img={comfort} title="Comfort" />
+        </Link>
       </div>
     </div>
   )
