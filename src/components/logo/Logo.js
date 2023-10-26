@@ -1,10 +1,20 @@
-import { Link } from "react-router-dom"
+import SmallLogo from "../../images/SmallLogoWithText.svg"
+import BigLogo from "../../images/BigLogoWithoutText.svg"
+import "../logo/logo.css"
 
-function Logo({ logo }) {
+function Logo({ isSmall }) {
   return (
-    <Link to="/">
-      <img src={logo} alt="logo_img" />
-    </Link>
+    <div className="logo">
+      {isSmall ? (
+        <div>
+          <img src={SmallLogo} alt="SmallLogo" className="Small Logo" />
+        </div>
+      ) : (
+        <div>
+          <img src={BigLogo} alt="BigLogo" className="Big Logo" />
+        </div>
+      )}
+    </div>
   )
 }
 

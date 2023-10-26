@@ -1,8 +1,8 @@
-import "../secondHeader/secondHeader.css"
+// import "../secondHeader/secondHeader.css"
 
-function SecondHeader({ text }) {
+function SecondHeader({ text, className }) {
   return (
-    <div className="secondHeader">
+    <div className={className}>
       <h2>{text}</h2>
     </div>
   )

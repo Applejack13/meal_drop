@@ -1,17 +1,16 @@
 .Top-header {
-  width: 100vw;
+  width: auto;
   height: auto;
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 
 .Top-header__search {
   display: flex;
   align-items: right;
   width: 90%;
-  padding: 0 10rem 0 0;
   justify-content: flex-end;
 }
 

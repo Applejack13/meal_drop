@@ -1,14 +1,31 @@
 .Footer {
   background-color: #2c2c2c;
-  display: grid;
-  width: 100%;
+  gap: 40px 24px;
   height: 28rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   color: #fff;
+  justify-items: left;
 }
 
-.Footer > h2 {
-  padding-top: 3rem;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-container > div {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.footer-container > div:first-child {
+  align-items: center;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
+.footer-container > h2 {
   color: #fff;
   font-family: Montserrat;
   font-size: 1.40625rem;
@@ -17,23 +34,19 @@
   line-height: normal;
 }
 
-.Footer > p {
+.footer-container > div > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-container > div > ul > li {
+  list-style: none;
   color: #fff;
+  margin: 1rem 0;
   font-family: Hind;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.Footer > img {
-  padding: 5.69rem 13rem 16rem;
-}
-
-.Footer > div {
-  padding-top: 3rem;
-}
-
-.discoverUs {
-  display: block;
+  text-align: left;
 }
