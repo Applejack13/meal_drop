@@ -1,14 +1,16 @@
 import "../button/button.css"
-
 import { Link } from "react-router-dom"
 
-function Button({ style, text, page, className, img }) {
+function Button({ text, page, className, img, style }) {
   return (
-    <Link to={page}>
-      <button className={className} style={style}>
-        {text} {img}
-      </button>
-    </Link>
+    <>
+      <Link to={page}>
+        <button className={`button ${className}`} style={style}>
+          {text}
+          <img src={img} alt="" />
+        </button>
+      </Link>
+    </>
   )
 }
 

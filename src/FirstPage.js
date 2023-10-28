@@ -13,7 +13,7 @@ function FirstPage() {
       <Banner />
       <OurFavouritePicks />
       <AwardWinningBanner />
-      <OurFavouritePicks />
+      {/* <OurFavouritePicks /> */}
       <Categories />
       <Footer />
     </div>

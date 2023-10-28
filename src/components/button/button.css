@@ -1,12 +1,14 @@
 .large-dark {
-  /* display: inline-flex; */
-  height: 4rem;
-  padding: 0.5rem 2rem;
-  /* justify-content: center;
-  align-items: center; */
+  display: inline-flex;
+  padding: 0.9rem;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
   gap: 0.625rem;
   flex-shrink: 0;
-  background-color: #ef4848;
+  background-color: #202020;
+  color: #fff;
+  cursor: pointer;
 }
 
 .medium-dark {
@@ -16,6 +18,18 @@
 }
 
 .medium-ghost {
+  display: inline-flex;
+  height: 3.5rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border: 0;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background: #fff;
+  cursor: pointer;
 }
 
 .medium {

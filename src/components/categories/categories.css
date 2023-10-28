@@ -1,5 +1,5 @@
 .CategoriesWrapper {
-  padding: 0 5.5rem 4.5rem 5.5rem;
+  padding: 3rem 5.5rem 4.5rem 5.5rem;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -11,17 +11,21 @@
   grid-template-columns: repeat(6, auto);
   gap: 3.5rem;
 }
-
 .textContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .textContainer > h2 {
   text-align: left;
 }
 
-.textContainer > p {
+.textContainer button {
   text-align: right;
+}
+
+a {
+  color: #202020;
+  text-decoration: none;
 }

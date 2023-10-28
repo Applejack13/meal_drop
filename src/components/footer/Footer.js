@@ -1,5 +1,6 @@
 import "./../footer/footer.css"
 import Logo from "../logo/Logo"
+import LinkInFooter from "../linkInFooter/LinkInFooter"
 
 function Footer() {
   return (
@@ -11,25 +12,25 @@ function Footer() {
         <div>
           <h2>Discover us</h2>
           <ul>
-            <li>Home</li>
-            <li>Categories</li>
-            <li>About</li>
-            <li>Login</li>
+            <LinkInFooter link="/" text="Home" />
+            <LinkInFooter link="/categories" text="Categories" />
+            <LinkInFooter text="About" />
+            <LinkInFooter text="Login" />
           </ul>
         </div>
         <div>
           <h2>Our social media</h2>
           <ul>
-            <li>Facebook</li>
-            <li>Instagramm</li>
-            <li>Twitter</li>
+            <LinkInFooter text="Facebook" />
+            <LinkInFooter text="Instagram" />
+            <LinkInFooter text="Twitter" />
           </ul>
         </div>
         <div>
           <h2>Check our apps</h2>
           <ul>
-            <li>Link1</li>
-            <li>Link2</li>
+            <LinkInFooter text="Apple Store" />
+            <LinkInFooter text="Google Play" />
           </ul>
         </div>
       </div>
