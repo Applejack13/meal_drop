@@ -1,0 +1,15 @@
+.Link-in-footer li {
+  list-style: none;
+  margin: 1rem 0;
+  font-family: Hind;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.Link-in-footer li > a {
+  color: #fff;
+  text-decoration: none;
+}

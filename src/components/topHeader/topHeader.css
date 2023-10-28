@@ -1,32 +1,20 @@
 .Top-header {
-  width: auto;
-  height: auto;
-  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 5rem;
+}
+
+.Top-header__logo {
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  justify-content: flex-start;
 }
 
 .Top-header__search {
   display: flex;
-  align-items: right;
-  width: 90%;
+  align-items: center;
   justify-content: flex-end;
-}
-
-.Top-header__search > img:last-child {
-  background-color: black;
-  padding: 16px;
-  border-radius: 0.25rem;
-  margin: 0.5rem 0;
-}
-
-.Top-header__search button {
-  background-color: white;
-  margin: 1rem 0;
-  border: 4px;
-  border-radius: 0.25rem;
-  padding: 0.825rem 1.5rem;
-  cursor: pointer;
-  font-size: 1rem;
+  flex: 1;
 }

@@ -38,15 +38,3 @@
   padding: 0;
   margin: 0;
 }
-
-.footer-container > div > ul > li {
-  list-style: none;
-  color: #fff;
-  margin: 1rem 0;
-  font-family: Hind;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: left;
-}
