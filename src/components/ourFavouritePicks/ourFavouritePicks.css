@@ -1,13 +1,13 @@
-.arrowRight {
+.OurFavouritePicks__button button {
   width: 3.5rem;
   height: 3.5rem;
   flex-shrink: 0;
-  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
-  padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 8px;
   border: 0;
+  padding: 1rem;
+  background-color: #fff;
 }
 
 .OurFavouritePicks {

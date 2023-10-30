@@ -2,6 +2,7 @@ import "./../ourFavouritePicks/ourFavouritePicks.css"
 import image from "../../images/Image.png"
 import Carousel from "../carousel/Carousel"
 import arrowRight from "../../images/arrow-right 1.svg"
+import Button from "../button/Button"
 
 function OurFavouritePicks() {
   const settings = {
@@ -64,9 +65,9 @@ function OurFavouritePicks() {
         items={carouselItems}
         customStyles={customStyles}
       />
-      <button className="arrowRight">
-        <img src={arrowRight} alt="arrowRight_img" />
-      </button>
+      <div className="OurFavouritePicks__button">
+        <Button img={arrowRight} text="" />
+      </div>
     </div>
   )
 }
