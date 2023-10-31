@@ -1,5 +1,5 @@
 import "./../ourFavouritePicks/ourFavouritePicks.css"
-import image from "../../images/Image.png"
+// import image from "../../images/Image.png"
 import image2 from "../../images/RestaurantForCard1.webp"
 import image3 from "../../images/RestaurantForCard2.jpeg"
 import image4 from "../../images/RestaurantForCard3.avif"
@@ -35,12 +35,13 @@ function OurFavouritePicks() {
 
   const carouselItems = [
     {
-      image: image,
+      image: image4,
       alt: "",
       description: "Mira",
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/mira",
     },
     {
       image: image2,
@@ -49,6 +50,7 @@ function OurFavouritePicks() {
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/kara-fin",
     },
     {
       image: image3,
@@ -57,38 +59,52 @@ function OurFavouritePicks() {
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/t-kuyltje",
+    },
+    {
+      image: image2,
+      alt: "",
+      description: "Kara Fin",
+      description2: "★ 4.2  Very Good",
+      description3: "Nicest place for burgers",
+      description4: "Comfort food",
+      link: "/kara-fin",
     },
     {
       image: image4,
       alt: "",
-      description: "Kara Fin",
+      description: "Mira",
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/mira",
     },
     {
-      image: image,
+      image: image2,
       alt: "",
       description: "Kara Fin",
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/kara-fin",
     },
     {
-      image: image2,
+      image: image3,
       alt: "",
       description: "‘T Kuyltje",
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/t-kuyltje",
     },
     {
-      image: image4,
+      image: image2,
       alt: "",
       description: "Kara Fin",
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
+      link: "/kara-fin",
     },
   ]
 
@@ -98,6 +114,7 @@ function OurFavouritePicks() {
         <h2>Our favourite picks</h2>
       </div>
       <CarouselSlider
+        links={carouselItems.map((item) => item.link)}
         items={carouselItems}
         customStyles={customStyles}
         customText={customStyles.customText}

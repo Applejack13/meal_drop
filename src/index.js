@@ -6,6 +6,7 @@ import CategoriesPage from "./components/categoriesPage/CategoriesPage"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import TypeOfFood from "./components/typeOfFood/TypeOfFood"
 import AllRestaurants from "./components/allRestaurants/AllRestaurants"
+import RestaurantPage from "./components/restaurantPage/RestaurantPage"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -68,6 +69,18 @@ root.render(
               text="Comfort"
             />
           }
+        />
+        <Route
+          path="/mira"
+          element={<RestaurantPage restaurantClass=" mira " />}
+        />
+        <Route
+          path="/kara-fin"
+          element={<RestaurantPage restaurantClass=" kara_fin " />}
+        />
+        <Route
+          path="/t-kuyltje"
+          element={<RestaurantPage restaurantClass=" t-kuyltje " />}
         />
       </Routes>
     </BrowserRouter>
