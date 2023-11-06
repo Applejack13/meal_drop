@@ -1,5 +1,4 @@
 import "./../ourFavouritePicks/ourFavouritePicks.css"
-// import image from "../../images/Image.png"
 import image2 from "../../images/RestaurantForCard1.webp"
 import image3 from "../../images/RestaurantForCard2.jpeg"
 import image4 from "../../images/RestaurantForCard3.avif"

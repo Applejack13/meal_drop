@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
 import FirstPage from "./FirstPage"
@@ -7,11 +7,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import TypeOfFood from "./components/typeOfFood/TypeOfFood"
 import AllRestaurants from "./components/allRestaurants/AllRestaurants"
 import RestaurantPage from "./components/restaurantPage/RestaurantPage"
+import { useLocation } from "react-router-dom"
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<FirstPage />} />
         <Route path="/allRestaurants" element={<AllRestaurants />} />
@@ -72,15 +84,40 @@ root.render(
         />
         <Route
           path="/mira"
-          element={<RestaurantPage restaurantClass=" mira " />}
+          element={
+            <RestaurantPage
+              restaurantClass="mira"
+              restaurantName="Mira"
+              description="Specialties: Sarma (wine leafs with rice)"
+              rating="No reviews yet"
+              buttons="Pizza"
+            />
+          }
         />
         <Route
           path="/kara-fin"
-          element={<RestaurantPage restaurantClass=" kara_fin " />}
+          element={
+            <RestaurantPage
+              thirdHeaderClassName="thirdHeaderClassName"
+              restaurantClass="kara_fin"
+              restaurantName="Kara Fin"
+              description="Specialties: Sarma (wine leafs with rice)"
+              rating="No reviews yet"
+              buttons="Burgers"
+            />
+          }
         />
         <Route
           path="/t-kuyltje"
-          element={<RestaurantPage restaurantClass=" t-kuyltje " />}
+          element={
+            <RestaurantPage
+              restaurantClass="t-kuyltje"
+              restaurantName="T Kuyltje"
+              description="Specialties: Sarma (wine leafs with rice)"
+              rating="No reviews yet"
+              buttons="Desserts"
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,18 @@
+.otherStyles {
+  margin: 1rem 5rem;
+  text-align-last: start;
+}
+
+.otherStyles h2 {
+  color: #202020;
+  font-size: 2rem;
+}
+
+.otherStyles p:first-of-type {
+  font-size: 1.1rem;
+}
+
+.otherStyles p:nth-child(3) {
+  font-size: 1rem;
+  color: rgb(89 111 114);
+}

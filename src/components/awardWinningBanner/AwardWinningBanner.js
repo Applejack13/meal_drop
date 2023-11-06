@@ -19,7 +19,7 @@ function AwardWinningBanner() {
           <p>The best restaurants near you!</p>
           <Button
             text="Explore the best restaurants"
-            page="/allRestaurants"
+            page="/categories"
             className="large-dark"
           />
         </div>

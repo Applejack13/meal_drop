@@ -11,7 +11,7 @@ function TopHeader() {
         <div className="Top-header__search">
           <Button page="/" text="Home" className="medium-ghost" />
           <Button
-            page="/allRestaurants"
+            page="/categories"
             text="All restaurants"
             className="medium-ghost"
           />

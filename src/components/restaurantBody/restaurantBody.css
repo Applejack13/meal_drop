@@ -1,0 +1,15 @@
+.restaurantBody {
+  background-color: rgb(249, 249, 249);
+  padding: 2rem 5rem 8rem;
+}
+
+.restaurantBody > div {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.restaurantBody h2 {
+  color: #202020;
+  font-size: 1.8rem;
+}

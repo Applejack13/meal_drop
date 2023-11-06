@@ -1,0 +1,10 @@
+.foodButton {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 30rem;
+}
+
+/* .foodButton:hover {
+} */
