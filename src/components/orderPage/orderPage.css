@@ -1,0 +1,62 @@
+.orderContainer2 {
+  background-color: #e5f8bc;
+  height: 20rem;
+}
+
+.orderContainer2 h2 {
+  padding: 2.5rem;
+}
+
+.orderList {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderTotal {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.yourOrder {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  right: 3%;
+  top: 25%;
+  z-index: 5;
+  position: fixed;
+}
+
+.contactAndSteps {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactAndSteps > p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderContainer1 {
+  background-color: #fff;
+  width: 77rem;
+  left: 3%;
+  top: 25%;
+  padding: 1rem;
+  z-index: 5;
+  position: fixed;
+  border-radius: 0.5rem;
+}
+
+.firstAndLastName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstNameContainer,
+.lastNameContainer {
+  display: flex;
+}

@@ -16,6 +16,7 @@ function TopHeader() {
             className="medium-ghost"
           />
           <Button
+            page="/orderPage"
             img={shoppingCart}
             alt="shoppingCart_img"
             className="large-dark"
