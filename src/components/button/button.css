@@ -1,6 +1,7 @@
 .large-dark {
   display: inline-flex !important;
   padding: 1.7rem 1rem !important;
+  margin: 0.5rem !important;
   border-radius: 0.25rem !important;
   justify-content: center !important;
   align-items: center !important;

@@ -2,8 +2,7 @@ import "./../ourFavouritePicks/ourFavouritePicks.css"
 import image2 from "../../images/RestaurantForCard1.webp"
 import image3 from "../../images/RestaurantForCard2.jpeg"
 import image4 from "../../images/RestaurantForCard3.avif"
-// import arrowRight from "../../images/arrow-right 1.svg"
-// import Button from "../button/Button"
+import closedRestaurant from "../../images/closedRestaurant.jpg"
 import CarouselSlider from "../carousel/Carousel"
 
 function OurFavouritePicks() {
@@ -52,13 +51,14 @@ function OurFavouritePicks() {
       link: "/kara-fin",
     },
     {
-      image: image3,
+      image: closedRestaurant,
+      text: "This restaurant is closed",
       alt: "",
       description: "‘T Kuyltje",
       description2: "★ 4.2  Very Good",
       description3: "Nicest place for burgers",
       description4: "Comfort food",
-      link: "/t-kuyltje",
+      link: "",
     },
     {
       image: image2,
@@ -131,9 +131,6 @@ function OurFavouritePicks() {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
       />
-      <div className="OurFavouritePicks__button">
-        {/* <Button img={arrowRight} text="" /> */}
-      </div>
     </div>
   )
 }

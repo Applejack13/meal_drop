@@ -9,6 +9,7 @@ import AllRestaurants from "./components/allRestaurants/AllRestaurants"
 import RestaurantPage from "./components/restaurantPage/RestaurantPage"
 import { useLocation } from "react-router-dom"
 import OrderPage from "./components/orderPage/OrderPage"
+import SuccessOrderPage from "./components/successOrderPage/SuccessOrderPage"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -121,6 +122,7 @@ root.render(
           }
         />
         <Route path="/orderPage" element={<OrderPage />} />
+        <Route path="/success" element={<SuccessOrderPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

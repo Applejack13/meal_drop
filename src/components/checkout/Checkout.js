@@ -1,10 +1,29 @@
 import "../checkout/checkout.css"
 import Button from "../button/Button"
+import YourOrder from "../yourOrder/YourOrder"
 
-function Checkout({ headerText, step, clazz }) {
+function Checkout({
+  headerText,
+  step,
+  clazz,
+  name1,
+  ph1,
+  name2OrPostcode,
+  ph2,
+  emailOrCity,
+  ph3,
+  phoneOrNothing,
+  ph4,
+  clazz2,
+  btnText,
+  btnClass,
+  btnText2,
+  clazz3,
+  page,
+}) {
   return (
     <div className="orderPage__content">
-      <div className="orderContainer2">
+      <div className="checkout">
         <h2>Checkout</h2>
       </div>
       <div className="bodyContainer">
@@ -15,68 +34,59 @@ function Checkout({ headerText, step, clazz }) {
           </div>
           {/* there'll be progress bar */}
           <div className="contactDetails">
-            <div className="firstAndLastName">
-              <div className="firstName">
-                <p>First name</p>
-                <input
-                  type="text"
-                  placeholder="Yulia"
-                  name="lastName"
-                  className="input"
-                />
-              </div>
-              <div className="lastName">
-                <p>Last name</p>
-                <input
-                  type="text"
-                  placeholder="Topor"
-                  name="lastName"
-                  className="input"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="emailAndPhone">
-            <div className="email">
-              <p>Email</p>
+            <>
+              <p>{name1}</p>
               <input
                 type="text"
-                placeholder="email@example.com"
+                placeholder={ph1}
+                name="lastName"
+                className="input"
+              />
+            </>
+
+            <>
+              <p>{name2OrPostcode}</p>
+              <input
+                type="text"
+                placeholder={ph2}
+                name="lastName"
+                className="input"
+              />
+            </>
+
+            <>
+              <p>{emailOrCity}</p>
+              <input
+                type="text"
+                placeholder={ph3}
                 name="email"
                 className="input"
               />
-            </div>
+            </>
 
-            <div className="phone">
-              <p>Phone number</p>
+            <div className={clazz2}>
+              <p>{phoneOrNothing}</p>
               <input
                 type="phone"
-                placeholder="+380..."
+                placeholder={ph4}
                 name="phoneNumber"
                 className="input"
               />
             </div>
-          </div>
-          <p>We’ll only use your phone to call you about your order</p>
-          <Button text="Next" className="large-dark" />
-        </div>
 
-        <div className="yourOrder">
-          <h2>Your order</h2>
-          <div className="orderList">
-            <p>Dishname </p>
-            <p>8.50$ </p>
-          </div>
-          <div className="orderList">
-            <p>Dishname </p>
-            <p>8.50$ </p>
-          </div>
-          <div className="orderTotal">
-            <p>Total: </p>
-            <p>17.00$</p>
+            <p className={`${clazz2} smallText`}>
+              We’ll only use your phone to call you about your order
+            </p>
+            <div className={`${btnClass} btnContainer`}>
+              <Button
+                text={btnText2}
+                className={`medium-ghost btn ${clazz3}`}
+              />
+              <Button text={btnText} className="large-dark btn" page={page} />
+            </div>
           </div>
         </div>
+        <YourOrder />
       </div>
     </div>
   )

@@ -4,16 +4,12 @@
   padding: 3rem 1rem;
 }
 
-.OurFavouritePicks > h2 {
+.OurFavouritePicks h2 {
   color: #2c2c2c;
   font-size: 2.1975rem;
   font-style: normal;
   font-weight: 700;
   line-height: 3rem;
-}
-
-.carousel-container {
-  margin: 0 auto;
 }
 
 .carousel-container div {
@@ -25,22 +21,26 @@
 .carousel-container div > img {
   width: 100%;
   height: 15rem;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
   object-fit: cover;
 }
 
 .react-multiple-carousel__arrow--left {
   left: calc(5% - 4.5rem) !important;
-  top: calc(45% + 1rem) !important;
+  top: calc(47.5% + 1rem) !important;
   background-color: #202020 !important;
 }
 
 .react-multiple-carousel__arrow--right {
   right: calc(5% - 4.5rem) !important;
-  top: calc(45% + 1rem) !important;
+  top: calc(47.5% + 1rem) !important;
   background-color: #202020 !important;
 }
 
 .carousel-container > ul > li:hover {
-  filter: brightness(1.1);
+  filter: brightness(0.97);
+}
+
+.carousel-container ul li:nth-child(3) {
+  filter: grayscale(100%);
 }

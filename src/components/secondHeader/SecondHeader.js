@@ -1,4 +1,4 @@
-// import "../secondHeader/secondHeader.css"
+import "../secondHeader/secondHeader.css"
 
 function SecondHeader({ text, className }) {
   return (

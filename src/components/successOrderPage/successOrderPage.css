@@ -1,0 +1,57 @@
+.secondHeader {
+  display: flex;
+  background-color: #e5f8bc;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.74688rem;
+  font-style: normal;
+  line-height: 4rem;
+  letter-spacing: -0.13738rem;
+  height: 15rem;
+}
+
+.ladies2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.ladiesImg {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.timeAndOrder {
+  background-color: #f9f9f9;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.timeAndOrder > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.timeAndOrder > h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.yourOrderWrapper {
+  background-color: #f9f9f9;
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0 10rem;
+}
