@@ -1,0 +1,115 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.orderPage__content {
+  display: flex;
+}
+
+.orderPage__content:not(div:first-child) {
+  display: block;
+}
+
+.orderPage__content:not(div:first-child) > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bodyContainer {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -5rem;
+  gap: 2rem;
+}
+
+.contactAndSteps > p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.orderContainer2 > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  padding: 6% 8%;
+  /* fix it later */
+}
+
+.orderList,
+.orderTotal {
+  width: 18rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.yourOrder {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  z-index: 5;
+}
+
+.yourOrder p,
+.yourOrder h2 {
+  padding: 0.75rem 0;
+}
+
+.contactAndSteps {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderContainer1 {
+  background-color: #fff;
+  padding: 1rem;
+  z-index: 5;
+  border-radius: 0.5rem;
+}
+
+.orderContainer1,
+.yourOrder {
+  width: auto;
+  height: auto;
+}
+
+.orderContainer1 p {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.orderPage__content input {
+  background-color: rgb(248, 248, 248);
+}
+
+.orderContainer1 button {
+  padding: 10rem 0;
+}
+
+.firstAndLastName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstAndLastName input {
+  width: 33rem;
+  /* fix it later */
+}
+
+.firstName > p,
+.lastName > p {
+  padding: 1rem 0 0.5rem 0;
+  color: #000;
+}
+
+.orderContainer1 > p:last-of-type {
+  font-size: 0.7rem;
+  padding: 1rem 0;
+}
