@@ -1,9 +1,37 @@
 .categoriesBody {
-  padding: 3.5rem;
+  margin: 6rem 8rem;
+}
+
+.categoriesBodyContainer1 > h2 {
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  font-weight: 700;
+}
+
+.categoriesBodyContainer1 > p {
+  font-size: 1.5rem;
+  color: #2c2c2c;
+  font-weight: 400;
+  padding: 1.5rem 0;
+}
+
+.categoriesWindowContainer {
+  display: flex;
+  position: relative;
+}
+
+.categoriesWindowContainer > h3 {
+  padding: 0.7rem 1rem;
+  background-color: #202020;
+  position: absolute;
+  transform: translate(25%, 30%);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .categoriesBody p {
-  width: 47rem;
   color: #2c2c2c;
   font-family: Hind;
   font-size: 1.125rem;
@@ -12,8 +40,12 @@
   line-height: normal;
 }
 
-.CategoriesBodyContainer2 {
+.categoriesBodyContainer2 {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
+}
+
+.categoriesBodyContainer2 img {
+  width: 100%;
 }

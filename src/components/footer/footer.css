@@ -25,12 +25,11 @@
   margin-top: 3rem;
 }
 
-.footer-container > h2 {
+.footer-container > div > h2 {
   color: #fff;
   font-family: Montserrat;
-  font-size: 1.40625rem;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   line-height: normal;
 }
 

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 function CategoriesBody() {
   return (
     <div className="categoriesBody">
-      <div className="CategoriesBodyContainer1">
+      <div className="categoriesBodyContainer1">
         <h2>What's on the menu?</h2>
         <p>
           Whatever you’re craving - we’ll deliver it to your door. Feel like
@@ -19,7 +19,7 @@ function CategoriesBody() {
           possibilities below.
         </p>
       </div>
-      <div className="CategoriesBodyContainer2">
+      <div className="categoriesBodyContainer2">
         <Link to="/pizza">
           <CategoriesWindow
             img={pizza}
