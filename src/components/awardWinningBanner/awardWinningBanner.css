@@ -1,36 +1,41 @@
-/* fix it later */
+@keyframes slide {
+  0% {
+    transform: translate3d(0px, -1692px, 0px);
+  }
 
-.AwardWinningBanner {
-  display: grid;
-  width: 100%;
-  background-color: #e5f8bc;
-  overflow: hidden;
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
-.awardWinningBannerWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 8rem;
+.AwardWinningBanner {
+  display: flex;
+  background-color: #e5f8bc;
+  overflow: hidden;
+  height: 35rem;
+}
+
+.awardWinningBannerContainer {
+  display: flex;
+  padding: 0 4rem;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
 }
 
 .banner {
   display: flex;
+  flex: 0.5 1 0%;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.banner > h2,
-.banner > p {
-  margin: 0;
 }
 
 .banner button {
-  margin: 2rem auto 0 0;
+  margin: 2rem 0 0 !important;
 }
 
-.banner > h2,
-.banner > p {
+.banner h2 {
   color: #000025;
   font-family: Montserrat;
   font-size: 2.74688rem;
@@ -41,21 +46,9 @@
 }
 
 .restaurantsCardsBanner {
-  display: flex;
-  height: 31rem;
-  /* animation: 60s linear 0s infinite normal none running slide; */
-}
-
-.column1,
-.column2,
-.column3 {
-  flex: 1;
-}
-
-.column2 {
-  margin-top: 25%;
-}
-
-.column2 > div:first-child > img {
-  margin-top: 3.5rem;
+  background: url(../../images/awardWinningRestaurants.png) repeat-y;
+  height: 5076px;
+  animation: 60s linear 0s infinite normal none running slide;
+  /* display: none; */
+  flex: 0.5 1 0%;
 }
