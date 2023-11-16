@@ -1,18 +1,29 @@
-.foodButton {
+.foodButton button {
   background-color: #fff;
-  padding: 1rem 1.5rem;
   border-radius: 0.25rem;
   cursor: pointer;
   width: 30rem;
+  height: auto;
+  border: 0;
 }
 
-.foodButton > h3 {
+.foodButton button > div:first-of-type {
   font-size: 1.5rem;
   font-weight: 700;
+  color: #000;
 }
 
-.foodButton > p:last-child {
+.foodButton button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.foodButton button > div:last-child {
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem 0;
+  color: #000;
 }

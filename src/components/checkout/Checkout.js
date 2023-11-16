@@ -20,6 +20,8 @@ function Checkout({
   btnText2,
   clazz3,
   page,
+  onClick,
+  progress,
 }) {
   return (
     <div className="orderPage__content">
@@ -32,7 +34,7 @@ function Checkout({
             <p>{headerText}</p>
             <p>Step {step} of 2</p>
           </div>
-          {/* there'll be progress bar */}
+          <p className={`progressBar ${progress}`}></p>
           <div className="contactDetails">
             <>
               <p>{name1}</p>
@@ -80,9 +82,15 @@ function Checkout({
             <div className={`${btnClass} btnContainer`}>
               <Button
                 text={btnText2}
+                onClick={onClick}
                 className={`medium-ghost btn ${clazz3}`}
               />
-              <Button text={btnText} className="large-dark btn" page={page} />
+              <Button
+                onClick={onClick}
+                text={btnText}
+                className="large-dark btn"
+                page={page}
+              />
             </div>
           </div>
         </div>

@@ -1,0 +1,54 @@
+.modalForOrder {
+  background-color: rgb(245, 245, 245);
+  border-radius: 1rem;
+}
+
+.modalForOrder__title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 2rem 1.5rem 0;
+  color: #202020;
+}
+
+.modalForOrder__description {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem 3rem;
+  color: #202020;
+}
+
+.mfoFuncAndButton {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.mfoFuncAndButton p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #202020;
+  padding: 0 1rem;
+}
+
+.function {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.function button {
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+.btn button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}

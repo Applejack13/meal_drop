@@ -1,15 +1,16 @@
 .large-dark {
   display: inline-flex !important;
   padding: 1.7rem 1rem !important;
-  margin: 0.5rem !important;
   border-radius: 0.25rem !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 0.625rem !important;
   flex-shrink: 0 !important;
   background-color: #202020 !important;
   color: #fff !important;
   cursor: pointer !important;
+}
+
+.foodBtn {
 }
 
 .medium-dark {

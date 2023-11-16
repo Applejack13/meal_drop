@@ -1,20 +1,16 @@
 import "../yourOrder/yourOrder.css"
 
-function YourOrder() {
+function YourOrder({ dishname, price, totalPrice }) {
   return (
     <div className="yourOrder">
       <h2>Your order</h2>
       <div className="orderList">
-        <p>Dishname </p>
-        <p>8.50$ </p>
-      </div>
-      <div className="orderList">
-        <p>Dishname </p>
-        <p>8.50$ </p>
+        <p>{dishname} </p>
+        <p>{price} </p>
       </div>
       <div className="orderTotal">
-        <p>Total: </p>
-        <p>17.00$</p>
+        <h2>Total: </h2>
+        <h2>{totalPrice}</h2>
       </div>
     </div>
   )

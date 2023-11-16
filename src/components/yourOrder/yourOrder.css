@@ -1,0 +1,16 @@
+.yourOrder > h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: black;
+  padding: 1rem;
+}
+
+.orderList > p {
+  padding: 1rem;
+}
+
+.orderTotal > h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+}
