@@ -9,7 +9,7 @@ import ModalWindow from "../modal/ModalWindow"
 
 ReactModal.setAppElement("#root")
 
-function TopHeader() {
+function TopHeader(cartItems) {
   const [isToggleOn, setIsToggleOn] = useState(true)
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -73,11 +73,14 @@ function TopHeader() {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
           >
-            <ModalWindow
-              text="Checkout"
-              page="/orderPage"
-              clazz=" large-dark"
-            />
+            {modalIsOpen && (
+              <ModalWindow
+                text="Checkout"
+                page="/orderPage"
+                clazz=" large-dark"
+                cartItems={cartItems}
+              />
+            )}
           </ReactModal>
         </div>
       </div>

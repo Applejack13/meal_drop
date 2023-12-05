@@ -4,6 +4,7 @@ import Footer from "../footer/Footer"
 import SecondHeader from "../secondHeader/SecondHeader"
 import RestaurantBody from "../restaurantBody/RestaurantBody"
 import ThirdHeader from "../thirdHeader/ThirdHeader"
+import { useState } from "react"
 
 function RestaurantPage({
   restaurantClass,
@@ -14,9 +15,30 @@ function RestaurantPage({
   thirdHeaderClassName,
   restaurantPageClass,
 }) {
+  const [cartItems, setCartItems] = useState([])
+
+  const addToCart = (product) => {
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    )
+
+    if (existingItemIndex !== -1) {
+      // Если товар уже есть в корзине, обновляем количество
+      const updatedCartItems = cartItems.map((item, index) =>
+        index === existingItemIndex
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+      setCartItems(updatedCartItems)
+    } else {
+      // Если товара нет в корзине, добавляем новый
+      setCartItems([...cartItems, { ...product, quantity: 1 }])
+    }
+  }
+
   return (
     <div className={restaurantPageClass}>
-      <TopHeader />
+      <TopHeader cartItems={cartItems} />
       <SecondHeader className={`secondHeaderClass ${restaurantClass}`} />
       <ThirdHeader
         thirdHeaderClassName={thirdHeaderClassName}
@@ -25,7 +47,7 @@ function RestaurantPage({
         rating={rating}
         buttons={buttons}
       />
-      <RestaurantBody />
+      <RestaurantBody addToCart={addToCart} />
       <Footer />
     </div>
   )

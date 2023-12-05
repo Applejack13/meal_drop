@@ -2,35 +2,63 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
-}
-
-.orderList > p {
-  padding: 0.5rem 1rem 0.5rem;
-  font-size: 1.15rem;
 }
 
 .orderList > p:first-child {
   font-weight: 600;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.orderList p:last-child {
+  font-size: 1.15rem;
+  padding: 0 auto;
+}
+
+.orderTotal {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  position: inherit;
+}
+
+.total1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.total1 h2 {
+  padding: 1rem;
+}
+
+.total2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.total2 button {
+  width: 280%;
+  margin: 1rem;
 }
 
 .orderListContainer {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  max-height: 75%;
+  /* fix it later */
+  overflow-y: auto;
 }
 
-.orderTotalContainer {
-  bottom: 0;
-  position: inherit;
+.orderTotal p:first-of-type {
+  background-color: rgba(240, 240, 240, 0.61);
   width: 100%;
-}
-
-.orderTotalContainer > p {
-  background-color: rgb(240, 240, 240);
-  width: 100%;
-  height: 0.05rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 0;
 }
 
 .modalContainer {
@@ -50,9 +78,4 @@
   color: black;
   padding: 1rem;
   background-color: #f9f9f9;
-}
-
-.modalContainer button {
-  width: 90%;
-  margin: 1rem;
 }

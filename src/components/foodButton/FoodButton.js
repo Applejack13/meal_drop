@@ -3,9 +3,8 @@ import Button from "../button/Button"
 import ReactModal from "react-modal"
 import { useState } from "react"
 import ModalForOrder from "../modalForOrder/ModalForOrder"
-import ModalWindow from "../modal/ModalWindow"
 
-function FoodButton({ foodName, foodDescription, foodPrice }) {
+function FoodButton({ foodName, foodDescription, foodPrice, addToCart, id }) {
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   const openModal = () => {
@@ -13,19 +12,6 @@ function FoodButton({ foodName, foodDescription, foodPrice }) {
   }
 
   const closeModal = () => {
-    setModalIsOpen(false)
-  }
-
-  const handleAddToCart = () => {
-    // ;<ModalWindow
-    //   foodDescription={foodDescription}
-    //   foodPrice={foodPrice}
-    //   foodName={foodName}
-    // />
-    console.log(foodName)
-    console.log(foodDescription)
-    console.log(foodPrice)
-    console.log("added")
     setModalIsOpen(false)
   }
 
@@ -56,7 +42,15 @@ function FoodButton({ foodName, foodDescription, foodPrice }) {
           foodName={foodName}
           foodDescription={foodDescription}
           foodPrice={foodPrice}
-          onClick={handleAddToCart}
+          onClick={() => {
+            addToCart({
+              name: foodName,
+              description: foodDescription,
+              price: foodPrice,
+              id: id,
+            })
+            closeModal()
+          }}
         />
       </ReactModal>
       <Button

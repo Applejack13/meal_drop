@@ -1,3 +1,4 @@
+import React from "react"
 import TopHeader from "./components/topHeader/TopHeader"
 import Banner from "./components/banner/Banner"
 import OurFavouritePicks from "./components/ourFavouritePicks/OurFavouritePicks"
@@ -13,7 +14,6 @@ function FirstPage() {
       <Banner />
       <OurFavouritePicks />
       <AwardWinningBanner />
-      {/* <OurFavouritePicks /> */}
       <Categories />
       <Footer />
     </div>

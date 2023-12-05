@@ -1,41 +1,93 @@
 import "../restaurantBody/restaurantBody.css"
 import FoodButton from "../foodButton/FoodButton"
 
-function RestaurantBody() {
+function RestaurantBody({ addToCart }) {
+  const products = {
+    foodNames: [
+      "Cheeseburger",
+      "Fries",
+      "Nuggets",
+      "Ice cream",
+      "Coca-cola",
+      "Fanta",
+      "Sprite",
+    ],
+    foodDescriptions: [
+      "Nice grilled burger with cheese",
+      "Fried french fries",
+      "Fried chicken nuggets",
+      "Ice cream",
+    ],
+    foodPrice: ["8.50", "2.50", "6.50", "2.00", "1.75", "1.50", "1.00"],
+
+    id: [
+      "sd65sd6sd",
+      "sd6f5sdf4s65sdf",
+      "sd65sd6sd",
+      "sd6f5sdf4s65df",
+      "sdlkgsdhglsdkg",
+      "Fjhdslsdg",
+      "Fsdfhlksdgjsdlkgh",
+      // here'll be some random ids
+    ],
+  }
+
   return (
     <>
       <div className="restaurantBody">
         <h2>To eat</h2>
         <div className="toEat">
           <FoodButton
-            foodName="Cheeseburger"
-            foodDescription="Nice grilled burger with cheese"
-            foodPrice="8.50$"
+            foodName={products.foodNames[0]}
+            foodDescription={products.foodDescriptions[0]}
+            foodPrice={`${products.foodPrice[0]} $`}
+            addToCart={addToCart}
+            id={products.id[0]}
           />
           <FoodButton
-            foodName="Fries"
-            foodDescription="Fried french fries"
-            foodPrice="2.50$"
+            foodName={products.foodNames[1]}
+            foodDescription={products.foodDescriptions[1]}
+            foodPrice={`${products.foodPrice[1]} $`}
+            addToCart={addToCart}
+            id={products.id[1]}
           />
           <FoodButton
-            foodName="Nuggets"
-            foodDescription="Fried chicken nuggets"
-            foodPrice="6.50$"
+            foodName={products.foodNames[2]}
+            foodDescription={products.foodDescriptions[2]}
+            foodPrice={`${products.foodPrice[2]} $`}
+            addToCart={addToCart}
+            id={products.id[2]}
           />
         </div>
         <h2>Dessert</h2>
         <div className="dessert">
           <FoodButton
-            foodName="Vanilla ice cream"
-            foodDescription="Ice cream"
-            foodPrice="2.00$"
+            foodName={products.foodNames[3]}
+            foodPrice={`${products.foodPrice[3]} $`}
+            addToCart={addToCart}
+            id={products.id[3]}
           />
         </div>
         <h2>To drink</h2>
         <div className="toDrink">
-          <FoodButton foodName="Coca-cola" foodPrice="1.75$" />
-          <FoodButton foodName="Fanta" foodPrice="1.50$" />
-          <FoodButton foodName="Sprite" foodPrice="1.50$" />
+          <FoodButton
+            foodName={products.foodNames[4]}
+            foodPrice={`${products.foodPrice[4]} $`}
+            addToCart={addToCart}
+            id={products.id[4]}
+          />
+          <FoodButton
+            foodName={products.foodNames[5]}
+            foodPrice={`${products.foodPrice[5]} $`}
+            addToCart={addToCart}
+            id={products.id[5]}
+          />
+          <FoodButton
+            foodName={products.foodNames[6]}
+            foodPrice={`${products.foodPrice[6]} $`}
+            addToCart={addToCart}
+            id={products.id[6]}
+          />
         </div>
       </div>
     </>

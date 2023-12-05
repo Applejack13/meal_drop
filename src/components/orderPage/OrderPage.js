@@ -8,12 +8,10 @@ function OrderPage() {
 
   const nextStep = () => {
     setStep(step + 1)
-    console.log("Next step")
   }
 
   const prevStep = () => {
     setStep(step - 1)
-    console.log("Prev step")
   }
 
   return (

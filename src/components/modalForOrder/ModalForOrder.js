@@ -2,7 +2,13 @@ import "../modalForOrder/modalForOrder.css"
 import Button from "../button/Button"
 import { useState } from "react"
 
-function ModalForOrder({ foodName, foodDescription, foodPrice, onClick }) {
+function ModalForOrder({
+  foodName,
+  foodDescription,
+  foodPrice,
+  onClick,
+  addToCart,
+}) {
   const [count, setCount] = useState(1)
 
   const decrement = () => {
@@ -15,6 +21,8 @@ function ModalForOrder({ foodName, foodDescription, foodPrice, onClick }) {
       setCount(1)
     }
   }
+
+  let sum = parseFloat(foodPrice) * count
 
   return (
     <div className="mofContainer">
@@ -34,9 +42,10 @@ function ModalForOrder({ foodName, foodDescription, foodPrice, onClick }) {
         </div>
         <div className="btn">
           <Button
-            text={`add for ${parseFloat(foodPrice) * parseFloat(count)} $`}
+            text={`add for ${sum} $`}
             className="large-dark"
             onClick={onClick}
+            addToCart={addToCart}
           />
         </div>
       </div>
@@ -45,3 +54,5 @@ function ModalForOrder({ foodName, foodDescription, foodPrice, onClick }) {
 }
 
 export default ModalForOrder
+
+// Как передать count из модального окна button в модальное окно корзины?

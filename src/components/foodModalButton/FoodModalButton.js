@@ -9,8 +9,7 @@ function FoodModalButton({ food, foodDescription, sum }) {
         <p>{foodDescription}</p>
       </div>
       <div className="foodCounter">
-        {/* component with + - */}
-        <Button text={`add for ${sum}`} />
+        <Button text={sum} />
       </div>
     </div>
   )
