@@ -4,7 +4,17 @@ import ReactModal from "react-modal"
 import { useState } from "react"
 import ModalForOrder from "../modalForOrder/ModalForOrder"
 
-function FoodButton({ foodName, foodDescription, foodPrice, addToCart, id }) {
+function FoodButton({
+  foodName,
+  foodDescription,
+  foodPrice,
+  addToCart,
+  id,
+  count,
+  increment,
+  decrement,
+  setCount,
+}) {
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   const openModal = () => {
@@ -42,14 +52,18 @@ function FoodButton({ foodName, foodDescription, foodPrice, addToCart, id }) {
           foodName={foodName}
           foodDescription={foodDescription}
           foodPrice={foodPrice}
+          count={count}
+          increment={increment}
+          decrement={decrement}
           onClick={() => {
             addToCart({
-              name: foodName,
-              description: foodDescription,
-              price: foodPrice,
+              foodName: foodName,
+              foodDescription: foodDescription,
+              foodPrice: foodPrice,
               id: id,
             })
             closeModal()
+            setCount(1)
           }}
         />
       </ReactModal>

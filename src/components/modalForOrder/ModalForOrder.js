@@ -1,6 +1,5 @@
 import "../modalForOrder/modalForOrder.css"
 import Button from "../button/Button"
-import { useState } from "react"
 
 function ModalForOrder({
   foodName,
@@ -8,24 +7,15 @@ function ModalForOrder({
   foodPrice,
   onClick,
   addToCart,
+  sum,
+  increment,
+  decrement,
+  count,
 }) {
-  const [count, setCount] = useState(1)
-
-  const decrement = () => {
-    setCount((prevCount) => (prevCount > 1 ? prevCount - 1 : 1))
-  }
-
-  const increment = () => {
-    setCount((prevCount) => prevCount + 1)
-    if (count > 9) {
-      setCount(1)
-    }
-  }
-
-  let sum = parseFloat(foodPrice) * count
+  sum = parseFloat(foodPrice) * count
 
   return (
-    <div className="mofContainer">
+    <div className="mfoContainer">
       <div className="modalForOrder">
         <div className="modalForOrder__title">
           <h2>{foodName}</h2>

@@ -16,24 +16,67 @@ function RestaurantPage({
   restaurantPageClass,
 }) {
   const [cartItems, setCartItems] = useState([])
+  const [count, setCount] = useState(1)
 
-  const addToCart = (product) => {
+  const addToCart = (products) => {
+    const newProduct = {
+      foodName: products.foodName,
+      foodDescription: products.foodDescription,
+      foodPrice: products.foodPrice,
+      id: products.id,
+      quantity: count,
+    }
+
     const existingItemIndex = cartItems.findIndex(
-      (item) => item.id === product.id
+      (item) => item.id === newProduct.id
     )
 
     if (existingItemIndex !== -1) {
-      // Если товар уже есть в корзине, обновляем количество
       const updatedCartItems = cartItems.map((item, index) =>
         index === existingItemIndex
-          ? { ...item, quantity: item.quantity + 1 }
+          ? { ...item, quantity: item.quantity + count }
           : item
       )
       setCartItems(updatedCartItems)
     } else {
-      // Если товара нет в корзине, добавляем новый
-      setCartItems([...cartItems, { ...product, quantity: 1 }])
+      setCartItems([...cartItems, newProduct])
     }
+  }
+
+  // const addToCart = (product) => {
+  //   const newProduct = {
+  //     id: product.id,
+  //     quantity: count,
+  //     foodName: product.foodName,
+  //     foodDescription: product.foodDescription,
+  //     foodPrice: product.foodPrice,
+  //   }
+
+  //   const existingItemIndex = cartItems.cartItems.findIndex(
+  //     (item) => item.id === newProduct.id
+  //   )
+
+  //   if (existingItemIndex !== -1) {
+  //     const updatedCartItems = cartItems.cartItems.map((item, index) =>
+  //       index === existingItemIndex
+  //         ? { ...item, quantity: item.quantity + count }
+  //         : item
+  //     )
+  //     setCartItems({ ...cartItems, cartItems: updatedCartItems })
+  //   } else {
+  //     setCartItems({
+  //       ...cartItems,
+  //       cartItems: [...cartItems.cartItems, newProduct],
+  //     })
+  //   }
+  // }
+
+  const decrement = () => {
+    setCount((prevCount) => (prevCount > 1 ? prevCount - 1 : 1))
+  }
+
+  const increment = () => {
+    setCount((prevCount) => (prevCount < 9 ? prevCount + 1 : 9))
   }
 
   return (
@@ -47,7 +90,13 @@ function RestaurantPage({
         rating={rating}
         buttons={buttons}
       />
-      <RestaurantBody addToCart={addToCart} />
+      <RestaurantBody
+        addToCart={addToCart}
+        count={count}
+        increment={increment}
+        decrement={decrement}
+        setCount={setCount}
+      />
       <Footer />
     </div>
   )

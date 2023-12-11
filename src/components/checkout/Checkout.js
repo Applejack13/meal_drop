@@ -94,6 +94,7 @@ function Checkout({
             </div>
           </div>
         </div>
+        {/* <YourOrder CNFO={"yourOrder"} /> */}
         <YourOrder />
       </div>
     </div>

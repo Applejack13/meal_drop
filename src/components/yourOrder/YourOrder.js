@@ -1,8 +1,9 @@
 import "../yourOrder/yourOrder.css"
 
-function YourOrder({ dishname, price, totalPrice }) {
+function YourOrder({ dishname, price, totalPrice, CNFO }) {
   return (
     <div className="yourOrder">
+      {/* <div className={`${CNFO}`}> */}
       <h2>Your order</h2>
       <div className="orderList">
         <p>{dishname} </p>

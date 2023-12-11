@@ -14,3 +14,30 @@
   font-weight: 600;
   padding: 1rem;
 }
+
+/* .yourOrder > h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: black;
+  padding: 1rem;
+}
+
+.orderList > p {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400 !important;
+}
+
+.orderTotal,
+.orderList {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+
+.orderTotal h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+} */
+/* solve it later */

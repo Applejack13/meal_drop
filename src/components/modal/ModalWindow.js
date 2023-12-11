@@ -2,7 +2,7 @@ import React from "react"
 import "../modal/modalWindow.css"
 import Button from "../button/Button"
 
-function ModalWindow({ text, clazz, page, cartItems = {} }) {
+function ModalWindow({ text, clazz, page, cartItems }) {
   let parsedCartItems = []
 
   if (
@@ -20,14 +20,13 @@ function ModalWindow({ text, clazz, page, cartItems = {} }) {
 
   parsedCartItems = parsedCartItems.map((item) => ({
     ...item,
-    price: parseFloat(item.price),
-    // quantity: parseFloat(count),
+    foodPrice: parseFloat(item.foodPrice),
   }))
 
   const calculateTotalPrice = () => {
     let totalPrice = 0
     parsedCartItems.forEach((item) => {
-      totalPrice += item.price * item.quantity // Умножаем цену на количество
+      totalPrice += item.foodPrice * item.quantity
     })
     return totalPrice
   }
@@ -38,10 +37,10 @@ function ModalWindow({ text, clazz, page, cartItems = {} }) {
       <div className="orderListContainer">
         {parsedCartItems.map((item, index) => (
           <div key={index} className="orderList">
-            <p>{item.name}</p>
-            <p>{item.description}</p>
-            <p>{`${item.price * item.quantity} $`}</p>
-            <p>Quantity: {item.quantity}</p>{" "}
+            <p>{item.foodName}</p>
+            <p>{item.foodDescription}</p>
+            <p>{`${item.foodPrice * item.quantity} $`}</p>
+            <p>Quantity: {item.quantity}</p>
           </div>
         ))}
       </div>
@@ -60,5 +59,3 @@ function ModalWindow({ text, clazz, page, cartItems = {} }) {
 }
 
 export default ModalWindow
-
-// Как обеспечить появление в корзине правильного количество товаров?
