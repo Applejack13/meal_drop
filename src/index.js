@@ -23,6 +23,8 @@ function ScrollToTop() {
 
 const WrappedComponent = HOCWrapper(RestaurantPage)
 const WrappedFirstPage = HOCWrapper(FirstPage)
+const WrappedOrderPage = HOCWrapper(OrderPage)
+const WrappedSuccessOrderPage = HOCWrapper(SuccessOrderPage)
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -124,8 +126,8 @@ root.render(
             />
           }
         />
-        <Route path="/orderPage" element={<OrderPage />} />
-        <Route path="/success" element={<SuccessOrderPage />} />
+        <Route path="/orderPage" element={<WrappedOrderPage />} />
+        <Route path="/success" element={<WrappedSuccessOrderPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -22,6 +22,7 @@ function Checkout({
   page,
   onClick,
   progress,
+  cartItems,
 }) {
   return (
     <div className="orderPage__content">
@@ -95,7 +96,7 @@ function Checkout({
           </div>
         </div>
         {/* <YourOrder CNFO={"yourOrder"} /> */}
-        <YourOrder />
+        <YourOrder cartItems={cartItems} />
       </div>
     </div>
   )

@@ -1,4 +1,3 @@
-import React from "react"
 import "../modal/modalWindow.css"
 import Button from "../button/Button"
 

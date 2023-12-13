@@ -3,7 +3,7 @@ import TopHeader from "../topHeader/TopHeader"
 import Checkout from "../checkout/Checkout"
 import { useState } from "react"
 
-function OrderPage() {
+function OrderPage({ cartItems }) {
   const [step, setStep] = useState(1)
 
   const nextStep = () => {
@@ -60,9 +60,9 @@ function OrderPage() {
     <div className="orderPage">
       <TopHeader isVisible={false} />
       {step === 1 ? (
-        <Checkout {...firstStepProps} />
+        <Checkout {...firstStepProps} cartItems={cartItems} />
       ) : (
-        <Checkout {...secondStepProps} />
+        <Checkout {...secondStepProps} cartItems={cartItems} />
       )}
     </div>
   )

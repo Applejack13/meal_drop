@@ -1,9 +1,32 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const HOCWrapper = (WrappedComponent) => {
   return function HOCWrapper(props) {
     const [cartItems, setCartItems] = useState([])
     const [count, setCount] = useState(1)
+
+    useEffect(() => {
+      // Загружаем корзину из localStorage при первой загрузке
+      const storedCartItems = localStorage.getItem("cartItems")
+      if (storedCartItems) {
+        setCartItems(JSON.parse(storedCartItems))
+      }
+    }, [])
+
+    useEffect(() => {
+      // Добавляем обработчик события beforeunload
+      window.addEventListener("beforeunload", handleBeforeUnload)
+
+      return () => {
+        // Удаляем обработчик перед выгрузкой компонента
+        window.removeEventListener("beforeunload", handleBeforeUnload)
+      }
+    }, [])
+
+    const handleBeforeUnload = () => {
+      // Удаляем корзину из localStorage при обновлении страницы
+      localStorage.removeItem("cartItems")
+    }
 
     const addToCart = (products) => {
       const newProduct = {
@@ -25,8 +48,13 @@ const HOCWrapper = (WrappedComponent) => {
             : item
         )
         setCartItems(updatedCartItems)
+        // Сохраняем обновленную корзину в localStorage
+        localStorage.setItem("cartItems", JSON.stringify(updatedCartItems))
       } else {
-        setCartItems([...cartItems, newProduct])
+        const updatedCartItems = [...cartItems, newProduct]
+        setCartItems(updatedCartItems)
+        // Сохраняем обновленную корзину в localStorage
+        localStorage.setItem("cartItems", JSON.stringify(updatedCartItems))
       }
     }
 
