@@ -9,7 +9,7 @@ import ModalWindow from "../modal/ModalWindow"
 
 ReactModal.setAppElement("#root")
 
-function TopHeader(cartItems) {
+function TopHeader({ cartItems, isVisible }) {
   const [isToggleOn, setIsToggleOn] = useState(true)
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -29,6 +29,8 @@ function TopHeader(cartItems) {
     <div className="Top-header">
       <div className="Top-header__logo">
         <Logo link="/" isSmall={true} />
+      </div>
+      {isVisible ? (
         <div className="Top-header__search">
           <Button
             text={isToggleOn ? "ON" : "OFF"}
@@ -83,7 +85,7 @@ function TopHeader(cartItems) {
             )}
           </ReactModal>
         </div>
-      </div>
+      ) : null}
     </div>
   )
 }

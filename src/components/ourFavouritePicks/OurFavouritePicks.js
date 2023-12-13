@@ -5,7 +5,14 @@ import image4 from "../../images/RestaurantForCard3.avif"
 import closedRestaurant from "../../images/closedRestaurant.jpg"
 import CarouselSlider from "../carousel/Carousel"
 
-function OurFavouritePicks(addToCart) {
+function OurFavouritePicks({
+  addToCart,
+  decrement,
+  increment,
+  setCount,
+  count,
+  cartItems,
+}) {
   const customStyles = {
     carouselContainer: "carouselContainer",
     carouselItem: "carouselItem",
@@ -113,6 +120,11 @@ function OurFavouritePicks(addToCart) {
         <h2>Our favourite picks</h2>
       </div>
       <CarouselSlider
+        cartItems={cartItems}
+        decrement={decrement}
+        increment={increment}
+        setCount={setCount}
+        count={count}
         addToCart={addToCart}
         links={carouselItems.map((item) => item.link)}
         items={carouselItems}

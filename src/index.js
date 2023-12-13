@@ -1,15 +1,15 @@
 import React, { useEffect } from "react"
 import ReactDOM from "react-dom/client"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import "./index.css"
-import FirstPage from "./FirstPage"
-import CategoriesPage from "./components/categoriesPage/CategoriesPage"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import TypeOfFood from "./components/typeOfFood/TypeOfFood"
 import AllRestaurants from "./components/allRestaurants/AllRestaurants"
-import RestaurantPage from "./components/restaurantPage/RestaurantPage"
-import { useLocation } from "react-router-dom"
+import CategoriesPage from "./components/categoriesPage/CategoriesPage"
+import FirstPage from "./FirstPage"
+import HOCWrapper from "./components/HOCWrapper/HOCWrapper"
 import OrderPage from "./components/orderPage/OrderPage"
+import RestaurantPage from "./components/restaurantPage/RestaurantPage"
 import SuccessOrderPage from "./components/successOrderPage/SuccessOrderPage"
+import TypeOfFood from "./components/typeOfFood/TypeOfFood"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -21,13 +21,16 @@ function ScrollToTop() {
   return null
 }
 
+const WrappedComponent = HOCWrapper(RestaurantPage)
+const WrappedFirstPage = HOCWrapper(FirstPage)
+
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<FirstPage />} />
+        <Route path="/" element={<WrappedFirstPage />} />
         <Route path="/allRestaurants" element={<AllRestaurants />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route
@@ -87,7 +90,7 @@ root.render(
         <Route
           path="/mira"
           element={
-            <RestaurantPage
+            <WrappedComponent
               restaurantClass="mira"
               restaurantName="Mira"
               description="Specialties: Sarma (wine leafs with rice)"
@@ -99,7 +102,7 @@ root.render(
         <Route
           path="/kara-fin"
           element={
-            <RestaurantPage
+            <WrappedComponent
               thirdHeaderClassName="thirdHeaderClassName"
               restaurantClass="kara_fin"
               restaurantName="Kara Fin"
@@ -112,7 +115,7 @@ root.render(
         <Route
           path="/t-kuyltje"
           element={
-            <RestaurantPage
+            <WrappedComponent
               restaurantClass="t-kuyltje"
               restaurantName="T Kuyltje"
               description="Specialties: Sarma (wine leafs with rice)"
