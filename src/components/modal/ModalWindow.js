@@ -4,17 +4,21 @@ import Button from "../button/Button"
 function ModalWindow({ text, clazz, page, cartItems }) {
   let parsedCartItems = []
 
-  if (
-    typeof cartItems === "object" &&
-    typeof cartItems.cartItems === "string"
-  ) {
+  if (Array.isArray(cartItems)) {
+    parsedCartItems = cartItems.map((item) => ({
+      ...item,
+      foodPrice: parseFloat(item.foodPrice),
+    }))
+  } else {
     try {
-      parsedCartItems = JSON.parse(cartItems.cartItems)
+      parsedCartItems = JSON.parse(cartItems)
+      parsedCartItems = parsedCartItems.map((item) => ({
+        ...item,
+        foodPrice: parseFloat(item.foodPrice),
+      }))
     } catch (error) {
       console.error("Error parsing cart items:", error)
     }
-  } else if (Array.isArray(cartItems.cartItems)) {
-    parsedCartItems = cartItems.cartItems
   }
 
   parsedCartItems = parsedCartItems.map((item) => ({

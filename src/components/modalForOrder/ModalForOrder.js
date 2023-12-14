@@ -44,5 +44,3 @@ function ModalForOrder({
 }
 
 export default ModalForOrder
-
-// Как передать count из модального окна button в модальное окно корзины?
