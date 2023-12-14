@@ -4,8 +4,12 @@
   flex-direction: column;
 }
 
+.orderList > p {
+  padding: 1rem;
+}
+
 .orderList > p:first-child {
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.5rem 1rem;
 }
 
@@ -21,6 +25,12 @@
   align-items: center;
   bottom: 0;
   position: inherit;
+}
+
+.orderTotal > h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
 }
 
 .total1 {
@@ -78,4 +88,11 @@
   color: black;
   padding: 1rem;
   background-color: #f9f9f9;
+}
+
+.yourOrder > h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: black;
+  padding: 1rem;
 }

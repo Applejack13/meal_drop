@@ -16,3 +16,5 @@ function YourOrderModal({ total }) {
 }
 
 export default YourOrderModal
+
+// Am I need this component?

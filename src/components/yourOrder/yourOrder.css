@@ -1,43 +1,51 @@
-.yourOrder > h2 {
+.yourOrderCheckout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 20rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.yourOrderCheckout > h2 {
   font-size: 1.4rem;
   font-weight: 700;
   color: black;
-  padding: 1rem;
 }
 
-.orderList > p {
-  padding: 1rem;
+.orderListCheckout > p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-.orderTotal > h2 {
+.orderListCheckout {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 1fr;
+}
+
+.orderTotalCheckout {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 2rem;
+}
+
+.justLine {
+  height: 0.03rem;
+  margin-top: 1rem;
+  background-color: rgb(237, 237, 237);
+}
+
+.orderTotalCheckout h2:first-of-type {
   font-size: 1rem;
   font-weight: 600;
-  padding: 1rem;
-}
-
-/* .yourOrder > h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: black;
-  padding: 1rem;
-}
-
-.orderList > p {
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: 400 !important;
-}
-
-.orderTotal,
-.orderList {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
   align-items: center;
 }
 
-.orderTotal h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem;
-} */
-/* solve it later */
+.orderTotalCheckout h2:last-of-type {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
