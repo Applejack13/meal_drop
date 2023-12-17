@@ -17,7 +17,6 @@ function OrderPage({ cartItems }) {
   // Общие свойства для обоих шагов
   const commonProps = {
     clazz: "show",
-    clazz3: "clazz3",
     progress: step === 1 ? "" : "secondStep",
     onClick: step === 1 ? nextStep : prevStep,
   }
@@ -26,6 +25,7 @@ function OrderPage({ cartItems }) {
   const firstStepProps = {
     headerText: "Contact Details",
     step: "1",
+    clazz3: "clazz3",
     ...commonProps,
     name1: "First name",
     ph1: "Yulia",
@@ -36,6 +36,7 @@ function OrderPage({ cartItems }) {
     phoneOrNothing: "Phone number",
     ph4: "+380...",
     btnText: "Next",
+    isHidden: true,
   }
 
   // Свойства для второго шага
@@ -54,6 +55,7 @@ function OrderPage({ cartItems }) {
     btnText2: "Previous",
     btnClass: "btnClass",
     page: "/success",
+    isHidden: false,
   }
 
   return (

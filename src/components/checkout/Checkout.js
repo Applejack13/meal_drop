@@ -23,6 +23,7 @@ function Checkout({
   onClick,
   progress,
   cartItems,
+  isHidden,
 }) {
   return (
     <div className="orderPage__content">
@@ -81,21 +82,23 @@ function Checkout({
               We’ll only use your phone to call you about your order
             </p>
             <div className={`${btnClass} btnContainer`}>
-              <Button
-                text={btnText2}
-                onClick={onClick}
-                className={`medium-ghost btn ${clazz3}`}
-              />
+              <div className={isHidden ? "hide" : ""}>
+                <Button
+                  text={btnText2}
+                  onClick={onClick}
+                  className={`medium-ghost btn ${clazz3}`}
+                />
+              </div>
+
               <Button
                 onClick={onClick}
                 text={btnText}
-                className="large-dark btn"
+                className={`${"large-dark btn "}`}
                 page={page}
               />
             </div>
           </div>
         </div>
-        {/* <YourOrder CNFO={"yourOrder"} /> */}
         <YourOrder cartItems={cartItems} />
       </div>
     </div>
