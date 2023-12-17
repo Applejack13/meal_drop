@@ -4,6 +4,22 @@ import Checkout from "../checkout/Checkout"
 import { useState } from "react"
 
 function OrderPage({ cartItems }) {
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [isPhoneValid, setIsPhoneValid] = useState(true)
+
+  const handlePhoneChange = (e) => {
+    const inputValue = e.target.value
+    setPhoneNumber(inputValue)
+
+    const isValidPhoneNumber = /^\d+$/.test(inputValue)
+
+    if (inputValue === "" || isValidPhoneNumber) {
+      setIsPhoneValid(true)
+    } else {
+      setIsPhoneValid(false)
+    }
+  }
+
   const [step, setStep] = useState(1)
 
   const nextStep = () => {
@@ -14,14 +30,12 @@ function OrderPage({ cartItems }) {
     setStep(step - 1)
   }
 
-  // Общие свойства для обоих шагов
   const commonProps = {
     clazz: "show",
     progress: step === 1 ? "" : "secondStep",
     onClick: step === 1 ? nextStep : prevStep,
   }
 
-  // Свойства для первого шага
   const firstStepProps = {
     headerText: "Contact Details",
     step: "1",
@@ -34,12 +48,14 @@ function OrderPage({ cartItems }) {
     emailOrCity: "Email",
     ph3: "example@example.com",
     phoneOrNothing: "Phone number",
-    ph4: "+380...",
+    ph4: "380...",
     btnText: "Next",
     isHidden: true,
+    isPhoneValid: isPhoneValid,
+    phoneNumber: phoneNumber,
+    onPhoneChange: handlePhoneChange,
   }
 
-  // Свойства для второго шага
   const secondStepProps = {
     headerText: "Delivery Details",
     step: "2",
@@ -55,7 +71,9 @@ function OrderPage({ cartItems }) {
     btnText2: "Previous",
     btnClass: "btnClass",
     page: "/success",
-    isHidden: false,
+    isPhoneValid: isPhoneValid,
+    phoneNumber: phoneNumber,
+    onPhoneChange: handlePhoneChange,
   }
 
   return (

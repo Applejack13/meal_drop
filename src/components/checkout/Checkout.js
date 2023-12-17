@@ -24,7 +24,12 @@ function Checkout({
   progress,
   cartItems,
   isHidden,
+  isPhoneValid,
+  phoneNumber,
+  onPhoneChange,
 }) {
+  const isInputEmpty = phoneNumber.length === 0
+
   return (
     <div className="orderPage__content">
       <div className="checkout">
@@ -74,7 +79,11 @@ function Checkout({
                 type="phone"
                 placeholder={ph4}
                 name="phoneNumber"
-                className="input"
+                value={phoneNumber}
+                onChange={onPhoneChange}
+                className={`input ${
+                  isInputEmpty ? "" : isPhoneValid ? "valid" : "invalid"
+                }`}
               />
             </div>
 
@@ -89,7 +98,6 @@ function Checkout({
                   className={`medium-ghost btn ${clazz3}`}
                 />
               </div>
-
               <Button
                 onClick={onClick}
                 text={btnText}
