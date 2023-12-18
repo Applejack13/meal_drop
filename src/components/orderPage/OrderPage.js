@@ -7,6 +7,22 @@ function OrderPage({ cartItems }) {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [isPhoneValid, setIsPhoneValid] = useState(true)
 
+  const [name1, setName1] = useState("")
+  const [isNameValid, setIsNameValid] = useState(true)
+
+  const handleName1Change = (e) => {
+    const inputValue = e.target.value
+    setName1(inputValue)
+
+    const isValidName = /^[a-zA-Z\s-]+$/.test(inputValue)
+
+    if (inputValue === "" || isValidName) {
+      setIsNameValid(true)
+    } else {
+      setIsNameValid(false)
+    }
+  }
+
   const handlePhoneChange = (e) => {
     const inputValue = e.target.value
     setPhoneNumber(inputValue)
@@ -54,6 +70,8 @@ function OrderPage({ cartItems }) {
     isPhoneValid: isPhoneValid,
     phoneNumber: phoneNumber,
     onPhoneChange: handlePhoneChange,
+    isNameValid: isNameValid,
+    onNameChange: handleName1Change,
   }
 
   const secondStepProps = {
@@ -74,6 +92,8 @@ function OrderPage({ cartItems }) {
     isPhoneValid: isPhoneValid,
     phoneNumber: phoneNumber,
     onPhoneChange: handlePhoneChange,
+    isNameValid: isNameValid,
+    setName1: handleName1Change,
   }
 
   return (

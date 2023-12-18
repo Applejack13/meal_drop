@@ -6,7 +6,6 @@ function Checkout({
   headerText,
   step,
   clazz,
-  name1,
   ph1,
   name2OrPostcode,
   ph2,
@@ -27,8 +26,12 @@ function Checkout({
   isPhoneValid,
   phoneNumber,
   onPhoneChange,
+  isNameValid,
+  onNameChange,
+  name1,
 }) {
   const isInputEmpty = phoneNumber.length === 0
+  const isInputEmpty2 = name1.length === 0
 
   return (
     <div className="orderPage__content">
@@ -48,8 +51,11 @@ function Checkout({
               <input
                 type="text"
                 placeholder={ph1}
-                name="lastName"
-                className="input"
+                name="firstName"
+                onChange={onNameChange}
+                className={`input ${
+                  isInputEmpty2 ? "" : isNameValid ? "valid" : "invalid"
+                }`}
               />
             </>
 
