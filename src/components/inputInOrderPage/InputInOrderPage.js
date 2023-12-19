@@ -8,6 +8,7 @@ function InputInOrderPage({
   type,
   validation,
   additionalClassName,
+  isVisible,
 }) {
   const [inputValue, setInputValue] = useState("")
   const [isValid, setIsValid] = useState(true)
@@ -29,7 +30,8 @@ function InputInOrderPage({
   }
 
   return (
-    <div>
+    // <div className={isVisible ? "" : "hide"}>
+    <div className={isVisible}>
       <p>{text}</p>
       <input
         type={type}

@@ -4,8 +4,6 @@ import Checkout from "../checkout/Checkout"
 import { useState } from "react"
 
 function OrderPage({ cartItems }) {
-  // const isValidName = /^[a-zA-Z\s-]+$/.test(inputValue)
-
   const [step, setStep] = useState(1)
 
   const nextStep = () => {
@@ -29,6 +27,10 @@ function OrderPage({ cartItems }) {
     ...commonProps,
     btnText: "Next",
     isHidden: true,
+    isVisible: "hide",
+    isVisible2: "hide",
+    isVisible3: "hide",
+    isVisible4: "hide",
   }
 
   const secondStepProps = {
@@ -40,6 +42,9 @@ function OrderPage({ cartItems }) {
     btnText2: "Previous",
     btnClass: "btnClass",
     page: "/success",
+    isVisible5: "hide",
+    isVisible6: "hide",
+    isVisible7: "hide",
   }
 
   return (
