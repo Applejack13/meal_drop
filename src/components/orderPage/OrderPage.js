@@ -1,17 +1,19 @@
+import React, { useState } from "react"
 import "../orderPage/orderPage.css"
 import TopHeader from "../topHeader/TopHeader"
 import Checkout from "../checkout/Checkout"
-import { useState } from "react"
 
 function OrderPage({ cartItems }) {
   const [step, setStep] = useState(1)
 
   const nextStep = () => {
-    setStep(step + 1)
+    if (step === 1) {
+      setStep(2)
+    }
   }
 
   const prevStep = () => {
-    setStep(step - 1)
+    setStep(1)
   }
 
   const commonProps = {
@@ -27,10 +29,6 @@ function OrderPage({ cartItems }) {
     ...commonProps,
     btnText: "Next",
     isHidden: true,
-    isVisible: "hide",
-    isVisible2: "hide",
-    isVisible3: "hide",
-    isVisible4: "hide",
   }
 
   const secondStepProps = {
@@ -41,10 +39,8 @@ function OrderPage({ cartItems }) {
     btnText: "Complete order",
     btnText2: "Previous",
     btnClass: "btnClass",
-    page: "/success",
-    isVisible5: "hide",
-    isVisible6: "hide",
-    isVisible7: "hide",
+    page: "/success", //or just?
+    //add here if you want to go to the success page only when all fields are filled. You can add a modal or an alert here.
   }
 
   return (

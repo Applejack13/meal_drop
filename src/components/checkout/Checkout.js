@@ -18,12 +18,8 @@ function Checkout({
   cartItems,
   isHidden,
   isVisible,
-  isVisible2,
-  isVisible3,
-  isVisible4,
-  isVisible5,
-  isVisible6,
-  isVisible7,
+  isWorked,
+  handleInputChange,
 }) {
   return (
     <div className="orderPage__content">
@@ -44,7 +40,8 @@ function Checkout({
               text="First name"
               type="text"
               validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <InputInOrderPage
@@ -53,7 +50,8 @@ function Checkout({
               text="Last name"
               type="text"
               validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible2 ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <InputInOrderPage
@@ -64,7 +62,8 @@ function Checkout({
               validation={(value) =>
                 /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value)
               }
-              isVisible={isVisible3 ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <InputInOrderPage
@@ -73,7 +72,8 @@ function Checkout({
               text="Phone number"
               type="phone"
               validation={(value) => /^\d*$/.test(value)}
-              isVisible={isVisible4 ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <InputInOrderPage
@@ -82,7 +82,8 @@ function Checkout({
               text="Streetname and housenumber"
               type="text"
               validation={(value) => /^[a-zA-Z0-9\s-]+$/.test(value)}
-              isVisible={isVisible5 ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <InputInOrderPage
@@ -91,7 +92,8 @@ function Checkout({
               text="Post code"
               type="text"
               validation={(value) => /^[A-Z\s-]+$/.test(value)}
-              isVisible={isVisible6 ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <InputInOrderPage
@@ -100,7 +102,8 @@ function Checkout({
               text="City"
               type="text"
               validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible7 ? "" : "hide"}
+              isVisible={isVisible}
+              onChange={handleInputChange}
             />
 
             <p className={`${clazz2} smallText`}>
@@ -117,7 +120,7 @@ function Checkout({
               <Button
                 onClick={onClick}
                 text={btnText}
-                className={`${"large-dark btn "}`}
+                className={`btn ${isWorked ? "large-dark" : "large-gray"}`}
                 page={page}
               />
             </div>

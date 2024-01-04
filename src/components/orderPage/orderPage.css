@@ -21,3 +21,7 @@
   transform: rotateX();
   transition: all 0.5s ease;
 }
+
+.hide {
+  display: none;
+}
