@@ -7,7 +7,7 @@ function Banner() {
   return (
     <div className="Banner">
       <h2>
-        <span>Hungry?</span> Find your next meal
+        Hungry?<span> Find your next meal</span>
       </h2>
       <Button
         text="View all restaurants"

@@ -1,38 +1,10 @@
 import "../modal/modalWindow.css"
 import Button from "../button/Button"
+import { calculateTotalPrice, cartItemsToParse } from "../../FirstPage"
 
 function ModalWindow({ text, clazz, page, cartItems }) {
-  let parsedCartItems = []
-
-  if (Array.isArray(cartItems)) {
-    parsedCartItems = cartItems.map((item) => ({
-      ...item,
-      foodPrice: parseFloat(item.foodPrice),
-    }))
-  } else {
-    try {
-      parsedCartItems = JSON.parse(cartItems)
-      parsedCartItems = parsedCartItems.map((item) => ({
-        ...item,
-        foodPrice: parseFloat(item.foodPrice),
-      }))
-    } catch (error) {
-      console.error("Error parsing cart items:", error)
-    }
-  }
-
-  parsedCartItems = parsedCartItems.map((item) => ({
-    ...item,
-    foodPrice: parseFloat(item.foodPrice),
-  }))
-
-  const calculateTotalPrice = () => {
-    let totalPrice = 0
-    parsedCartItems.forEach((item) => {
-      totalPrice += item.foodPrice * item.quantity
-    })
-    return totalPrice
-  }
+  const parsedCartItems = cartItemsToParse(cartItems)
+  const totalPrice = calculateTotalPrice(parsedCartItems)
 
   return (
     <div className="modalContainer">
@@ -51,7 +23,7 @@ function ModalWindow({ text, clazz, page, cartItems }) {
         <p />
         <div className="total1">
           <h2>Total: </h2>
-          <h2>{calculateTotalPrice()} $</h2>
+          <h2>{totalPrice} $</h2>
         </div>
         <div className="total2">
           <Button className={clazz} text={text} page={page} />

@@ -49,6 +49,5 @@
   background: url(../../images/awardWinningRestaurants.png) repeat-y;
   height: 5076px;
   animation: 60s linear 0s infinite normal none running slide;
-  /* display: none; */
   flex: 0.5 1 0%;
 }
