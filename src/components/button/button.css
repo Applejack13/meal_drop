@@ -10,6 +10,18 @@
   cursor: pointer !important;
 }
 
+.money-button {
+  display: inline-flex;
+  padding: 1.7rem 1rem;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  background: url("../../../src/images/payment-1s-1084px.svg");
+  color: #000;
+  cursor: pointer;
+}
+
 .large-gray {
   display: inline-flex !important;
   padding: 1.7rem 1rem !important;

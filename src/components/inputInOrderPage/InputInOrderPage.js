@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "../inputInOrderPage/inputInOrderPage.css"
 
-function InputInOrderPage({
+export default function InputInOrderPage({
   placeholder,
   name,
   text,
@@ -13,17 +13,11 @@ function InputInOrderPage({
   const [inputValue, setInputValue] = useState("")
   const [isValid, setIsValid] = useState(true)
   const [isFocused, setIsFocused] = useState(false)
-  const [fillOutProgress, setFillOutProgress] = useState(1)
 
   const handleInputChange = (e) => {
     const value = e.target.value
     setInputValue(value)
     setIsValid(validation(value))
-    if (value !== "" && validation(value) && fillOutProgress < 2) {
-      setFillOutProgress(fillOutProgress + 1)
-      console.log(`fillOutProgress now is ${fillOutProgress}`)
-      // пока что наиболее приближенный вариант
-    }
   }
 
   const handleInputFocus = () => {
@@ -52,5 +46,3 @@ function InputInOrderPage({
     </div>
   )
 }
-
-export default InputInOrderPage

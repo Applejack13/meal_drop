@@ -17,7 +17,13 @@ function Checkout({
   progress,
   cartItems,
   isHidden,
-  isVisible,
+  isVisible1,
+  isVisible2,
+  isVisible3,
+  isVisible4,
+  isVisible5,
+  isVisible6,
+  isVisible7,
   isWorked,
   handleInputChange,
 }) {
@@ -40,7 +46,7 @@ function Checkout({
               text="First name"
               type="text"
               validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible}
+              isVisible={isVisible1 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -50,7 +56,7 @@ function Checkout({
               text="Last name"
               type="text"
               validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible}
+              isVisible={isVisible2 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -62,7 +68,7 @@ function Checkout({
               validation={(value) =>
                 /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value)
               }
-              isVisible={isVisible}
+              isVisible={isVisible3 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -72,7 +78,7 @@ function Checkout({
               text="Phone number"
               type="phone"
               validation={(value) => /^\d*$/.test(value)}
-              isVisible={isVisible}
+              isVisible={isVisible4 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -82,7 +88,7 @@ function Checkout({
               text="Streetname and housenumber"
               type="text"
               validation={(value) => /^[a-zA-Z0-9\s-]+$/.test(value)}
-              isVisible={isVisible}
+              isVisible={isVisible5 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -92,7 +98,7 @@ function Checkout({
               text="Post code"
               type="text"
               validation={(value) => /^[A-Z\s-]+$/.test(value)}
-              isVisible={isVisible}
+              isVisible={isVisible6 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -102,7 +108,7 @@ function Checkout({
               text="City"
               type="text"
               validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible}
+              isVisible={isVisible7 ? "" : "hide"}
               onChange={handleInputChange}
             />
 
@@ -121,6 +127,7 @@ function Checkout({
                 onClick={onClick}
                 text={btnText}
                 className={`btn ${isWorked ? "large-dark" : "large-gray"}`}
+                // I'll make later how to choose the color of the button
                 page={page}
               />
             </div>

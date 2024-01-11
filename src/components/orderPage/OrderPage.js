@@ -3,7 +3,7 @@ import "../orderPage/orderPage.css"
 import TopHeader from "../topHeader/TopHeader"
 import Checkout from "../checkout/Checkout"
 
-function OrderPage({ cartItems }) {
+export default function OrderPage({ cartItems }) {
   const [step, setStep] = useState(1)
 
   const nextStep = () => {
@@ -20,6 +20,7 @@ function OrderPage({ cartItems }) {
     clazz: "show",
     progress: step === 1 ? "" : "secondStep",
     onClick: step === 1 ? nextStep : prevStep,
+    isWorked: true,
   }
 
   const firstStepProps = {
@@ -29,6 +30,10 @@ function OrderPage({ cartItems }) {
     ...commonProps,
     btnText: "Next",
     isHidden: true,
+    isVisible1: true,
+    isVisible2: true,
+    isVisible3: true,
+    isVisible4: true,
   }
 
   const secondStepProps = {
@@ -39,8 +44,11 @@ function OrderPage({ cartItems }) {
     btnText: "Complete order",
     btnText2: "Previous",
     btnClass: "btnClass",
-    page: "/success", //or just?
-    //add here if you want to go to the success page only when all fields are filled. You can add a modal or an alert here.
+    page: "/success",
+    isHidden: false,
+    isVisible5: true,
+    isVisible6: true,
+    isVisible7: true,
   }
 
   return (
@@ -54,5 +62,3 @@ function OrderPage({ cartItems }) {
     </div>
   )
 }
-
-export default OrderPage

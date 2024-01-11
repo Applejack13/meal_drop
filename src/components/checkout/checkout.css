@@ -2,10 +2,6 @@
   display: none;
 }
 
-.show {
-  display: block;
-}
-
 .orderPage__content {
   display: flex;
 }
