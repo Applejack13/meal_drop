@@ -1,7 +1,8 @@
 import "../foodModalButton/foodModalButton.css"
-import Button from "../button/Button"
+import { Button } from "../button/Button"
 
-function FoodModalButton({ food, foodDescription, sum }) {
+export const FoodModalButton = (props) => {
+  const { food, foodDescription, sum } = props
   return (
     <div className="foodModalButton">
       <div className="nameOfFood">
@@ -15,4 +16,4 @@ function FoodModalButton({ food, foodDescription, sum }) {
   )
 }
 
-export default FoodModalButton
+//  Am I use this?

@@ -1,7 +1,8 @@
 import "./../foodCategory/foodCategory.css"
 import { Link } from "react-router-dom"
 
-function FoodCategory({ img, alt, title, link }) {
+export const FoodCategory = (props) => {
+  const { img, alt, title, link } = props
   return (
     <Link to={link}>
       <div className="FoodCategory">
@@ -11,5 +12,3 @@ function FoodCategory({ img, alt, title, link }) {
     </Link>
   )
 }
-
-export default FoodCategory

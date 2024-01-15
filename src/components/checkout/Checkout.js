@@ -1,32 +1,33 @@
 import "../checkout/checkout.css"
-import Button from "../button/Button"
-import YourOrder from "../yourOrder/YourOrder"
-import InputInOrderPage from "../inputInOrderPage/InputInOrderPage"
+import { Button } from "../button/Button"
+import { YourOrder } from "../yourOrder/YourOrder"
+import { InputInOrderPage } from "../inputInOrderPage/InputInOrderPage"
 
-function Checkout({
-  headerText,
-  step,
-  clazz,
-  clazz2,
-  clazz3,
-  btnText,
-  btnText2,
-  btnClass,
-  page,
-  onClick,
-  progress,
-  cartItems,
-  isHidden,
-  isVisible1,
-  isVisible2,
-  isVisible3,
-  isVisible4,
-  isVisible5,
-  isVisible6,
-  isVisible7,
-  isWorked,
-  handleInputChange,
-}) {
+export const Checkout = (props) => {
+  const {
+    headerText,
+    step,
+    clazz,
+    clazz2,
+    clazz3,
+    btnText,
+    btnText2,
+    btnClass,
+    page,
+    onClick,
+    progress,
+    cartItems,
+    isHidden,
+    isVisible1,
+    isVisible2,
+    isVisible3,
+    isVisible4,
+    isVisible5,
+    isVisible6,
+    isVisible7,
+    isWorked,
+    handleInputChange,
+  } = props
   return (
     <div className="orderPage__content">
       <div className="checkout">
@@ -138,5 +139,3 @@ function Checkout({
     </div>
   )
 }
-
-export default Checkout

@@ -1,8 +1,8 @@
 import "./../footer/footer.css"
-import Logo from "../logo/Logo"
-import LinkInFooter from "../linkInFooter/LinkInFooter"
+import { Logo } from "../logo/Logo"
+import { LinkInFooter } from "../linkInFooter/LinkInFooter"
 
-function Footer() {
+export const Footer = () => {
   return (
     <div className="Footer">
       <div className="footer-container">
@@ -37,5 +37,3 @@ function Footer() {
     </div>
   )
 }
-
-export default Footer

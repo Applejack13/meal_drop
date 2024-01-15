@@ -1,8 +1,9 @@
 import "../modal/modalWindow.css"
-import Button from "../button/Button"
+import { Button } from "../button/Button"
 import { calculateTotalPrice, cartItemsToParse } from "../../FirstPage"
 
-function ModalWindow({ text, clazz, page, cartItems }) {
+export const ModalWindow = (props) => {
+  const { text, clazz, page, cartItems } = props
   const parsedCartItems = cartItemsToParse(cartItems)
   const totalPrice = calculateTotalPrice(parsedCartItems)
 
@@ -32,5 +33,3 @@ function ModalWindow({ text, clazz, page, cartItems }) {
     </div>
   )
 }
-
-export default ModalWindow

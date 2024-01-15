@@ -3,7 +3,8 @@ import BigLogo from "../../images/BigLogoWithoutText.svg"
 import "../logo/logo.css"
 import { Link } from "react-router-dom"
 
-function Logo({ isSmall, link }) {
+export const Logo = (props) => {
+  const { link, isSmall } = props
   return (
     <div className="logo">
       <Link to={link}>
@@ -20,5 +21,3 @@ function Logo({ isSmall, link }) {
     </div>
   )
 }
-
-export default Logo

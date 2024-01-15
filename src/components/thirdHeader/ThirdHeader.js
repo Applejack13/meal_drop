@@ -1,12 +1,8 @@
 import "../thirdHeader/thirdHeader.css"
 
-function ThirdHeader({
-  restaurantName,
-  description,
-  rating,
-  buttons,
-  thirdHeaderClassName,
-}) {
+export const ThirdHeader = (props) => {
+  const { restaurantName, description, rating, buttons, thirdHeaderClassName } =
+    props
   return (
     <div className={`otherStyles ${thirdHeaderClassName}`}>
       <h2>{restaurantName}</h2>
@@ -16,5 +12,3 @@ function ThirdHeader({
     </div>
   )
 }
-
-export default ThirdHeader

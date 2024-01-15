@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react"
 import "../successOrderPage/successOrderPage.css"
-import TopHeader from "../topHeader/TopHeader"
-import SecondHeader from "../secondHeader/SecondHeader"
-import YourOrder from "../yourOrder/YourOrder"
+import { TopHeader } from "../topHeader/TopHeader"
+import { SecondHeader } from "../secondHeader/SecondHeader"
+import { YourOrder } from "../yourOrder/YourOrder"
 import img from "../../images/successPageImg.svg"
 
-function SuccessOrderPage({ cartItems }) {
+export const SuccessOrderPage = ({ cartItems }) => {
   const [deliveryTime, setDeliveryTime] = useState({ hours: 0, minutes: 0 })
 
   useEffect(() => {
     const timeToDelivery = new Date()
-    const hours = timeToDelivery.getHours() + 1 // fix it later
+    const hours = timeToDelivery.getHours()
     const minutes = timeToDelivery.getMinutes()
     setDeliveryTime({ hours, minutes })
   }, [])
@@ -22,7 +22,10 @@ function SuccessOrderPage({ cartItems }) {
       <div className="timeAndOrder">
         <h4>Estimated delivery</h4>
         <h2>
-          {deliveryTime.hours}:{deliveryTime.minutes} today
+          {deliveryTime.hours === 23
+            ? (deliveryTime.hours = 0)
+            : deliveryTime.hours}
+          :{deliveryTime.minutes} today
         </h2>
         <div className="yourOrderWrapper">
           <YourOrder cartItems={cartItems} />
@@ -34,5 +37,3 @@ function SuccessOrderPage({ cartItems }) {
     </div>
   )
 }
-
-export default SuccessOrderPage

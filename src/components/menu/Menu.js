@@ -1,9 +1,9 @@
 import "../menu/menu.css"
-import TopHeader from "../topHeader/To1pHeader"
-import Footer from "../footer/Footer"
-import SecondHeader from "../secondHeader/SecondHeader"
+import { TopHeader } from "../topHeader/To1pHeader"
+import { Footer } from "../footer/Footer"
+import { SecondHeader } from "../secondHeader/SecondHeader"
 
-function Menu() {
+export const Menu = () => {
   return (
     <div className="menu">
       <TopHeader />
@@ -14,4 +14,4 @@ function Menu() {
   )
 }
 
-export default Menu
+// Am I use this?

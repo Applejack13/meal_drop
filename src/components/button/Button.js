@@ -1,19 +1,20 @@
 import "../button/button.css"
 import { Link } from "react-router-dom"
 
-function Button({
-  text,
-  page,
-  className,
-  img,
-  style,
-  onClick,
-  foodName,
-  foodDescription,
-  foodPrice,
-}) {
+export const Button = (props) => {
+  const {
+    text,
+    page,
+    className,
+    img,
+    style,
+    onClick,
+    foodName,
+    foodDescription,
+    foodPrice,
+  } = props
   return (
-    <>
+    <div>
       <Link to={page}>
         <button
           className={`button ${className}`}
@@ -27,8 +28,6 @@ function Button({
           <div>{foodPrice}</div>
         </button>
       </Link>
-    </>
+    </div>
   )
 }
-
-export default Button

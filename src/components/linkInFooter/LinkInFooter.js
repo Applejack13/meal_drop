@@ -1,7 +1,8 @@
 import "../linkInFooter/linkInFooter.css"
 import { Link } from "react-router-dom"
 
-function LinkInFooter({ link, text }) {
+export const LinkInFooter = (props) => {
+  const { link, text } = props
   return (
     <div className="Link-in-footer">
       <li>
@@ -10,5 +11,3 @@ function LinkInFooter({ link, text }) {
     </div>
   )
 }
-
-export default LinkInFooter

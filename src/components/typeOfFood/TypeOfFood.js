@@ -1,9 +1,10 @@
-import TopHeader from "../topHeader/TopHeader"
-import SecondHeader from "../secondHeader/SecondHeader"
-import Footer from "../footer/Footer"
+import { TopHeader } from "../topHeader/TopHeader"
+import { SecondHeader } from "../secondHeader/SecondHeader"
+import { Footer } from "../footer/Footer"
 import "../typeOfFood/typeOfFood.css"
 
-function TypeOfFood({ text, className }) {
+export const TypeOfFood = (props) => {
+  const { className, text } = props
   return (
     <>
       <TopHeader />
@@ -12,5 +13,3 @@ function TypeOfFood({ text, className }) {
     </>
   )
 }
-
-export default TypeOfFood

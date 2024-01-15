@@ -1,15 +1,14 @@
 import "./../categories/categories.css"
-import FoodCategory from "../foodCategory/FoodCategory"
+import { FoodCategory } from "../foodCategory/FoodCategory"
 import img1 from "../../images/food1.png"
 import img2 from "../../images/food2.png"
 import img3 from "../../images/food3.png"
 import img4 from "../../images/food4.png"
 import img5 from "../../images/food5.png"
 import img6 from "../../images/food6.png"
-import Button from "../button/Button"
-import "../button/button.css"
+import { Button } from "../button/Button"
 
-function Categories() {
+export const Categories = () => {
   return (
     <div className="CategoriesWrapper">
       <div className="textContainer">
@@ -41,5 +40,3 @@ function Categories() {
     </div>
   )
 }
-
-export default Categories

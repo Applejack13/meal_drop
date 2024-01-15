@@ -1,20 +1,22 @@
 import "../foodButton/foodButton.css"
-import Button from "../button/Button"
+import { Button } from "../button/Button"
 import ReactModal from "react-modal"
 import { useState } from "react"
-import ModalForOrder from "../modalForOrder/ModalForOrder"
+import { ModalForOrder } from "../modalForOrder/ModalForOrder"
 
-function FoodButton({
-  foodName,
-  foodDescription,
-  foodPrice,
-  addToCart,
-  id,
-  count,
-  increment,
-  decrement,
-  setCount,
-}) {
+export const FoodButton = (props) => {
+  const {
+    foodName,
+    foodDescription,
+    foodPrice,
+    addToCart,
+    id,
+    count,
+    increment,
+    decrement,
+    setCount,
+  } = props
+
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   const openModal = () => {

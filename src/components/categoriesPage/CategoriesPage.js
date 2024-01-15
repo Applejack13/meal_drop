@@ -1,10 +1,10 @@
 import "../categoriesPage/categoriesPage.css"
-import TopHeader from "../topHeader/TopHeader"
-import SecondHeader from "../secondHeader/SecondHeader"
-import Footer from "../footer/Footer"
-import CategoriesBody from "../categoriesBody/CategoriesBody"
+import { TopHeader } from "../topHeader/TopHeader"
+import { SecondHeader } from "../secondHeader/SecondHeader"
+import { Footer } from "../footer/Footer"
+import { CategoriesBody } from "../categoriesBody/CategoriesBody"
 
-function CategoriesPage() {
+export const CategoriesPage = () => {
   return (
     <div className="categoriesPage">
       <TopHeader />
@@ -14,5 +14,3 @@ function CategoriesPage() {
     </div>
   )
 }
-
-export default CategoriesPage

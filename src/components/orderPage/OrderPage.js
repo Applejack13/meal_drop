@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import "../orderPage/orderPage.css"
-import TopHeader from "../topHeader/TopHeader"
-import Checkout from "../checkout/Checkout"
+import { TopHeader } from "../topHeader/TopHeader"
+import { Checkout } from "../checkout/Checkout"
 
-export default function OrderPage({ cartItems }) {
+export const OrderPage = ({ cartItems }) => {
   const [step, setStep] = useState(1)
 
   const nextStep = () => {

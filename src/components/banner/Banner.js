@@ -1,6 +1,6 @@
 import "../banner/banner.css"
 import ladies from "../../images/BothLadies.svg"
-import Button from "../button/Button"
+import { Button } from "../button/Button"
 import "../button/button.css"
 
 function Banner() {

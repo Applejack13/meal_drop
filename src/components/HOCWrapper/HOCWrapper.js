@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const HOCWrapper = (WrappedComponent) => {
+export const HOCWrapper = (WrappedComponent) => {
   return function HOCWrapper(props) {
     const [cartItems, setCartItems] = useState([])
     const [count, setCount] = useState(1)
@@ -79,5 +79,3 @@ const HOCWrapper = (WrappedComponent) => {
     )
   }
 }
-
-export default HOCWrapper

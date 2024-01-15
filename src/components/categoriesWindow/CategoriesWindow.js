@@ -1,6 +1,7 @@
 import "../categoriesWindow/categoriesWindow.css"
 
-function CategoriesWindow({ img, title }) {
+export const CategoriesWindow = (props) => {
+  const { img, title } = props
   return (
     <div className="categoriesWindow">
       <div className="categoriesWindowContainer">
@@ -10,5 +11,3 @@ function CategoriesWindow({ img, title }) {
     </div>
   )
 }
-
-export default CategoriesWindow

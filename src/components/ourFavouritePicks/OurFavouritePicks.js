@@ -3,39 +3,14 @@ import image2 from "../../images/RestaurantForCard1.webp"
 import image3 from "../../images/RestaurantForCard2.jpeg"
 import image4 from "../../images/RestaurantForCard3.avif"
 import closedRestaurant from "../../images/closedRestaurant.jpg"
-import CarouselSlider from "../carousel/Carousel"
+import { CarouselSlider } from "../carousel/Carousel"
 
-function OurFavouritePicks({
-  addToCart,
-  decrement,
-  increment,
-  setCount,
-  count,
-  cartItems,
-}) {
+export const OurFavouritePicks = (props) => {
+  const { addToCart, decrement, increment, setCount, count, cartItems } = props
   const customStyles = {
     carouselContainer: "carouselContainer",
     carouselItem: "carouselItem",
     customText: "customText",
-  }
-
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
   }
 
   const carouselItems = [
@@ -130,15 +105,9 @@ function OurFavouritePicks({
         items={carouselItems}
         customStyles={customStyles}
         customText={customStyles.customText}
-        swipeable={true}
-        draggable={true}
         showDots={false}
-        responsive={responsive}
         ssr={false}
         infinite={false}
-        autoPlay={false}
-        autoPlaySpeed={1000}
-        keyBoardControl={true}
         customTransition="transform 400ms ease-in-out"
         transitionDuration={500}
         containerClass="carousel-container"
@@ -147,5 +116,3 @@ function OurFavouritePicks({
     </div>
   )
 }
-
-export default OurFavouritePicks

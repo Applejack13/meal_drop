@@ -1,18 +1,20 @@
 import "../modalForOrder/modalForOrder.css"
-import Button from "../button/Button"
+import { Button } from "../button/Button"
 
-function ModalForOrder({
-  foodName,
-  foodDescription,
-  foodPrice,
-  onClick,
-  addToCart,
-  sum,
-  increment,
-  decrement,
-  count,
-}) {
+export const ModalForOrder = (props) => {
+  let {
+    foodName,
+    foodDescription,
+    foodPrice,
+    onClick,
+    addToCart,
+    sum,
+    increment,
+    decrement,
+    count,
+  } = props
   sum = parseFloat(foodPrice) * count
+  // оставить let?
 
   return (
     <div className="mfoContainer">
@@ -42,5 +44,3 @@ function ModalForOrder({
     </div>
   )
 }
-
-export default ModalForOrder

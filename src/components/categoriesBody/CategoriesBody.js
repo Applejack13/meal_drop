@@ -1,5 +1,5 @@
 import "../categoriesBody/categoriesBody.css"
-import CategoriesWindow from "../categoriesWindow/CategoriesWindow"
+import { CategoriesWindow } from "../categoriesWindow/CategoriesWindow"
 import pizza from "../../images/pizza1.png"
 import burger from "../../images/burgers1.png"
 import dessert from "../../images/desserts1.png"
@@ -8,7 +8,7 @@ import asian from "../../images/asian1.png"
 import comfort from "../../images/comfort1.png"
 import { Link } from "react-router-dom"
 
-function CategoriesBody() {
+export const CategoriesBody = () => {
   return (
     <div className="categoriesBody">
       <div className="categoriesBodyContainer1">
@@ -46,5 +46,3 @@ function CategoriesBody() {
     </div>
   )
 }
-
-export default CategoriesBody

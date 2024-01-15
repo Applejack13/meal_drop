@@ -1,7 +1,7 @@
 import "../allRestaurants/allRestaurants.css"
-import TopHeader from "../topHeader/TopHeader"
-import Footer from "../footer/Footer"
-import ExchangeRates from "../exchangeRates/ExchangeRates"
+import { TopHeader } from "../topHeader/TopHeader"
+import { Footer } from "../footer/Footer"
+import { ExchangeRates } from "../exchangeRates/ExchangeRates"
 
 function AllRestaurants() {
   return (

@@ -1,15 +1,16 @@
 import "../topHeader/topHeader.css"
 import "../modal/modalWindow.css"
 import shoppingCart from "../../images/shopping-cart 2.svg"
-import Logo from "../logo/Logo"
-import Button from "../button/Button"
+import { Logo } from "../logo/Logo"
+import { Button } from "../button/Button"
 import React, { useState } from "react"
 import ReactModal from "react-modal"
-import ModalWindow from "../modal/ModalWindow"
+import { ModalWindow } from "../modal/ModalWindow"
 
 ReactModal.setAppElement("#root")
 
-function TopHeader({ cartItems, isVisible }) {
+export const TopHeader = (props) => {
+  const { cartItems, isVisible } = props
   const [isToggleOn, setIsToggleOn] = useState(true)
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -89,5 +90,3 @@ function TopHeader({ cartItems, isVisible }) {
     </div>
   )
 }
-
-export default TopHeader

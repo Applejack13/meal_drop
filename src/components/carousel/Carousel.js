@@ -4,18 +4,19 @@ import "react-multi-carousel/lib/styles.css"
 import "../carousel/carousel.css"
 import { Link } from "react-router-dom"
 
-function CarouselSlider({
-  links,
-  items,
-  customStyles,
-  cartItems,
-  decrement,
-  increment,
-  setCount,
-  count,
-  addToCart,
-  ...settings
-}) {
+export const CarouselSlider = (props) => {
+  const {
+    links,
+    items,
+    customStyles,
+    cartItems,
+    decrement,
+    increment,
+    setCount,
+    count,
+    addToCart,
+    ...settings
+  } = props
   return (
     <>
       <Carousel {...settings}>
@@ -36,5 +37,3 @@ function CarouselSlider({
     </>
   )
 }
-
-export default CarouselSlider
