@@ -24,7 +24,7 @@ export const SuccessOrderPage = ({ cartItems }) => {
         <h2>
           {deliveryTime.hours === 23
             ? (deliveryTime.hours = 0)
-            : deliveryTime.hours}
+            : deliveryTime.hours + 1}
           :{deliveryTime.minutes} today
         </h2>
         <div className="yourOrderWrapper">
