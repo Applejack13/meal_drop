@@ -1,7 +1,7 @@
 import "./../awardWinningBanner/awardWinningBanner.css"
 import { Button } from "../button/Button"
 
-function AwardWinningBanner() {
+export const AwardWinningBanner = () => {
   return (
     <div className="AwardWinningBanner">
       <div className="awardWinningBannerContainer">
@@ -19,5 +19,3 @@ function AwardWinningBanner() {
     </div>
   )
 }
-
-export default AwardWinningBanner

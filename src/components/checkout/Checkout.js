@@ -1,7 +1,8 @@
-import "../checkout/checkout.css"
 import { Button } from "../button/Button"
 import { YourOrder } from "../yourOrder/YourOrder"
 import { InputInOrderPage } from "../inputInOrderPage/InputInOrderPage"
+
+import "../checkout/checkout.css"
 
 export const Checkout = (props) => {
   const {
@@ -139,3 +140,4 @@ export const Checkout = (props) => {
     </div>
   )
 }
+// 142

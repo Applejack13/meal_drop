@@ -3,7 +3,7 @@ import { TopHeader } from "../topHeader/TopHeader"
 import { Footer } from "../footer/Footer"
 import { ExchangeRates } from "../exchangeRates/ExchangeRates"
 
-function AllRestaurants() {
+export const AllRestaurants = () => {
   return (
     <div className="allRestaurants">
       <TopHeader />
@@ -12,5 +12,3 @@ function AllRestaurants() {
     </div>
   )
 }
-
-export default AllRestaurants

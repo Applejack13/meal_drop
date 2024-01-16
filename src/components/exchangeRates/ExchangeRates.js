@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react"
+
+// import TopHeader from "./allPages"
+
 import "./exchangeRates.css"
 
 export const ExchangeRates = () => {

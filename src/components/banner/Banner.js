@@ -3,7 +3,7 @@ import ladies from "../../images/BothLadies.svg"
 import { Button } from "../button/Button"
 import "../button/button.css"
 
-function Banner() {
+export const Banner = () => {
   return (
     <div className="Banner">
       <h2>
@@ -20,5 +20,3 @@ function Banner() {
     </div>
   )
 }
-
-export default Banner

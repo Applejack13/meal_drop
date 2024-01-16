@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react"
-import "../successOrderPage/successOrderPage.css"
+
 import { TopHeader } from "../topHeader/TopHeader"
 import { SecondHeader } from "../secondHeader/SecondHeader"
 import { YourOrder } from "../yourOrder/YourOrder"
+
 import img from "../../images/successPageImg.svg"
+
+import "../successOrderPage/successOrderPage.css"
 
 export const SuccessOrderPage = ({ cartItems }) => {
   const [deliveryTime, setDeliveryTime] = useState({ hours: 0, minutes: 0 })

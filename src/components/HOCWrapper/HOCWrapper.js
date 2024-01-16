@@ -25,6 +25,7 @@ export const HOCWrapper = (WrappedComponent) => {
 
     const handleBeforeUnload = () => {
       // Удаляем корзину из localStorage при обновлении страницы
+      // Сделать так, чтоб корзина удалялась, когда пользователь покинул страницу
       localStorage.removeItem("cartItems")
     }
 

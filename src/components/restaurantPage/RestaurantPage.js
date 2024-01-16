@@ -1,9 +1,10 @@
-import "../restaurantPage/restaurantPage.css"
 import { TopHeader } from "../topHeader/TopHeader"
 import { Footer } from "../footer/Footer"
 import { SecondHeader } from "../secondHeader/SecondHeader"
 import { RestaurantBody } from "../restaurantBody/RestaurantBody"
 import { ThirdHeader } from "../thirdHeader/ThirdHeader"
+
+import "../restaurantPage/restaurantPage.css"
 
 export const RestaurantPage = (props) => {
   const {

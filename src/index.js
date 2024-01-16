@@ -1,15 +1,19 @@
 import React, { useEffect } from "react"
-import ReactDOM from "react-dom/client"
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
+import ReactDOM from "react-dom/client"
+
+import { FirstPage } from "./FirstPage"
+import {
+  OrderPage,
+  SuccessOrderPage,
+  TypeOfFood,
+  RestaurantPage,
+  CategoriesPage,
+  HOCWrapper,
+  AllRestaurants,
+} from "./allPages"
+
 import "./index.css"
-import AllRestaurants from "./components/allRestaurants/AllRestaurants"
-import { CategoriesPage } from "./components/categoriesPage/CategoriesPage"
-import FirstPage from "./FirstPage"
-import { HOCWrapper } from "./components/HOCWrapper/HOCWrapper"
-import { OrderPage } from "./components/orderPage/OrderPage"
-import { RestaurantPage } from "./components/restaurantPage/RestaurantPage"
-import { SuccessOrderPage } from "./components/successOrderPage/SuccessOrderPage"
-import { TypeOfFood } from "./components/typeOfFood/TypeOfFood"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
