@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 import SmallLogo from "../../images/SmallLogoWithText.svg"
 import BigLogo from "../../images/BigLogoWithoutText.svg"
+
 import "../logo/logo.css"
-import { Link } from "react-router-dom"
 
 export function Logo(props) {
   const { link, isSmall } = props

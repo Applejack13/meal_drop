@@ -1,5 +1,3 @@
-import "../secondHeader/secondHeader.css"
-
 export function SecondHeader({ className, text }) {
   return (
     <div className={className}>

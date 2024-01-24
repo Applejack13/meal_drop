@@ -1,5 +1,4 @@
-import { CarouselSlider } from "../carousel/Carousel"
-import { carouselItems } from "../carousel/CarouselItems"
+import { CarouselSlider, CarouselItems } from "../../allPages"
 
 import "./../ourFavouritePicks/ourFavouritePicks.css"
 
@@ -35,8 +34,8 @@ export function OurFavouritePicks() {
         <h2>Our favourite picks</h2>
       </div>
       <CarouselSlider
-        links={carouselItems.map((item) => item.link)}
-        items={carouselItems}
+        links={CarouselItems.map((item) => item.link)}
+        items={CarouselItems}
         customStyles={customStyles}
         customText={customStyles.customText}
         showDots={false}

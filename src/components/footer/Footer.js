@@ -1,6 +1,6 @@
+import { Logo, LinkInFooter } from "../../allPages"
+
 import "./../footer/footer.css"
-import { Logo } from "../logo/Logo"
-import { LinkInFooter } from "../linkInFooter/LinkInFooter"
 
 export function Footer() {
   return (

@@ -1,5 +1,6 @@
-import "./../awardWinningBanner/awardWinningBanner.css"
 import { Button } from "../button/Button"
+
+import "./../awardWinningBanner/awardWinningBanner.css"
 
 export function AwardWinningBanner() {
   return (

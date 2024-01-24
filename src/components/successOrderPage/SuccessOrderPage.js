@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import { TopHeader } from "../topHeader/TopHeader"
-import { SecondHeader } from "../secondHeader/SecondHeader"
-import { YourOrder } from "../yourOrder/YourOrder"
+import { SecondHeader, YourOrder } from "../../allPages"
 
 import img from "../../images/successPageImg.svg"
 

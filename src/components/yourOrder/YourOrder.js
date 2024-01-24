@@ -1,5 +1,6 @@
+import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart"
+
 import "../yourOrder/yourOrder.css"
-import { calculateTotalPrice, cartItemsToParse } from "../../FirstPage"
 
 export function YourOrder({ cartItems }) {
   const parsedCartItems = cartItemsToParse(cartItems)

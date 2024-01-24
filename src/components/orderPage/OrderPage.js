@@ -1,7 +1,7 @@
 import React, { useState } from "react"
+
+import { TopHeader, Checkout } from "../../allPages"
 import "../orderPage/orderPage.css"
-import { TopHeader } from "../topHeader/TopHeader"
-import { Checkout } from "../checkout/Checkout"
 
 export function OrderPage({ cartItems }) {
   const [step, setStep] = useState(1)

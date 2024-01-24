@@ -1,6 +1,4 @@
-import { Button } from "../button/Button"
-import { YourOrder } from "../yourOrder/YourOrder"
-import { InputInOrderPage } from "../inputInOrderPage/InputInOrderPage"
+import { Button, YourOrder, InputInOrderPage } from "../../allPages"
 
 import "../checkout/checkout.css"
 

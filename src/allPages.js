@@ -4,6 +4,7 @@ import { Banner } from "./components/banner/Banner"
 import { Button } from "./components/button/Button"
 import { CarouselSlider } from "./components/carousel/Carousel"
 import { Categories } from "./components/categories/Categories"
+import { CarouselItems } from "./components/carousel/CarouselItems"
 import { CategoriesBody } from "./components/categoriesBody/CategoriesBody"
 import { CategoriesPage } from "./components/categoriesPage/CategoriesPage"
 import { CategoriesWindow } from "./components/categoriesWindow/CategoriesWindow"
@@ -31,8 +32,11 @@ import { TypeOfFood } from "./components/typeOfFood/TypeOfFood"
 import { YourOrder } from "./components/yourOrder/YourOrder"
 import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary"
 import { Loading } from "./components/loading/Loading"
+import { Main } from "./Main"
+import { Products } from "./components/restaurantBody/Products"
 
 export {
+  Main,
   Loading,
   FirstPage,
   OrderPage,
@@ -66,4 +70,6 @@ export {
   ThirdHeader,
   RestaurantBody,
   ErrorBoundary,
+  CarouselItems,
+  Products,
 }

@@ -3,7 +3,7 @@ import image3 from "../../images/RestaurantForCard2.jpeg"
 import image4 from "../../images/RestaurantForCard3.avif"
 import closedRestaurant from "../../images/closedRestaurant.jpg"
 
-export const carouselItems = [
+export const CarouselItems = [
   {
     image: image4,
     alt: "",

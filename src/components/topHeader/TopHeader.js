@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import ReactModal from "react-modal"
 
-import { Logo } from "../logo/Logo"
-import { Button } from "../button/Button"
-import { ModalWindow } from "../modal/ModalWindow"
+import { Logo, Button, ModalWindow } from "../../allPages"
 
 import shoppingCart from "../../images/shopping-cart 2.svg"
 

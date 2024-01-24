@@ -1,5 +1,6 @@
 import { Button } from "../button/Button"
-import { calculateTotalPrice, cartItemsToParse } from "../../FirstPage"
+
+import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart"
 
 import "../modal/modalWindow.css"
 

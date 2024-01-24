@@ -1,8 +1,10 @@
-import { TopHeader } from "../topHeader/TopHeader"
-import { Footer } from "../footer/Footer"
-import { SecondHeader } from "../secondHeader/SecondHeader"
-import { RestaurantBody } from "../restaurantBody/RestaurantBody"
-import { ThirdHeader } from "../thirdHeader/ThirdHeader"
+import {
+  TopHeader,
+  SecondHeader,
+  ThirdHeader,
+  Footer,
+  RestaurantBody,
+} from "../../allPages"
 
 import "../restaurantPage/restaurantPage.css"
 export function RestaurantPage(props) {

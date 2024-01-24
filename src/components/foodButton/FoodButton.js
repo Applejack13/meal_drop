@@ -1,8 +1,10 @@
-import "../foodButton/foodButton.css"
-import { Button } from "../button/Button"
-import ReactModal from "react-modal"
 import { useState } from "react"
-import { ModalForOrder } from "../modalForOrder/ModalForOrder"
+
+import ReactModal from "react-modal"
+
+import { Button, ModalForOrder } from "../../allPages"
+
+import "../foodButton/foodButton.css"
 
 export function FoodButton(props) {
   const {

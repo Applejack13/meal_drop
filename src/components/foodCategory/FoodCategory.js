@@ -1,5 +1,6 @@
-import "./../foodCategory/foodCategory.css"
 import { Link } from "react-router-dom"
+
+import "./../foodCategory/foodCategory.css"
 
 export function FoodCategory(props) {
   const { img, alt, title, link } = props

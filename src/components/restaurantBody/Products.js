@@ -1,4 +1,4 @@
-export const products = [
+export const Products = [
   {
     foodName: "Cheeseburger",
     foodDescription: "Nice grilled burger with cheese",

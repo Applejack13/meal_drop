@@ -1,8 +1,5 @@
 import "../categoriesPage/categoriesPage.css"
-import { TopHeader } from "../topHeader/TopHeader"
-import { SecondHeader } from "../secondHeader/SecondHeader"
-import { Footer } from "../footer/Footer"
-import { CategoriesBody } from "../categoriesBody/CategoriesBody"
+import { TopHeader, SecondHeader, Footer, CategoriesBody } from "../../allPages"
 
 export function CategoriesPage() {
   return (

@@ -1,7 +1,8 @@
-import "../banner/banner.css"
+import { Button } from "../../allPages"
+
 import ladies from "../../images/BothLadies.svg"
-import { Button } from "../button/Button"
-import "../button/button.css"
+
+import "../banner/banner.css"
 
 export function Banner() {
   return (

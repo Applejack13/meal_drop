@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { CategoriesWindow } from "../categoriesWindow/CategoriesWindow"
+import { CategoriesWindow } from "../../allPages"
 
 import pizza from "../../images/pizza1.png"
 import burger from "../../images/burgers1.png"

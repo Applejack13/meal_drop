@@ -1,5 +1,4 @@
-import { FoodButton } from "../foodButton/FoodButton"
-import { products } from "../restaurantBody/Products"
+import { FoodButton, Products } from "../../allPages"
 
 import "../restaurantBody/restaurantBody.css"
 
@@ -26,11 +25,11 @@ export function RestaurantBody(props) {
   return (
     <div className="restaurantBody">
       <h2>To eat</h2>
-      <div className="toEat">{renderFoodButtons(products.slice(0, 3))}</div>
+      <div className="toEat">{renderFoodButtons(Products.slice(0, 3))}</div>
       <h2>Dessert</h2>
-      <div className="dessert">{renderFoodButtons(products.slice(3, 4))}</div>
+      <div className="dessert">{renderFoodButtons(Products.slice(3, 4))}</div>
       <h2>To drink</h2>
-      <div className="toDrink">{renderFoodButtons(products.slice(4))}</div>
+      <div className="toDrink">{renderFoodButtons(Products.slice(4))}</div>
     </div>
   )
 }

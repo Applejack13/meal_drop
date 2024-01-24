@@ -1,5 +1,6 @@
-import "../modalForOrder/modalForOrder.css"
 import { Button } from "../button/Button"
+
+import "../modalForOrder/modalForOrder.css"
 
 export function ModalForOrder(props) {
   let {
