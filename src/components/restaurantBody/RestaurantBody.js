@@ -1,9 +1,9 @@
-import FoodButton from "../foodButton/FoodButton"
+import { FoodButton } from "../foodButton/FoodButton"
 import { products } from "../restaurantBody/Products"
 
 import "../restaurantBody/restaurantBody.css"
 
-export const RestaurantBody = (props) => {
+export function RestaurantBody(props) {
   const { addToCart, count, increment, decrement, setCount } = props
 
   const renderFoodButtons = (foodCategory) => {

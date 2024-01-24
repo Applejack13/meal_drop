@@ -1,7 +1,7 @@
 import "../button/button.css"
 import { Link } from "react-router-dom"
 
-export const Button = (props) => {
+export function Button(props) {
   const {
     text,
     page,

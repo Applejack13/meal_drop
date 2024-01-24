@@ -1,6 +1,6 @@
 import "../thirdHeader/thirdHeader.css"
 
-export const ThirdHeader = (props) => {
+export function ThirdHeader(props) {
   const { restaurantName, description, rating, buttons, thirdHeaderClassName } =
     props
   return (

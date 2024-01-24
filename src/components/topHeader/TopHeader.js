@@ -11,7 +11,7 @@ import "../topHeader/topHeader.css"
 
 ReactModal.setAppElement("#root")
 
-export const TopHeader = (props) => {
+export function TopHeader(props) {
   const { cartItems, isVisible } = props
   const [isToggleOn, setIsToggleOn] = useState(true)
   const [modalIsOpen, setModalIsOpen] = useState(false)

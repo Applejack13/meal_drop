@@ -5,8 +5,7 @@ import { RestaurantBody } from "../restaurantBody/RestaurantBody"
 import { ThirdHeader } from "../thirdHeader/ThirdHeader"
 
 import "../restaurantPage/restaurantPage.css"
-
-export const RestaurantPage = (props) => {
+export function RestaurantPage(props) {
   const {
     restaurantClass,
     restaurantName,

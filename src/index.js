@@ -2,8 +2,8 @@ import React, { useEffect } from "react"
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import ReactDOM from "react-dom/client"
 
-import { FirstPage } from "./FirstPage"
 import {
+  FirstPage,
   OrderPage,
   SuccessOrderPage,
   TypeOfFood,
@@ -35,6 +35,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<WrappedFirstPage />} />
         <Route path="/allRestaurants" element={<AllRestaurants />} />

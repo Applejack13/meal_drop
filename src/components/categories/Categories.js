@@ -8,7 +8,7 @@ import img5 from "../../images/food5.png"
 import img6 from "../../images/food6.png"
 import { Button } from "../button/Button"
 
-export const Categories = () => {
+export function Categories() {
   return (
     <div className="CategoriesWrapper">
       <div className="textContainer">

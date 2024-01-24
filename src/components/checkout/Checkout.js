@@ -4,7 +4,7 @@ import { InputInOrderPage } from "../inputInOrderPage/InputInOrderPage"
 
 import "../checkout/checkout.css"
 
-export const Checkout = (props) => {
+export function Checkout(props) {
   const {
     headerText,
     step,

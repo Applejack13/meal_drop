@@ -8,7 +8,7 @@ import img from "../../images/successPageImg.svg"
 
 import "../successOrderPage/successOrderPage.css"
 
-export const SuccessOrderPage = ({ cartItems }) => {
+export function SuccessOrderPage({ cartItems }) {
   const [deliveryTime, setDeliveryTime] = useState({ hours: 0, minutes: 0 })
 
   useEffect(() => {

@@ -29,8 +29,11 @@ import { ThirdHeader } from "./components/thirdHeader/ThirdHeader"
 import { TopHeader } from "./components/topHeader/TopHeader"
 import { TypeOfFood } from "./components/typeOfFood/TypeOfFood"
 import { YourOrder } from "./components/yourOrder/YourOrder"
+import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary"
+import { Loading } from "./components/loading/Loading"
 
 export {
+  Loading,
   FirstPage,
   OrderPage,
   SuccessOrderPage,
@@ -62,4 +65,5 @@ export {
   OurFavouritePicks,
   ThirdHeader,
   RestaurantBody,
+  ErrorBoundary,
 }

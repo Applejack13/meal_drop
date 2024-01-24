@@ -1,13 +1,20 @@
-import "../allRestaurants/allRestaurants.css"
-import { TopHeader } from "../topHeader/TopHeader"
-import { Footer } from "../footer/Footer"
-import { ExchangeRates } from "../exchangeRates/ExchangeRates"
+import {
+  ExchangeRates,
+  Footer,
+  TopHeader,
+  ErrorBoundary,
+  Loading,
+} from "../../allPages"
 
-export const AllRestaurants = () => {
+import "../allRestaurants/allRestaurants.css"
+
+export function AllRestaurants() {
   return (
     <div className="allRestaurants">
       <TopHeader />
       <ExchangeRates />
+      <ErrorBoundary />
+      <Loading />
       <Footer />
     </div>
   )

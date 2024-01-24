@@ -3,7 +3,7 @@ import ladies from "../../images/BothLadies.svg"
 import { Button } from "../button/Button"
 import "../button/button.css"
 
-export const Banner = () => {
+export function Banner() {
   return (
     <div className="Banner">
       <h2>

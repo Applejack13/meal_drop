@@ -4,7 +4,7 @@ import ReactModal from "react-modal"
 import { useState } from "react"
 import { ModalForOrder } from "../modalForOrder/ModalForOrder"
 
-export const FoodButton = (props) => {
+export function FoodButton(props) {
   const {
     foodName,
     foodDescription,
@@ -79,5 +79,3 @@ export const FoodButton = (props) => {
     </div>
   )
 }
-
-export default FoodButton

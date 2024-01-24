@@ -4,7 +4,7 @@ import { SecondHeader } from "../secondHeader/SecondHeader"
 import { Footer } from "../footer/Footer"
 import { CategoriesBody } from "../categoriesBody/CategoriesBody"
 
-export const CategoriesPage = () => {
+export function CategoriesPage() {
   return (
     <div className="categoriesPage">
       <TopHeader />

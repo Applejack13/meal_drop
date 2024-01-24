@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export const HOCWrapper = (WrappedComponent) => {
+export function HOCWrapper(WrappedComponent) {
   return function HOCWrapper(props) {
     const [cartItems, setCartItems] = useState([])
     const [count, setCount] = useState(1)

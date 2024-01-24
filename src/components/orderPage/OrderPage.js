@@ -3,7 +3,7 @@ import "../orderPage/orderPage.css"
 import { TopHeader } from "../topHeader/TopHeader"
 import { Checkout } from "../checkout/Checkout"
 
-export const OrderPage = ({ cartItems }) => {
+export function OrderPage({ cartItems }) {
   const [step, setStep] = useState(1)
 
   const nextStep = () => {

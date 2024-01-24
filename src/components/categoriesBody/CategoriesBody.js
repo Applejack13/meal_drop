@@ -1,14 +1,17 @@
-import "../categoriesBody/categoriesBody.css"
+import { Link } from "react-router-dom"
+
 import { CategoriesWindow } from "../categoriesWindow/CategoriesWindow"
+
 import pizza from "../../images/pizza1.png"
 import burger from "../../images/burgers1.png"
 import dessert from "../../images/desserts1.png"
 import sushi from "../../images/sushi1.png"
 import asian from "../../images/asian1.png"
 import comfort from "../../images/comfort1.png"
-import { Link } from "react-router-dom"
 
-export const CategoriesBody = () => {
+import "../categoriesBody/categoriesBody.css"
+
+export function CategoriesBody() {
   return (
     <div className="categoriesBody">
       <div className="categoriesBodyContainer1">

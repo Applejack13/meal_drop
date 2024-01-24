@@ -3,7 +3,7 @@ import BigLogo from "../../images/BigLogoWithoutText.svg"
 import "../logo/logo.css"
 import { Link } from "react-router-dom"
 
-export const Logo = (props) => {
+export function Logo(props) {
   const { link, isSmall } = props
   return (
     <div className="logo">

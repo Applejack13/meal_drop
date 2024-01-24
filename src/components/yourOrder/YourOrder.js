@@ -1,7 +1,7 @@
 import "../yourOrder/yourOrder.css"
 import { calculateTotalPrice, cartItemsToParse } from "../../FirstPage"
 
-export const YourOrder = ({ cartItems }) => {
+export function YourOrder({ cartItems }) {
   const parsedCartItems = cartItemsToParse(cartItems)
   const totalPrice = calculateTotalPrice(parsedCartItems)
 

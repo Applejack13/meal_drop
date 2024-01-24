@@ -3,7 +3,7 @@ import { SecondHeader } from "../secondHeader/SecondHeader"
 import { Footer } from "../footer/Footer"
 import "../typeOfFood/typeOfFood.css"
 
-export const TypeOfFood = ({ className, text }) => {
+export function TypeOfFood({ className, text }) {
   return (
     <>
       <TopHeader />

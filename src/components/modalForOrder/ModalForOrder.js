@@ -1,7 +1,7 @@
 import "../modalForOrder/modalForOrder.css"
 import { Button } from "../button/Button"
 
-export const ModalForOrder = (props) => {
+export function ModalForOrder(props) {
   let {
     foodName,
     foodDescription,

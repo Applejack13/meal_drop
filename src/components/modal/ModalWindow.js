@@ -3,7 +3,7 @@ import { calculateTotalPrice, cartItemsToParse } from "../../FirstPage"
 
 import "../modal/modalWindow.css"
 
-export const ModalWindow = (props) => {
+export function ModalWindow(props) {
   const { text, clazz, page, cartItems } = props
   const parsedCartItems = cartItemsToParse(cartItems)
   const totalPrice = calculateTotalPrice(parsedCartItems)

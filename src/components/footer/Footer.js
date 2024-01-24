@@ -2,7 +2,7 @@ import "./../footer/footer.css"
 import { Logo } from "../logo/Logo"
 import { LinkInFooter } from "../linkInFooter/LinkInFooter"
 
-export const Footer = () => {
+export function Footer() {
   return (
     <div className="Footer">
       <div className="footer-container">

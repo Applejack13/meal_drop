@@ -3,7 +3,7 @@ import { carouselItems } from "../carousel/CarouselItems"
 
 import "./../ourFavouritePicks/ourFavouritePicks.css"
 
-export const OurFavouritePicks = () => {
+export function OurFavouritePicks() {
   const customStyles = {
     carouselContainer: "carouselContainer",
     carouselItem: "carouselItem",

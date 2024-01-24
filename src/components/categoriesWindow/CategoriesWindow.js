@@ -1,6 +1,6 @@
 import "../categoriesWindow/categoriesWindow.css"
 
-export const CategoriesWindow = (props) => {
+export function CategoriesWindow(props) {
   const { img, title } = props
   return (
     <div className="categoriesWindow">

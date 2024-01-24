@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 
 import "./exchangeRates.css"
 
-export const ExchangeRates = () => {
+export function ExchangeRates() {
   const [exchangeRateEUR, setExchangeRate] = useState(null)
   const [exchangeRateUSD, setExchangeRateUSD] = useState(null)
 
