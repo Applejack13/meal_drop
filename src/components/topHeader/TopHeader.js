@@ -4,13 +4,14 @@ import ReactModal from "react-modal"
 import { Logo, Button, ModalWindow } from "../../allPages"
 
 import shoppingCart from "../../images/shopping-cart 2.svg"
+import theSun from "../../images/theSun.svg"
+import theMoon from "../../images/theMoon.svg"
 
 import "../topHeader/topHeader.css"
 
 ReactModal.setAppElement("#root")
 
-export function TopHeader(props) {
-  const { cartItems, isVisible } = props
+export function TopHeader({ cartItems, isVisible }) {
   const [isToggleOn, setIsToggleOn] = useState(true)
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -34,9 +35,9 @@ export function TopHeader(props) {
       {isVisible ? (
         <div className="Top-header__search">
           <Button
-            text={isToggleOn ? "ON" : "OFF"}
             onClick={() => handleToggleClick()}
-            className="medium-ghost"
+            img={isToggleOn ? theMoon : theSun}
+            className="theme-button"
           />
 
           <Button page="/" text="Home" className="medium-ghost" />

@@ -1,7 +1,5 @@
-import "../categoriesWindow/categoriesWindow.css"
-
 export function CategoriesWindow(props) {
-  const { img, title } = props
+  const { img, title } = props;
   return (
     <div className="categoriesWindow">
       <div className="categoriesWindowContainer">
@@ -9,5 +7,5 @@ export function CategoriesWindow(props) {
         <h3>{title}</h3>
       </div>
     </div>
-  )
+  );
 }

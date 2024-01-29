@@ -1,5 +1,10 @@
-import "../categoriesPage/categoriesPage.css"
-import { TopHeader, SecondHeader, Footer, CategoriesBody } from "../../allPages"
+import "../categoriesPage/categoriesPage.scss";
+import {
+  TopHeader,
+  SecondHeader,
+  Footer,
+  CategoriesBody,
+} from "../../allPages";
 
 export function CategoriesPage() {
   return (
@@ -9,5 +14,5 @@ export function CategoriesPage() {
       <CategoriesBody />
       <Footer />
     </div>
-  )
+  );
 }

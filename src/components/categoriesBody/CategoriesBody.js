@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import { CategoriesWindow } from "../../allPages"
+import { CategoriesWindow } from "../../allPages";
 
-import pizza from "../../images/pizza1.png"
-import burger from "../../images/burgers1.png"
-import dessert from "../../images/desserts1.png"
-import sushi from "../../images/sushi1.png"
-import asian from "../../images/asian1.png"
-import comfort from "../../images/comfort1.png"
+import pizza from "../../images/pizza1.png";
+import burger from "../../images/burgers1.png";
+import dessert from "../../images/desserts1.png";
+import sushi from "../../images/sushi1.png";
+import asian from "../../images/asian1.png";
+import comfort from "../../images/comfort1.png";
 
-import "../categoriesBody/categoriesBody.css"
+import "../categoriesBody/categoriesBody.scss";
 
 export function CategoriesBody() {
   return (
@@ -47,5 +47,5 @@ export function CategoriesBody() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

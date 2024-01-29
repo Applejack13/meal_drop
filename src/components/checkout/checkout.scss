@@ -1,3 +1,5 @@
+@import "../mixins.scss";
+
 .hide {
   display: none;
 }
@@ -41,8 +43,7 @@
 .orderList,
 .orderTotal {
   width: 20rem;
-  display: flex;
-  justify-content: space-between;
+  @include firstDisplaySettings
 }
 
 .yourOrder {
@@ -59,8 +60,7 @@
 
 .contactAndSteps {
   width: 70rem;
-  display: flex;
-  justify-content: space-between;
+  @include secondDisplaySettings
 }
 
 .orderContainer1 {
@@ -68,12 +68,6 @@
   padding: 1rem;
   z-index: 5;
   border-radius: 0.5rem;
-}
-
-.orderContainer1,
-.yourOrder {
-  width: auto;
-  height: auto;
 }
 
 .orderPage__content input {
@@ -86,14 +80,13 @@
 }
 
 .btn {
-  margin: 0.5rem 0 !important;
+  margin: 0.5rem 0;
 }
 
 .btnClass {
-  display: flex;
-  justify-content: space-between;
+  @include secondDisplaySettings;
 }
 
-.clazz3 {
-  padding: 0 !important;
-}
+// .clazz3 {
+//   padding: 0 !important;
+// }

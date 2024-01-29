@@ -1,41 +1,35 @@
+@import "../mixins.scss";
+
 .customText {
   padding: 0.2rem 1rem 1.5rem;
   margin: 0;
 }
 
 .customText p:first-of-type {
+  @include baseFontFamilyAndColor;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #202020;
   margin: 0 0 0.75rem;
 }
 
 .customText p:nth-of-type(2) {
+  @include FontFamilyHind;
   color: #596f72;
-  font-family: Hind;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   margin: 0 0 0.5rem;
 }
 
 .customText p:nth-of-type(3) {
+  @include FontFamilyHind;
   color: #4d4d4d;
-  font-family: Hind;
   font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+
 }
 
 .customText p:nth-child(4) {
+  @include FontFamilyHind;
   color: #636363;
-  font-family: Hind;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   background-color: #e9e9e9;
   border-radius: 0.25rem;
   width: 7rem;

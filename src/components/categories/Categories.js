@@ -1,13 +1,13 @@
-import { Button, FoodCategory } from "../../allPages"
+import { Button, FoodCategory } from "../../allPages";
 
-import img1 from "../../images/food1.png"
-import img2 from "../../images/food2.png"
-import img3 from "../../images/food3.png"
-import img4 from "../../images/food4.png"
-import img5 from "../../images/food5.png"
-import img6 from "../../images/food6.png"
+import img1 from "../../images/food1.png";
+import img2 from "../../images/food2.png";
+import img3 from "../../images/food3.png";
+import img4 from "../../images/food4.png";
+import img5 from "../../images/food5.png";
+import img6 from "../../images/food6.png";
 
-import "./../categories/categories.css"
+import "./../categories/categories.scss";
 
 export function Categories() {
   return (
@@ -39,5 +39,5 @@ export function Categories() {
         />
       </div>
     </div>
-  )
+  );
 }

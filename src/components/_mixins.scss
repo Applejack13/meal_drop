@@ -1,0 +1,49 @@
+$firstDisplaySettings: (
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+  );
+
+$secondDisplaySettings: (
+    display: flex,
+    justify-content: space-between
+  );
+  
+  $baseFontFamilyAndColor: (
+    font-family : "Montserrat",
+    color : #202020
+  );
+
+  $FontFamilyHind: (
+    font-family: "Hind",
+    font-style: normal,
+    line-height: normal,
+    font-weight: 400,
+);
+
+
+// Определение миксинов
+@mixin firstDisplaySettings {
+  @each $key, $value in $firstDisplaySettings {
+    #{$key}: $value;
+  }
+}
+
+@mixin secondDisplaySettings {
+  @each $key, $value in $secondDisplaySettings {
+    #{$key}: $value;
+  }
+}
+
+@mixin baseFontFamilyAndColor {
+  @each $key, $value in $baseFontFamilyAndColor {
+    #{$key}: $value;
+  }
+}
+
+@mixin FontFamilyHind {
+  @each $key, $value in $FontFamilyHind {
+    #{$key}: $value;
+  }
+};
+

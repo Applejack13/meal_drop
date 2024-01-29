@@ -2,7 +2,7 @@ import { Button } from "../../allPages"
 
 import ladies from "../../images/BothLadies.svg"
 
-import "../banner/banner.css"
+import "../banner/banner.scss"
 
 export function Banner() {
   return (

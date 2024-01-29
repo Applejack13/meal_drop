@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel"
 import { Link } from "react-router-dom"
 
 import "react-multi-carousel/lib/styles.css"
-import "../carousel/carousel.css"
+import "../carousel/carousel.scss"
 
 export function CarouselSlider(props) {
   const { links, items, customStyles, ...settings } = props

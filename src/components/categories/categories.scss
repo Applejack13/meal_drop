@@ -11,6 +11,7 @@
   grid-template-columns: repeat(6, auto);
   gap: 3.5rem;
 }
+
 .textContainer {
   display: flex;
   justify-content: space-between;
@@ -26,9 +27,4 @@
 
 .textContainer button {
   text-align: right;
-}
-
-a {
-  color: #202020;
-  text-decoration: none;
 }

@@ -1,3 +1,5 @@
+@import "../mixins.scss"; 
+
 .categoriesBody {
   margin: 6rem 8rem;
 }
@@ -16,8 +18,8 @@
 }
 
 .categoriesWindowContainer {
-  display: flex;
-  position: relative;
+  @include firstDisplaySettings;
+  align-items: flex-start;
 }
 
 .categoriesWindowContainer > h3 {
@@ -33,11 +35,8 @@
 
 .categoriesBody p {
   color: #2c2c2c;
-  font-family: Hind;
   font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  @include FontFamilyHind;
 }
 
 .categoriesBodyContainer2 {

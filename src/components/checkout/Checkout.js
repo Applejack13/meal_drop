@@ -1,6 +1,6 @@
-import { Button, YourOrder, InputInOrderPage } from "../../allPages"
+import { Button, YourOrder, InputInOrderPage } from "../../allPages";
 
-import "../checkout/checkout.css"
+import "../checkout/checkout.scss";
 
 export function Checkout(props) {
   const {
@@ -26,7 +26,7 @@ export function Checkout(props) {
     isVisible7,
     isWorked,
     handleInputChange,
-  } = props
+  } = props;
   return (
     <div className="orderPage__content">
       <div className="checkout">
@@ -136,6 +136,6 @@ export function Checkout(props) {
         <YourOrder cartItems={cartItems} />
       </div>
     </div>
-  )
+  );
 }
 // 142

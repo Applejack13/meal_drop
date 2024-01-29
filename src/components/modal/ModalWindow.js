@@ -19,7 +19,6 @@ export function ModalWindow(props) {
             {item.foodDescription !== undefined ? (
               <p>{item.foodDescription}</p>
             ) : null}
-            {/* <p>{item.foodDescription}</p> */}
             <p>{`${item.foodPrice * item.quantity} $`}</p>
             <p>Quantity: {item.quantity}</p>
           </div>

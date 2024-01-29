@@ -1,3 +1,5 @@
+@import "../mixins.scss";
+
 @keyframes slide {
   0% {
     transform: translate3d(0px, -1692px, 0px);
@@ -13,36 +15,28 @@
   background-color: #e5f8bc;
   overflow: hidden;
   height: 35rem;
-}
-
-.awardWinningBannerContainer {
-  display: flex;
   padding: 0 4rem;
   margin: 0 auto;
-  overflow: hidden;
-  width: 100%;
 }
 
 .banner {
-  display: flex;
+  @include firstDisplaySettings;
   flex: 0.5 1 0%;
-  align-items: flex-start;
-  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .banner button {
-  margin: 2rem 0 0 !important;
+  margin: 2rem 0 0;
 }
 
 .banner h2 {
-  color: #000025;
-  font-family: Montserrat;
+  @include baseFontFamilyAndColor;
   font-size: 2.74688rem;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 3.5rem;
-  letter-spacing: -0.13738rem;
+  letter-spacing: -0.15rem;
 }
 
 .restaurantsCardsBanner {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import "../button/button.css"
+import "../button/button.scss"
 
 export function Button(props) {
   const {

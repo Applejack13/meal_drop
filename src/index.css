@@ -1,6 +1,11 @@
 @import "bulma/css/bulma.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   padding: 0;
