@@ -1,10 +1,20 @@
-.orderList {
+@import "../mixins.scss";
+
+.orderList,
+.total2 {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  @include firstDisplaySettings;
+  align-items: flex-start;
 }
 
-.orderList > p {
+.orderTotal > h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.orderList > p,
+.total1 h2,
+.orderTotal > h2 {
   padding: 1rem;
 }
 
@@ -20,32 +30,14 @@
 
 .orderTotal {
   width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include firstDisplaySettings;
   bottom: 0;
   position: inherit;
 }
 
-.orderTotal > h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem;
-}
 
 .total1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.total1 h2 {
-  padding: 1rem;
-}
-
-.total2 {
-  display: flex;
+  @include secondDisplaySettings;
   align-items: center;
   width: 100%;
 }
@@ -56,8 +48,7 @@
 }
 
 .orderListContainer {
-  display: flex;
-  flex-direction: column;
+  @include firstDisplaySettings;
   max-height: 75%;
   /* fix it later */
   overflow-y: auto;
@@ -82,17 +73,11 @@
   width: 25rem;
 }
 
-.modalContainer > h2 {
+.modalContainer > h2,
+.yourOrder > h2 {
   font-size: 1.5rem;
   font-weight: 700;
   color: black;
   padding: 1rem;
   background-color: #f9f9f9;
-}
-
-.yourOrder > h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: black;
-  padding: 1rem;
 }

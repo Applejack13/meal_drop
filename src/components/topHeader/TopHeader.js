@@ -1,31 +1,31 @@
-import React, { useState } from "react"
-import ReactModal from "react-modal"
+import React, { useState } from "react";
+import ReactModal from "react-modal";
 
-import { Logo, Button, ModalWindow } from "../../allPages"
+import { Logo, Button, ModalWindow } from "../../allPages";
 
-import shoppingCart from "../../images/shopping-cart 2.svg"
-import theSun from "../../images/theSun.svg"
-import theMoon from "../../images/theMoon.svg"
+import shoppingCart from "../../images/shopping-cart 2.svg";
+import theSun from "../../images/theSun.svg";
+import theMoon from "../../images/theMoon.svg";
 
-import "../topHeader/topHeader.css"
+import "../topHeader/topHeader.scss";
 
-ReactModal.setAppElement("#root")
+ReactModal.setAppElement("#root");
 
 export function TopHeader({ cartItems, isVisible }) {
-  const [isToggleOn, setIsToggleOn] = useState(true)
-  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [isToggleOn, setIsToggleOn] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleToggleClick = () => {
-    setIsToggleOn(!isToggleOn)
-  }
+    setIsToggleOn(!isToggleOn);
+  };
 
   const openModal = () => {
-    setModalIsOpen(true)
-  }
+    setModalIsOpen(true);
+  };
 
   const closeModal = () => {
-    setModalIsOpen(false)
-  }
+    setModalIsOpen(false);
+  };
 
   return (
     <div className="Top-header">
@@ -89,5 +89,5 @@ export function TopHeader({ cartItems, isVisible }) {
         </div>
       ) : null}
     </div>
-  )
+  );
 }

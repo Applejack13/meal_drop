@@ -1,6 +1,6 @@
-import { Button } from "../button/Button"
+import { Button } from "../button/Button";
 
-import "../modalForOrder/modalForOrder.css"
+import "../modalForOrder/modalForOrder.scss";
 
 export function ModalForOrder(props) {
   let {
@@ -13,8 +13,8 @@ export function ModalForOrder(props) {
     increment,
     decrement,
     count,
-  } = props
-  sum = parseFloat(foodPrice) * count
+  } = props;
+  sum = parseFloat(foodPrice) * count;
   // оставить let?
 
   return (
@@ -43,5 +43,5 @@ export function ModalForOrder(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }

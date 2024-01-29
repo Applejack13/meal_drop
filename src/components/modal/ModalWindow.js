@@ -1,13 +1,13 @@
-import { Button } from "../button/Button"
+import { Button } from "../button/Button";
 
-import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart"
+import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart";
 
-import "../modal/modalWindow.css"
+import "../modal/modalWindow.scss";
 
 export function ModalWindow(props) {
-  const { text, clazz, page, cartItems } = props
-  const parsedCartItems = cartItemsToParse(cartItems)
-  const totalPrice = calculateTotalPrice(parsedCartItems)
+  const { text, clazz, page, cartItems } = props;
+  const parsedCartItems = cartItemsToParse(cartItems);
+  const totalPrice = calculateTotalPrice(parsedCartItems);
 
   return (
     <div className="modalContainer">
@@ -35,5 +35,5 @@ export function ModalWindow(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }

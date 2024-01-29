@@ -1,6 +1,6 @@
-import { Logo, LinkInFooter } from "../../allPages"
+import { Logo, LinkInFooter } from "../../allPages";
 
-import "./../footer/footer.css"
+import "./../footer/footer.scss";
 
 export function Footer() {
   return (
@@ -35,5 +35,5 @@ export function Footer() {
         </div>
       </div>
     </div>
-  )
+  );
 }

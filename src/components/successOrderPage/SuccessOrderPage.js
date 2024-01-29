@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 
-import { TopHeader } from "../topHeader/TopHeader"
-import { SecondHeader, YourOrder } from "../../allPages"
+import { TopHeader } from "../topHeader/TopHeader";
+import { SecondHeader, YourOrder } from "../../allPages";
 
-import img from "../../images/successPageImg.svg"
+import img from "../../images/successPageImg.svg";
 
-import "../successOrderPage/successOrderPage.css"
+import "../successOrderPage/successOrderPage.scss";
 
 export function SuccessOrderPage({ cartItems }) {
-  const [deliveryTime, setDeliveryTime] = useState({ hours: 0, minutes: 0 })
+  const [deliveryTime, setDeliveryTime] = useState({ hours: 0, minutes: 0 });
 
   useEffect(() => {
-    const timeToDelivery = new Date()
-    const hours = timeToDelivery.getHours()
-    const minutes = timeToDelivery.getMinutes()
-    setDeliveryTime({ hours, minutes })
-  }, [])
+    const timeToDelivery = new Date();
+    const hours = timeToDelivery.getHours();
+    const minutes = timeToDelivery.getMinutes();
+    setDeliveryTime({ hours, minutes });
+  }, []);
 
   return (
     <div className="successOrderPage">
@@ -37,5 +37,5 @@ export function SuccessOrderPage({ cartItems }) {
         <img src={img} alt="" className="ladies2" />
       </div>
     </div>
-  )
+  );
 }

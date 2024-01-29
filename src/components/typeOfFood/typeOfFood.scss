@@ -1,16 +1,21 @@
-.secondHeader {
-  display: flex;
-  background-color: #e5f8bc;
-  justify-content: center;
-  align-items: center;
-  color: #2c2c2c;
+@import "../mixins.scss";
+
+@mixin CommonSettings {
   text-align: center;
   font-family: Montserrat;
   font-size: 2.74688rem;
   font-style: normal;
   line-height: 4rem;
-  letter-spacing: -0.13738rem;
+  letter-spacing: -0.15rem;
   height: 15rem;
+}
+
+.secondHeader {
+  @include firstDisplaySettings; 
+  justify-content: center;
+  background-color: #e5f8bc;
+  color: #2c2c2c;
+  @include CommonSettings;
 }
 
 .foodSecondHeader {
@@ -18,15 +23,9 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 2.74688rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 4rem;
-  letter-spacing: -0.13738rem;
-  height: 15rem;
   margin-bottom: 4rem;
+  @include CommonSettings;
 }
 
 .pizzaSecondHeader {

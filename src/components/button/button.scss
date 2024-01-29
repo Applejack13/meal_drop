@@ -30,6 +30,7 @@ button:focus {
   @include CommonButtonStyles;
   background-color: #202020 !important;
   color: #fff !important;
+  padding: 1.5rem 1rem !important;
 }
 
 .large-gray {
@@ -42,4 +43,5 @@ button:focus {
   @include CommonButtonStyles;
   border: 0 !important;
   background: #fff !important;
+  padding: 1.5rem 1rem !important;
 }

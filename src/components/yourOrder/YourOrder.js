@@ -1,10 +1,10 @@
-import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart"
+import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart";
 
-import "../yourOrder/yourOrder.css"
+import "../yourOrder/yourOrder.scss";
 
 export function YourOrder({ cartItems }) {
-  const parsedCartItems = cartItemsToParse(cartItems)
-  const totalPrice = calculateTotalPrice(parsedCartItems)
+  const parsedCartItems = cartItemsToParse(cartItems);
+  const totalPrice = calculateTotalPrice(parsedCartItems);
 
   return (
     <div className="yourOrderCheckout">
@@ -22,5 +22,5 @@ export function YourOrder({ cartItems }) {
         <h2>{totalPrice} $</h2>
       </div>
     </div>
-  )
+  );
 }

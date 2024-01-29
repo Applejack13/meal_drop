@@ -4,9 +4,9 @@ import {
   ThirdHeader,
   Footer,
   RestaurantBody,
-} from "../../allPages"
+} from "../../allPages";
 
-import "../restaurantPage/restaurantPage.css"
+import "../restaurantPage/restaurantPage.scss";
 export function RestaurantPage(props) {
   const {
     restaurantClass,
@@ -22,7 +22,7 @@ export function RestaurantPage(props) {
     increment,
     count,
     setCount,
-  } = props
+  } = props;
   return (
     <div className={restaurantPageClass}>
       <TopHeader cartItems={cartItems} isVisible={true} />
@@ -43,5 +43,5 @@ export function RestaurantPage(props) {
       />
       <Footer />
     </div>
-  )
+  );
 }

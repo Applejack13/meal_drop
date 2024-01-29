@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import SmallLogo from "../../images/SmallLogoWithText.svg"
-import BigLogo from "../../images/BigLogoWithoutText.svg"
+import SmallLogo from "../../images/SmallLogoWithText.svg";
+import BigLogo from "../../images/BigLogoWithoutText.svg";
 
-import "../logo/logo.css"
+import "../logo/logo.scss";
 
 export function Logo(props) {
-  const { link, isSmall } = props
+  const { link, isSmall } = props;
   return (
     <div className="logo">
       <Link to={link}>
@@ -21,5 +21,5 @@ export function Logo(props) {
         )}
       </Link>{" "}
     </div>
-  )
+  );
 }

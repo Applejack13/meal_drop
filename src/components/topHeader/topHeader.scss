@@ -1,0 +1,17 @@
+@import "../mixins.scss";
+
+.Top-header {
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+}
+
+.Top-header__logo,
+.Top-header__search,
+.Top-header {
+  @include firstDisplaySettings;
+  flex-direction: row;
+}
+
+.Top-header__search {
+  padding: 0 5rem;
+}
