@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState } from "react";
 
-import ReactModal from "react-modal"
+import ReactModal from "react-modal";
 
-import { Button, ModalForOrder } from "../../allPages"
+import { Button, ModalForOrder } from "../../allPages";
 
-import "../foodButton/foodButton.css"
+import "../foodButton/foodButton.scss";
 
 export function FoodButton(props) {
   const {
@@ -17,17 +17,17 @@ export function FoodButton(props) {
     increment,
     decrement,
     setCount,
-  } = props
+  } = props;
 
-  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
-    setModalIsOpen(true)
-  }
+    setModalIsOpen(true);
+  };
 
   const closeModal = () => {
-    setModalIsOpen(false)
-  }
+    setModalIsOpen(false);
+  };
 
   return (
     <div className="foodButton">
@@ -35,7 +35,6 @@ export function FoodButton(props) {
         style={{
           overlay: {
             backgroundColor: "rgba(0, 0, 0, 0.4)",
-            overflow: "hidden",
           },
           content: {
             top: "50%",
@@ -48,7 +47,7 @@ export function FoodButton(props) {
             transform: "translate(-50%, -50%)",
           },
         }}
-        className={`modalContainer `}
+        className={`modalContainer mfoContainer `}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
       >
@@ -65,9 +64,9 @@ export function FoodButton(props) {
               foodDescription: foodDescription,
               foodPrice: foodPrice,
               id: id,
-            })
-            closeModal()
-            setCount(1)
+            });
+            closeModal();
+            setCount(1);
           }}
         />
       </ReactModal>
@@ -79,5 +78,5 @@ export function FoodButton(props) {
         foodName={foodName}
       />
     </div>
-  )
+  );
 }

@@ -55,10 +55,10 @@ export function TopHeader({ cartItems, isVisible }) {
           />
 
           <ReactModal
+            closeTimeoutMS={500}
             style={{
               overlay: {
                 backgroundColor: "rgba(0, 0, 0, 0.4)",
-                overflow: "hidden",
               },
               content: {
                 right: "0",
@@ -67,10 +67,6 @@ export function TopHeader({ cartItems, isVisible }) {
                 left: "unset",
                 height: "100vh",
                 width: "25rem",
-                transform: modalIsOpen
-                  ? "translate(0%, 0)"
-                  : "translate(-50%, 0)",
-                transition: "transform .5s ease-in-out",
               },
             }}
             className={`modalContainer `}
@@ -91,3 +87,5 @@ export function TopHeader({ cartItems, isVisible }) {
     </div>
   );
 }
+
+// переписать код с использованием модального окна, написанного вручную, если не получится использовать анимацию плавного открытия/закрытия модального окна

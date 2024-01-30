@@ -1,3 +1,5 @@
+@import"../mixins.scss";
+
 .foodButton button {
   background-color: #fff;
   border-radius: 0.25rem;
@@ -14,10 +16,8 @@
 }
 
 .foodButton button {
-  display: flex;
-  flex-direction: column;
+  @include firstDisplaySettings;
   align-items: flex-start;
-  /* justify-content: start; */
   gap: 0.5rem;
 }
 
@@ -26,4 +26,18 @@
   font-weight: 500;
   padding: 1rem 0;
   color: #000;
+}
+
+.ReactModal__Overlay > .modalContainer > .mfoContainer {
+  opacity: 0; 
+  transition: opacity 300ms ease-in-out;
+  
+}
+
+.ReactModal__Overlay--after-open > .modalContainer > .mfoContainer {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close > .modalContainer > .mfoContainer {
+  opacity: 0; 
 }
