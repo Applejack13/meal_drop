@@ -15,7 +15,6 @@ import { FoodButton } from "./components/foodButton/FoodButton";
 import { FoodCategory } from "./components/foodCategory/FoodCategory";
 import { Footer } from "./components/footer/Footer";
 import { HOCWrapper } from "./components/HOCWrapper/HOCWrapper";
-import { InputInOrderPage } from "./components/inputInOrderPage/InputInOrderPage";
 import { LinkInFooter } from "./components/linkInFooter/LinkInFooter";
 import { Logo } from "./components/logo/Logo";
 import { ModalWindow } from "./components/modal/ModalWindow";
@@ -60,7 +59,6 @@ export {
   ExchangeRates,
   FoodButton,
   FoodCategory,
-  InputInOrderPage,
   LinkInFooter,
   Logo,
   ModalWindow,

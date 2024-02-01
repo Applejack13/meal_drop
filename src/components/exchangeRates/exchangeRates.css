@@ -1,5 +1,5 @@
 .exchangeRatesWrapper {
-  background: url("../../../src/images/payment-1s-1084px.svg");
+  background: rgba(245, 245, 245);
   height: auto;
   color: #000;
   display: flex;
@@ -8,10 +8,10 @@
 }
 
 .exchangeRatesWrapper h2 {
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 400;
-  background-color: #000;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: transparent;
   padding: 0.25rem;
   margin: 0.5rem;
   border-radius: 0.25rem;

@@ -30,8 +30,7 @@
 
 .ReactModal__Overlay > .modalContainer > .mfoContainer {
   opacity: 0; 
-  transition: opacity 300ms ease-in-out;
-  
+  transition: all 300ms ;
 }
 
 .ReactModal__Overlay--after-open > .modalContainer > .mfoContainer {

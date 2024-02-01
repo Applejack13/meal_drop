@@ -1,7 +1,0 @@
-.input.valid {
-  background: rgba(0, 128, 0, 0.1);
-}
-
-.input.invalid {
-  background: rgba(255, 0, 0, 0.1);
-}

@@ -1,29 +1,10 @@
 @import "../mixins.scss";
 
-.hide {
-  display: none;
-}
-
-.orderPage__content {
-  display: flex;
-}
-
-.orderPage__content:not(div:first-child) {
-  display: block;
-}
-
-.orderPage__content:not(div:first-child) > h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
 .bodyContainer {
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: -5rem;
-  gap: 2rem;
+  gap: 3%;
 }
 
 .contactAndSteps > p:first-of-type {
@@ -36,37 +17,27 @@
   font-size: 2rem;
   font-weight: bold;
   color: #000;
-  padding: 6rem 8rem;
-  /* fix it later */
+  padding: 2rem 5rem ; 
+  // fix it later
 }
 
-.orderList,
-.orderTotal {
-  width: 20rem;
-  @include firstDisplaySettings
+.errorMessage {
+  color: red;
+  padding:  .5rem 0;
 }
 
-.yourOrder {
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  z-index: 5;
-}
-
-.yourOrder p,
-.yourOrder h2 {
-  padding: 0.75rem 0;
+.formClass {
+  width: 70rem;
 }
 
 .contactAndSteps {
-  width: 70rem;
   @include secondDisplaySettings
 }
 
 .orderContainer1 {
   background-color: #fff;
   padding: 1rem;
-  z-index: 5;
+  width: auto;
   border-radius: 0.5rem;
 }
 
@@ -86,7 +57,3 @@
 .btnClass {
   @include secondDisplaySettings;
 }
-
-// .clazz3 {
-//   padding: 0 !important;
-// }

@@ -1,4 +1,7 @@
-import { Button, YourOrder, InputInOrderPage } from "../../allPages";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+import { Button, YourOrder } from "../../allPages";
 
 import "../checkout/checkout.scss";
 
@@ -17,16 +20,9 @@ export function Checkout(props) {
     progress,
     cartItems,
     isHidden,
-    isVisible1,
-    isVisible2,
-    isVisible3,
-    isVisible4,
-    isVisible5,
-    isVisible6,
-    isVisible7,
     isWorked,
-    handleInputChange,
   } = props;
+
   return (
     <div className="orderPage__content">
       <div className="checkout">
@@ -39,103 +35,133 @@ export function Checkout(props) {
             <p>Step {step} of 2</p>
           </div>
           <p className={`progressBar ${progress}`}></p>
-          <div className="contactDetails">
-            <InputInOrderPage
-              placeholder="First name"
-              name="firstName"
-              text="First name"
-              type="text"
-              validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible1 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
 
-            <InputInOrderPage
-              placeholder="Last name"
-              name="lastName"
-              text="Last name"
-              type="text"
-              validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible2 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
+          <Formik
+            initialValues={{
+              firstName: "",
+              lastName: "",
+              email: "",
+              phoneNumber: "",
+              StreetnameAndHousenumber: "",
+              city: "",
+            }}
+            validationSchema={Yup.object({
+              firstName: Yup.string()
+                .trim()
+                .required("Obligatory field")
+                .min(2, "At least 2 characters")
+                .matches(/^[A-Za-z]+$/u, "Name must be in english"),
+              lastName: Yup.string()
+                .trim()
+                .required("Obligatory field")
+                .min(2, "At least 2 characters")
+                .matches(/^[A-Za-z]+$/u, "Last name must be in english"),
+              email: Yup.string()
+                .email("Email must have correct format")
+                .trim()
+                .required("Obligatory field"),
+              phoneNumber: Yup.string()
+                .required("Obligatory field")
+                .matches(/^[0-9]+$/u, "Phone number must have 10 digits")
+                .length(10, "Phone number must have 10 digits"),
+              StreetnameAndHousenumber:
+                Yup.string().required("Obligatory field"),
+              // осталось написать валидацию в поле streetnameAndHousenumber
+              city: Yup.string()
+                .trim()
+                .required("Obligatory field")
+                .min(2, "At least 2 characters"),
+            })}
+            onSubmit={(values) => console.log(JSON.stringify(values, null, 2))}
+          >
+            <Form className="formClass">
+              <p>First name</p>
+              <Field
+                className="input"
+                id="firstName"
+                name="firstName"
+                type="text"
+              />
+              <ErrorMessage
+                className="errorMessage"
+                name="firstName"
+                component="div"
+              />
+              <p>Last name</p>
+              <Field
+                className="input"
+                id="lastName"
+                name="lastName"
+                type="text"
+              />
+              <ErrorMessage
+                className="errorMessage"
+                name="lastName"
+                component="div"
+              />
+              <p>Email</p>
+              <Field className="input" id="email" name="email" type="email" />
+              <ErrorMessage
+                className="errorMessage"
+                name="email"
+                component="div"
+              />
+              <p>Phone number</p>
+              <Field
+                className="input"
+                id="phoneNumber"
+                name="phoneNumber"
+                type="tel"
+              />
+              <ErrorMessage
+                className="errorMessage"
+                name="phoneNumber"
+                component="div"
+              />
+              <p>Streetname and housenumber</p>
+              <Field
+                className="input"
+                id="StreetnameAndHousenumber"
+                name="StreetnameAndHousenumber"
+                type="text"
+              />
+              <ErrorMessage
+                className="errorMessage"
+                name="StreetnameAndHousenumber"
+                component="div"
+              />
+              <p>City</p>
+              <Field className="input" id="city" name="city" type="text" />
+              <ErrorMessage
+                className="errorMessage"
+                name="city"
+                component="div"
+              />
 
-            <InputInOrderPage
-              placeholder="example@example.com"
-              name="email"
-              text="Email"
-              type="email"
-              validation={(value) =>
-                /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value)
-              }
-              isVisible={isVisible3 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
-
-            <InputInOrderPage
-              placeholder="380"
-              name="phoneNumber"
-              text="Phone number"
-              type="phone"
-              validation={(value) => /^\d*$/.test(value)}
-              isVisible={isVisible4 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
-
-            <InputInOrderPage
-              placeholder="Some Streer 13"
-              name="StreetnameAndHousenumber"
-              text="Streetname and housenumber"
-              type="text"
-              validation={(value) => /^[a-zA-Z0-9\s-]+$/.test(value)}
-              isVisible={isVisible5 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
-
-            <InputInOrderPage
-              placeholder="AAAAXX"
-              name="postCode"
-              text="Post code"
-              type="text"
-              validation={(value) => /^[A-Z\s-]+$/.test(value)}
-              isVisible={isVisible6 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
-
-            <InputInOrderPage
-              placeholder="Odesa"
-              name="city"
-              text="City"
-              type="text"
-              validation={(value) => /^[a-zA-Z\s-]+$/.test(value)}
-              isVisible={isVisible7 ? "" : "hide"}
-              onChange={handleInputChange}
-            />
-
-            <p className={`${clazz2} smallText`}>
-              We’ll only use your phone to call you about your order
-            </p>
-            <div className={`${btnClass} btnContainer`}>
-              <div className={isHidden ? "hide" : ""}>
+              <p className={`${clazz2} smallText`}>
+                We’ll only use your phone to call you about your order
+              </p>
+              <div className={`${btnClass} btnContainer`}>
+                <div className={isHidden ? "hide" : ""}>
+                  <Button
+                    text={btnText2}
+                    onClick={onClick}
+                    className={`medium-ghost btn ${clazz3}`}
+                  />
+                </div>
                 <Button
-                  text={btnText2}
                   onClick={onClick}
-                  className={`medium-ghost btn ${clazz3}`}
+                  text={btnText}
+                  className={`btn ${isWorked ? "large-dark" : "large-gray"}`}
+                  // I'll make later how to choose the color of the button
+                  page={page}
                 />
               </div>
-              <Button
-                onClick={onClick}
-                text={btnText}
-                className={`btn ${isWorked ? "large-dark" : "large-gray"}`}
-                // I'll make later how to choose the color of the button
-                page={page}
-              />
-            </div>
-          </div>
+            </Form>
+          </Formik>
         </div>
-        <YourOrder cartItems={cartItems} />
+        <YourOrder cartItems={cartItems} className="yourOrder" />
       </div>
     </div>
   );
 }
-// 142

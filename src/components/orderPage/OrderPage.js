@@ -1,27 +1,27 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import { TopHeader, Checkout } from "../../allPages"
-import "../orderPage/orderPage.css"
+import { TopHeader, Checkout } from "../../allPages";
+import "../orderPage/orderPage.css";
 
 export function OrderPage({ cartItems }) {
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(1);
 
   const nextStep = () => {
     if (step === 1) {
-      setStep(2)
+      setStep(2);
     }
-  }
+  };
 
   const prevStep = () => {
-    setStep(1)
-  }
+    setStep(1);
+  };
 
   const commonProps = {
     clazz: "show",
     progress: step === 1 ? "" : "secondStep",
     onClick: step === 1 ? nextStep : prevStep,
     isWorked: true,
-  }
+  };
 
   const firstStepProps = {
     headerText: "Contact Details",
@@ -30,11 +30,7 @@ export function OrderPage({ cartItems }) {
     ...commonProps,
     btnText: "Next",
     isHidden: true,
-    isVisible1: true,
-    isVisible2: true,
-    isVisible3: true,
-    isVisible4: true,
-  }
+  };
 
   const secondStepProps = {
     headerText: "Delivery Details",
@@ -46,10 +42,7 @@ export function OrderPage({ cartItems }) {
     btnClass: "btnClass",
     page: "/success",
     isHidden: false,
-    isVisible5: true,
-    isVisible6: true,
-    isVisible7: true,
-  }
+  };
 
   return (
     <div className="orderPage">
@@ -60,5 +53,5 @@ export function OrderPage({ cartItems }) {
         <Checkout {...secondStepProps} cartItems={cartItems} />
       )}
     </div>
-  )
+  );
 }
