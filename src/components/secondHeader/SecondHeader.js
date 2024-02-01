@@ -1,7 +1,7 @@
-export function SecondHeader({ className, text }) {
+export function SecondHeader({ ...props }) {
   return (
-    <div className={className}>
-      <h2>{text}</h2>
+    <div className={props.className}>
+      <h2>{props.text}</h2>
     </div>
-  )
+  );
 }

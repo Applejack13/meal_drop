@@ -1,40 +1,37 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 
 import { Button, YourOrder } from "../../allPages";
 
 import "../checkout/checkout.scss";
 
-export function Checkout(props) {
-  const {
-    headerText,
-    step,
-    clazz,
-    clazz2,
-    clazz3,
-    btnText,
-    btnText2,
-    btnClass,
-    page,
-    onClick,
-    progress,
-    cartItems,
-    isHidden,
-    isWorked,
-  } = props;
+const MyInput = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
 
+  return (
+    <>
+      <label htmlFor={props.firstName}>{label}</label>
+      <input className="input" {...props} {...field} />
+      {meta.touched && meta.error ? (
+        <div className="errorMessage">{meta.error}</div>
+      ) : null}
+    </>
+  );
+};
+
+export function Checkout({ ...props }) {
   return (
     <div className="orderPage__content">
       <div className="checkout">
         <h2>Checkout</h2>
       </div>
       <div className="bodyContainer">
-        <div className={`orderContainer1 ${clazz}`}>
+        <div className={`orderContainer1 ${props.clazz}`}>
           <div className="contactAndSteps">
-            <p>{headerText}</p>
-            <p>Step {step} of 2</p>
+            <p>{props.headerText}</p>
+            <p>Step {props.step} of 2</p>
           </div>
-          <p className={`progressBar ${progress}`}></p>
+          <p className={`progressBar ${props.progress}`}></p>
 
           <Formik
             initialValues={{
@@ -48,119 +45,95 @@ export function Checkout(props) {
             validationSchema={Yup.object({
               firstName: Yup.string()
                 .trim()
-                .required("Obligatory field")
+                .required("This field is required")
                 .min(2, "At least 2 characters")
                 .matches(/^[A-Za-z]+$/u, "Name must be in english"),
               lastName: Yup.string()
                 .trim()
-                .required("Obligatory field")
+                .required("This field is required")
                 .min(2, "At least 2 characters")
                 .matches(/^[A-Za-z]+$/u, "Last name must be in english"),
               email: Yup.string()
                 .email("Email must have correct format")
                 .trim()
-                .required("Obligatory field"),
+                .required("This field is required"),
               phoneNumber: Yup.string()
-                .required("Obligatory field")
+                .required("This field is required")
                 .matches(/^[0-9]+$/u, "Phone number must have 10 digits")
                 .length(10, "Phone number must have 10 digits"),
-              StreetnameAndHousenumber:
-                Yup.string().required("Obligatory field"),
-              // осталось написать валидацию в поле streetnameAndHousenumber
+              StreetnameAndHousenumber: Yup.string()
+                .required("This field is required")
+                .min(6, "At least 6 characters")
+                .matches(
+                  /^[A-Za-z0-9\s]+$/u,
+                  "Street and house number must be valid"
+                  // I've to fix it later
+                ),
               city: Yup.string()
-                .trim()
-                .required("Obligatory field")
-                .min(2, "At least 2 characters"),
+                .required("This field is required")
+                .min(2, "At least 2 characters")
+                .matches(/^[A-Za-z]+$/u, "Name must be in english"),
             })}
             onSubmit={(values) => console.log(JSON.stringify(values, null, 2))}
           >
             <Form className="formClass">
-              <p>First name</p>
-              <Field
-                className="input"
+              <MyInput
+                label="Your name"
                 id="firstName"
                 name="firstName"
                 type="text"
               />
-              <ErrorMessage
-                className="errorMessage"
-                name="firstName"
-                component="div"
-              />
-              <p>Last name</p>
-              <Field
-                className="input"
+              <MyInput
+                label="Your second name"
                 id="lastName"
                 name="lastName"
                 type="text"
               />
-              <ErrorMessage
-                className="errorMessage"
-                name="lastName"
-                component="div"
-              />
-              <p>Email</p>
-              <Field className="input" id="email" name="email" type="email" />
-              <ErrorMessage
-                className="errorMessage"
+              <MyInput
+                label="Your email"
+                id="email"
                 name="email"
-                component="div"
+                type="email"
               />
-              <p>Phone number</p>
-              <Field
-                className="input"
+              <MyInput
+                label="Your phone number"
                 id="phoneNumber"
                 name="phoneNumber"
                 type="tel"
               />
-              <ErrorMessage
-                className="errorMessage"
-                name="phoneNumber"
-                component="div"
-              />
-              <p>Streetname and housenumber</p>
-              <Field
-                className="input"
+              <MyInput
+                label="Your street name and housenumber"
                 id="StreetnameAndHousenumber"
                 name="StreetnameAndHousenumber"
                 type="text"
               />
-              <ErrorMessage
-                className="errorMessage"
-                name="StreetnameAndHousenumber"
-                component="div"
-              />
-              <p>City</p>
-              <Field className="input" id="city" name="city" type="text" />
-              <ErrorMessage
-                className="errorMessage"
-                name="city"
-                component="div"
-              />
+              <MyInput label="Your city" id="city" name="city" type="text" />
 
-              <p className={`${clazz2} smallText`}>
+              <p className={`${props.clazz2} smallText`}>
                 We’ll only use your phone to call you about your order
               </p>
-              <div className={`${btnClass} btnContainer`}>
-                <div className={isHidden ? "hide" : ""}>
+              <div className={`${props.btnClass} btnContainer`}>
+                <div className={props.isHidden ? "hide" : ""}>
                   <Button
-                    text={btnText2}
-                    onClick={onClick}
-                    className={`medium-ghost btn ${clazz3}`}
+                    text={props.btnText2}
+                    onClick={props.onClick}
+                    className={`medium-ghost btn ${props.clazz3}`}
                   />
                 </div>
                 <Button
-                  onClick={onClick}
-                  text={btnText}
-                  className={`btn ${isWorked ? "large-dark" : "large-gray"}`}
+                  onClick={props.onClick}
+                  text={props.btnText}
+                  className={`btn ${
+                    props.isWorked ? "large-dark" : "large-gray"
+                  }`}
                   // I'll make later how to choose the color of the button
-                  page={page}
+                  page={props.page}
                 />
               </div>
             </Form>
           </Formik>
         </div>
-        <YourOrder cartItems={cartItems} className="yourOrder" />
+        <YourOrder cartItems={props.cartItems} className="yourOrder" />
       </div>
     </div>
   );

@@ -7,39 +7,24 @@ import {
 } from "../../allPages";
 
 import "../restaurantPage/restaurantPage.scss";
-export function RestaurantPage(props) {
-  const {
-    restaurantClass,
-    restaurantName,
-    description,
-    rating,
-    buttons,
-    thirdHeaderClassName,
-    restaurantPageClass,
-    cartItems,
-    addToCart,
-    decrement,
-    increment,
-    count,
-    setCount,
-  } = props;
+export function RestaurantPage({ ...props }) {
   return (
-    <div className={restaurantPageClass}>
-      <TopHeader cartItems={cartItems} isVisible={true} />
-      <SecondHeader className={`secondHeaderClass ${restaurantClass}`} />
+    <div className={props.restaurantPageClass}>
+      <TopHeader cartItems={props.cartItems} isVisible={true} />
+      <SecondHeader className={`secondHeaderClass ${props.restaurantClass}`} />
       <ThirdHeader
-        thirdHeaderClassName={thirdHeaderClassName}
-        restaurantName={restaurantName}
-        description={description}
-        rating={rating}
-        buttons={buttons}
+        thirdHeaderClassName={props.thirdHeaderClassName}
+        restaurantName={props.restaurantName}
+        description={props.description}
+        rating={props.rating}
+        buttons={props.buttons}
       />
       <RestaurantBody
-        addToCart={addToCart}
-        count={count}
-        increment={increment}
-        decrement={decrement}
-        setCount={setCount}
+        addToCart={props.addToCart}
+        count={props.count}
+        increment={props.increment}
+        decrement={props.decrement}
+        setCount={props.setCount}
       />
       <Footer />
     </div>

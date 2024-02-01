@@ -1,22 +1,22 @@
-import React from "react"
+import React from "react";
 
-import Carousel from "react-multi-carousel"
+import Carousel from "react-multi-carousel";
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import "react-multi-carousel/lib/styles.css"
-import "../carousel/carousel.scss"
+import "react-multi-carousel/lib/styles.css";
+import "../carousel/carousel.scss";
 
-export function CarouselSlider(props) {
-  const { links, items, customStyles, ...settings } = props
+export function CarouselSlider({ ...props }) {
+  const { ...settings } = props;
   return (
     <>
       <Carousel {...settings}>
-        {items.map((item, index) => (
-          <Link to={links[index]} key={index}>
-            <div key={index} className={customStyles.carouselItem}>
+        {props.items.map((item, index) => (
+          <Link to={props.links[index]} key={index}>
+            <div key={index} className={props.customStyles.carouselItem}>
               <img src={item.image} alt={item.alt} />
-              <div className={customStyles.customText}>
+              <div className={props.customStyles.customText}>
                 <p>{item.description}</p>
                 <p>{item.description2}</p>
                 <p>{item.description3}</p>
@@ -27,5 +27,5 @@ export function CarouselSlider(props) {
         ))}
       </Carousel>
     </>
-  )
+  );
 }

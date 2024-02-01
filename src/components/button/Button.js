@@ -1,34 +1,23 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-import "../button/button.scss"
+import "../button/button.scss";
 
-export function Button(props) {
-  const {
-    text,
-    page,
-    className,
-    img,
-    style,
-    onClick,
-    foodName,
-    foodDescription,
-    foodPrice,
-  } = props
+export function Button({ ...props }) {
   return (
     <div>
-      <Link to={page}>
+      <Link to={props.page}>
         <button
-          className={`button ${className}`}
-          style={style}
-          onClick={onClick}
+          className={`button ${props.className}`}
+          style={props.style}
+          onClick={props.onClick}
         >
-          <img src={img} alt="" />
-          {text}
-          <div>{foodName}</div>
-          <div>{foodDescription}</div>
-          <div>{foodPrice}</div>
+          <img src={props.img} alt="" />
+          {props.text}
+          <div>{props.foodName}</div>
+          <div>{props.foodDescription}</div>
+          <div>{props.foodPrice}</div>
         </button>
       </Link>
     </div>
-  )
+  );
 }

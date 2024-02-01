@@ -5,12 +5,11 @@ import BigLogo from "../../images/BigLogoWithoutText.svg";
 
 import "../logo/logo.scss";
 
-export function Logo(props) {
-  const { link, isSmall } = props;
+export function Logo({ ...props }) {
   return (
     <div className="logo">
-      <Link to={link}>
-        {isSmall ? (
+      <Link to={props.link}>
+        {props.isSmall ? (
           <div>
             <img src={SmallLogo} alt="SmallLogo" className="Small Logo" />
           </div>

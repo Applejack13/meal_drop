@@ -4,9 +4,8 @@ import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart";
 
 import "../modal/modalWindow.scss";
 
-export function ModalWindow(props) {
-  const { text, clazz, page, cartItems } = props;
-  const parsedCartItems = cartItemsToParse(cartItems);
+export function ModalWindow({ ...props }) {
+  const parsedCartItems = cartItemsToParse(props.cartItems);
   const totalPrice = calculateTotalPrice(parsedCartItems);
 
   return (
@@ -31,7 +30,7 @@ export function ModalWindow(props) {
           <h2>{totalPrice} $</h2>
         </div>
         <div className="total2">
-          <Button className={clazz} text={text} page={page} />
+          <Button className={props.clazz} text={props.text} page={props.page} />
         </div>
       </div>
     </div>

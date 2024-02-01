@@ -1,10 +1,8 @@
-import { FoodButton, Products } from "../../allPages"
+import { FoodButton, Products } from "../../allPages";
 
-import "../restaurantBody/restaurantBody.css"
+import "../restaurantBody/restaurantBody.css";
 
-export function RestaurantBody(props) {
-  const { addToCart, count, increment, decrement, setCount } = props
-
+export function RestaurantBody({ ...props }) {
   const renderFoodButtons = (foodCategory) => {
     return foodCategory.map((product) => (
       <FoodButton
@@ -13,14 +11,14 @@ export function RestaurantBody(props) {
         foodDescription={product.foodDescription}
         foodPrice={`${product.foodPrice} $`}
         id={product.id}
-        addToCart={addToCart}
-        count={count}
-        increment={increment}
-        decrement={decrement}
-        setCount={setCount}
+        addToCart={props.addToCart}
+        count={props.count}
+        increment={props.increment}
+        decrement={props.decrement}
+        setCount={props.setCount}
       />
-    ))
-  }
+    ));
+  };
 
   return (
     <div className="restaurantBody">
@@ -31,5 +29,5 @@ export function RestaurantBody(props) {
       <h2>To drink</h2>
       <div className="toDrink">{renderFoodButtons(Products.slice(4))}</div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,9 @@
-export function CategoriesWindow(props) {
-  const { img, title } = props;
+export function CategoriesWindow({ ...props }) {
   return (
     <div className="categoriesWindow">
       <div className="categoriesWindowContainer">
-        <img src={img} alt={title} />
-        <h3>{title}</h3>
+        <img src={props.img} alt={props.title} />
+        <h3>{props.title}</h3>
       </div>
     </div>
   );

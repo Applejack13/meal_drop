@@ -1,9 +1,9 @@
 .orderPage {
   background: linear-gradient(
     to bottom,
-    white 10%,
-    #e5f8bc 30%,
-    rgb(249, 249, 249) 60%
+    white 5%,
+    #e5f8bc 15%,
+    rgb(249, 249, 249) 80%
   );
   height: 130vh;
 }

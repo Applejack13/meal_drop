@@ -6,19 +6,7 @@ import { Button, ModalForOrder } from "../../allPages";
 
 import "../foodButton/foodButton.scss";
 
-export function FoodButton(props) {
-  const {
-    foodName,
-    foodDescription,
-    foodPrice,
-    addToCart,
-    id,
-    count,
-    increment,
-    decrement,
-    setCount,
-  } = props;
-
+export function FoodButton({ ...props }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -52,30 +40,30 @@ export function FoodButton(props) {
         onRequestClose={closeModal}
       >
         <ModalForOrder
-          foodName={foodName}
-          foodDescription={foodDescription}
-          foodPrice={foodPrice}
-          count={count}
-          increment={increment}
-          decrement={decrement}
+          foodName={props.foodName}
+          foodDescription={props.foodDescription}
+          foodPrice={props.foodPrice}
+          count={props.count}
+          increment={props.increment}
+          decrement={props.decrement}
           onClick={() => {
-            addToCart({
-              foodName: foodName,
-              foodDescription: foodDescription,
-              foodPrice: foodPrice,
-              id: id,
+            props.addToCart({
+              foodName: props.foodName,
+              foodDescription: props.foodDescription,
+              foodPrice: props.foodPrice,
+              id: props.id,
             });
             closeModal();
-            setCount(1);
+            props.setCount(1);
           }}
         />
       </ReactModal>
       <Button
         className="foodBtn"
         onClick={openModal}
-        foodDescription={foodDescription}
-        foodPrice={foodPrice}
-        foodName={foodName}
+        foodDescription={props.foodDescription}
+        foodPrice={props.foodPrice}
+        foodName={props.foodName}
       />
     </div>
   );
