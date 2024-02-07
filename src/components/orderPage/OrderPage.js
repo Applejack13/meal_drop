@@ -21,6 +21,7 @@ export function OrderPage({ cartItems }) {
     progress: step === 1 ? "" : "secondStep",
     onClick: step === 1 ? nextStep : prevStep,
     isWorked: true,
+    isVisible: step === 1 ? "hide" : "",
   };
 
   const firstStepProps = {

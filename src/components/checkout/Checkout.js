@@ -5,21 +5,21 @@ import { Button, YourOrder } from "../../allPages";
 
 import "../checkout/checkout.scss";
 
-const MyInput = ({ label, ...props }) => {
+const MyInput = ({ isVisible, label, ...props }) => {
   const [field, meta] = useField(props);
 
   return (
-    <>
+    <div className={isVisible}>
       <label htmlFor={props.firstName}>{label}</label>
       <input className="input" {...props} {...field} />
       {meta.touched && meta.error ? (
         <div className="errorMessage">{meta.error}</div>
       ) : null}
-    </>
+    </div>
   );
 };
 
-export function Checkout({ ...props }) {
+export function Checkout({ availability, ...props }) {
   return (
     <div className="orderPage__content">
       <div className="checkout">
@@ -48,6 +48,7 @@ export function Checkout({ ...props }) {
                 .required("This field is required")
                 .min(2, "At least 2 characters")
                 .matches(/^[A-Za-z]+$/u, "Name must be in english"),
+
               lastName: Yup.string()
                 .trim()
                 .required("This field is required")
@@ -66,7 +67,7 @@ export function Checkout({ ...props }) {
                 .min(6, "At least 6 characters")
                 .matches(
                   /^[A-Za-z0-9\s]+$/u,
-                  "Street and house number must be valid"
+                  "Street name and house number must be valid"
                   // I've to fix it later
                 ),
               city: Yup.string()
@@ -74,7 +75,6 @@ export function Checkout({ ...props }) {
                 .min(2, "At least 2 characters")
                 .matches(/^[A-Za-z]+$/u, "Name must be in english"),
             })}
-            onSubmit={(values) => console.log(JSON.stringify(values, null, 2))}
           >
             <Form className="formClass">
               <MyInput
@@ -82,32 +82,43 @@ export function Checkout({ ...props }) {
                 id="firstName"
                 name="firstName"
                 type="text"
+                isVisible={props.isVisible ? "" : "hide"}
               />
               <MyInput
                 label="Your second name"
                 id="lastName"
                 name="lastName"
                 type="text"
+                isVisible={props.isVisible ? "" : "hide"}
               />
               <MyInput
-                label="Your email"
+                label="Email"
                 id="email"
                 name="email"
                 type="email"
+                isVisible={props.isVisible ? "" : "hide"}
               />
               <MyInput
-                label="Your phone number"
+                label="Phone number"
                 id="phoneNumber"
                 name="phoneNumber"
                 type="tel"
+                isVisible={props.isVisible ? "hide" : ""}
               />
               <MyInput
-                label="Your street name and housenumber"
+                label="Street name and housenumber"
                 id="StreetnameAndHousenumber"
                 name="StreetnameAndHousenumber"
                 type="text"
+                isVisible={props.isVisible ? "hide" : ""}
               />
-              <MyInput label="Your city" id="city" name="city" type="text" />
+              <MyInput
+                label="City"
+                id="city"
+                name="city"
+                type="text"
+                isVisible={props.isVisible ? "hide" : ""}
+              />
 
               <p className={`${props.clazz2} smallText`}>
                 We’ll only use your phone to call you about your order
@@ -123,11 +134,8 @@ export function Checkout({ ...props }) {
                 <Button
                   onClick={props.onClick}
                   text={props.btnText}
-                  className={`btn ${
-                    props.isWorked ? "large-dark" : "large-gray"
-                  }`}
-                  // I'll make later how to choose the color of the button
                   page={props.page}
+                  className={availability === 0 ? "large-dark" : "large-gray"}
                 />
               </div>
             </Form>
