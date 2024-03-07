@@ -46,7 +46,7 @@ export function OrderPage({ cartItems }) {
   };
 
   return (
-    <div className="orderPage">
+    <div className='orderPage'>
       <TopHeader isVisible={false} />
       {step === 1 ? (
         <Checkout {...firstStepProps} cartItems={cartItems} />

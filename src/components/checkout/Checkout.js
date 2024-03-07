@@ -1,5 +1,6 @@
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
+import { useState, useEffect } from "react";
 
 import { Button, YourOrder } from "../../allPages";
 
@@ -7,27 +8,36 @@ import "../checkout/checkout.scss";
 
 const MyInput = ({ isVisible, label, ...props }) => {
   const [field, meta] = useField(props);
+  const [available, setAvailable] = useState(0);
+  //данные выводятся в консоль, но не так как мне это нужно
+  useEffect(() => {
+    if (!meta.error && field.value) {
+      setAvailable(available + 1);
+      console.log(available);
+    }
+    // eslint-disable-next-line
+  }, [field.value, field.meta]);
 
   return (
     <div className={isVisible}>
       <label htmlFor={props.firstName}>{label}</label>
-      <input className="input" {...props} {...field} />
+      <input className='input' {...props} {...field} />
       {meta.touched && meta.error ? (
-        <div className="errorMessage">{meta.error}</div>
+        <div className='errorMessage'>{meta.error}</div>
       ) : null}
     </div>
   );
 };
 
-export function Checkout({ availability, ...props }) {
+export function Checkout({ ...props }) {
   return (
-    <div className="orderPage__content">
-      <div className="checkout">
+    <div className='orderPage__content'>
+      <div className='checkout'>
         <h2>Checkout</h2>
       </div>
-      <div className="bodyContainer">
+      <div className='bodyContainer'>
         <div className={`orderContainer1 ${props.clazz}`}>
-          <div className="contactAndSteps">
+          <div className='contactAndSteps'>
             <p>{props.headerText}</p>
             <p>Step {props.step} of 2</p>
           </div>
@@ -39,7 +49,7 @@ export function Checkout({ availability, ...props }) {
               lastName: "",
               email: "",
               phoneNumber: "",
-              StreetnameAndHousenumber: "",
+              streetnameAndHousenumber: "",
               city: "",
             }}
             validationSchema={Yup.object({
@@ -62,7 +72,7 @@ export function Checkout({ availability, ...props }) {
                 .required("This field is required")
                 .matches(/^[0-9]+$/u, "Phone number must have 10 digits")
                 .length(10, "Phone number must have 10 digits"),
-              StreetnameAndHousenumber: Yup.string()
+              streetnameAndHousenumber: Yup.string()
                 .required("This field is required")
                 .min(6, "At least 6 characters")
                 .matches(
@@ -76,47 +86,47 @@ export function Checkout({ availability, ...props }) {
                 .matches(/^[A-Za-z]+$/u, "Name must be in english"),
             })}
           >
-            <Form className="formClass">
+            <Form className='formClass'>
               <MyInput
-                label="Your name"
-                id="firstName"
-                name="firstName"
-                type="text"
+                label='Your name'
+                id='firstName'
+                name='firstName'
+                type='text'
                 isVisible={props.isVisible ? "" : "hide"}
               />
               <MyInput
-                label="Your second name"
-                id="lastName"
-                name="lastName"
-                type="text"
+                label='Your second name'
+                id='lastName'
+                name='lastName'
+                type='text'
                 isVisible={props.isVisible ? "" : "hide"}
               />
               <MyInput
-                label="Email"
-                id="email"
-                name="email"
-                type="email"
+                label='Email'
+                id='email'
+                name='email'
+                type='email'
                 isVisible={props.isVisible ? "" : "hide"}
               />
               <MyInput
-                label="Phone number"
-                id="phoneNumber"
-                name="phoneNumber"
-                type="tel"
+                label='Phone number'
+                id='phoneNumber'
+                name='phoneNumber'
+                type='tel'
                 isVisible={props.isVisible ? "hide" : ""}
               />
               <MyInput
-                label="Street name and housenumber"
-                id="StreetnameAndHousenumber"
-                name="StreetnameAndHousenumber"
-                type="text"
+                label='Street name and housenumber'
+                id='streetnameAndHousenumber'
+                name='streetnameAndHousenumber'
+                type='text'
                 isVisible={props.isVisible ? "hide" : ""}
               />
               <MyInput
-                label="City"
-                id="city"
-                name="city"
-                type="text"
+                label='City'
+                id='city'
+                name='city'
+                type='text'
                 isVisible={props.isVisible ? "hide" : ""}
               />
 
@@ -135,13 +145,16 @@ export function Checkout({ availability, ...props }) {
                   onClick={props.onClick}
                   text={props.btnText}
                   page={props.page}
-                  className={availability === 0 ? "large-dark" : "large-gray"}
+                  className={
+                    "large-dark"
+                    //  : "large-gray"
+                  }
                 />
               </div>
             </Form>
           </Formik>
         </div>
-        <YourOrder cartItems={props.cartItems} className="yourOrder" />
+        <YourOrder cartItems={props.cartItems} className='yourOrder' />
       </div>
     </div>
   );
