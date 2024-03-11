@@ -19,13 +19,7 @@ export function RestaurantPage({ ...props }) {
         rating={props.rating}
         buttons={props.buttons}
       />
-      <RestaurantBody
-        addToCart={props.addToCart}
-        count={props.count}
-        increment={props.increment}
-        decrement={props.decrement}
-        setCount={props.setCount}
-      />
+      <RestaurantBody addToCart={props.addToCart} />
       <Footer />
     </div>
   );

@@ -18,7 +18,7 @@ import { HOCWrapper } from "./components/HOCWrapper/HOCWrapper";
 import { LinkInFooter } from "./components/linkInFooter/LinkInFooter";
 import { Logo } from "./components/logo/Logo";
 import { ModalWindow } from "./components/modal/ModalWindow";
-import { ModalForOrder } from "./components/modalForOrder/ModalForOrder";
+import ModalForOrder from "./components/modalForOrder/ModalForOrder";
 import { OrderPage } from "./components/orderPage/OrderPage";
 import { OurFavouritePicks } from "./components/ourFavouritePicks/OurFavouritePicks";
 import { RestaurantBody } from "./components/restaurantBody/RestaurantBody";
@@ -31,11 +31,9 @@ import { TypeOfFood } from "./components/typeOfFood/TypeOfFood";
 import { YourOrder } from "./components/yourOrder/YourOrder";
 import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary";
 import { Loading } from "./components/loading/Loading";
-import { Main } from "./Main";
 import { Products } from "./components/restaurantBody/Products";
 
 export {
-  Main,
   Loading,
   FirstPage,
   OrderPage,

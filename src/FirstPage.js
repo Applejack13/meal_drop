@@ -5,25 +5,18 @@ import {
   AwardWinningBanner,
   Categories,
   Footer,
-} from "./allPages"
+} from "./allPages";
 
 export function FirstPage(props) {
-  const { cartItems, addToCart, decrement, increment, setCount, count } = props
+  const { cartItems, addToCart } = props;
   return (
-    <div className="FirstPage">
+    <div className='FirstPage'>
       <TopHeader isVisible={true} cartItems={cartItems} />
       <Banner />
-      <OurFavouritePicks
-        cartItems={cartItems}
-        addToCart={addToCart}
-        decrement={decrement}
-        increment={increment}
-        setCount={setCount}
-        count={count}
-      />
+      <OurFavouritePicks cartItems={cartItems} addToCart={addToCart} />
       <AwardWinningBanner />
       <Categories />
       <Footer />
     </div>
-  )
+  );
 }

@@ -28,28 +28,28 @@ export function TopHeader({ cartItems, isVisible }) {
   };
 
   return (
-    <div className="Top-header">
-      <div className="Top-header__logo">
-        <Logo link="/" isSmall={true} />
+    <div className='Top-header'>
+      <div className='Top-header__logo'>
+        <Logo link='/' isSmall={true} />
       </div>
       {isVisible ? (
-        <div className="Top-header__search">
+        <div className='Top-header__search'>
           <Button
             onClick={() => handleToggleClick()}
             img={isToggleOn ? theMoon : theSun}
-            className="theme-button"
+            className='theme-button'
           />
 
-          <Button page="/" text="Home" className="medium-ghost" />
+          <Button page='/' text='Home' className='medium-ghost' />
 
           <Button
-            page="/categories"
-            text="All restaurants"
-            className="medium-ghost"
+            page='/categories'
+            text='All restaurants'
+            className='medium-ghost'
           />
 
           <Button
-            className="large-dark"
+            className='large-dark'
             onClick={openModal}
             img={shoppingCart}
           />
@@ -75,9 +75,9 @@ export function TopHeader({ cartItems, isVisible }) {
           >
             {modalIsOpen && (
               <ModalWindow
-                text="Checkout"
-                page="/orderPage"
-                clazz=" large-dark"
+                text='Checkout'
+                page='/orderPage'
+                clazz=' large-dark'
                 cartItems={cartItems}
               />
             )}
@@ -87,5 +87,3 @@ export function TopHeader({ cartItems, isVisible }) {
     </div>
   );
 }
-
-// переписать код с использованием модального окна, написанного вручную, если не получится использовать анимацию плавного открытия/закрытия модального окна

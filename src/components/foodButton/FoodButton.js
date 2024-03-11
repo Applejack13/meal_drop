@@ -18,7 +18,7 @@ export function FoodButton({ ...props }) {
   };
 
   return (
-    <div className="foodButton">
+    <div className='foodButton'>
       <ReactModal
         style={{
           overlay: {
@@ -54,12 +54,11 @@ export function FoodButton({ ...props }) {
               id: props.id,
             });
             closeModal();
-            props.setCount(1);
           }}
         />
       </ReactModal>
       <Button
-        className="foodBtn"
+        className='foodBtn'
         onClick={openModal}
         foodDescription={props.foodDescription}
         foodPrice={props.foodPrice}

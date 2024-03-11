@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import {
   FirstPage,
@@ -10,104 +10,106 @@ import {
   CategoriesPage,
   HOCWrapper,
   AllRestaurants,
-} from "./allPages"
+} from "./allPages";
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-  return null
+  return null;
 }
 
-const WrappedComponent = HOCWrapper(RestaurantPage)
-const WrappedFirstPage = HOCWrapper(FirstPage)
-const WrappedOrderPage = HOCWrapper(OrderPage)
-const WrappedSuccessOrderPage = HOCWrapper(SuccessOrderPage)
+const WrappedComponent = HOCWrapper(RestaurantPage);
+const WrappedFirstPage = HOCWrapper(FirstPage);
+const WrappedOrderPage = HOCWrapper(OrderPage);
+const WrappedSuccessOrderPage = HOCWrapper(SuccessOrderPage);
 
-export function Main() {
+const Main = () => {
   return (
     <>
       <BrowserRouter>
         <ScrollToTop />
 
         <Routes>
-          <Route path="/" element={<WrappedFirstPage />} />
-          <Route path="/allRestaurants" element={<AllRestaurants />} />
-          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path='/' element={<WrappedFirstPage />} />
+          <Route path='/allRestaurants' element={<AllRestaurants />} />
+          <Route path='/categories' element={<CategoriesPage />} />
           <Route
-            path="/pizza"
-            element={<TypeOfFood className="pizzaSecondHeader " text="Pizza" />}
+            path='/pizza'
+            element={<TypeOfFood className='pizzaSecondHeader ' text='Pizza' />}
           />
           <Route
-            path="/burgers"
+            path='/burgers'
             element={
-              <TypeOfFood className="burgersSecondHeader " text="Burgers" />
+              <TypeOfFood className='burgersSecondHeader ' text='Burgers' />
             }
           />
           <Route
-            path="/desserts"
+            path='/desserts'
             element={
-              <TypeOfFood className="dessertsSecondHeader " text="Desserts" />
+              <TypeOfFood className='dessertsSecondHeader ' text='Desserts' />
             }
           />
           <Route
-            path="/sushi"
-            element={<TypeOfFood className="sushiSecondHeader " text="Sushi" />}
+            path='/sushi'
+            element={<TypeOfFood className='sushiSecondHeader ' text='Sushi' />}
           />
           <Route
-            path="/asian"
-            element={<TypeOfFood className="asianSecondHeader " text="Asian" />}
+            path='/asian'
+            element={<TypeOfFood className='asianSecondHeader ' text='Asian' />}
           />
           <Route
-            path="/comfort"
+            path='/comfort'
             element={
-              <TypeOfFood className="comfortSecondHeader " text="Comfort" />
+              <TypeOfFood className='comfortSecondHeader ' text='Comfort' />
             }
           />
           <Route
-            path="/mira"
+            path='/mira'
             element={
               <WrappedComponent
-                restaurantClass="mira"
-                restaurantName="Mira"
-                description="Specialties: Sarma (wine leafs with rice)"
-                rating="No reviews yet"
-                buttons="Pizza"
+                restaurantClass='mira'
+                restaurantName='Mira'
+                description='Specialties: Sarma (wine leafs with rice)'
+                rating='No reviews yet'
+                buttons='Pizza'
               />
             }
           />
           <Route
-            path="/kara-fin"
+            path='/kara-fin'
             element={
               <WrappedComponent
-                thirdHeaderClassName="thirdHeaderClassName"
-                restaurantClass="kara_fin"
-                restaurantName="Kara Fin"
-                description="Specialties: Sarma (wine leafs with rice)"
-                rating="No reviews yet"
-                buttons="Burgers"
+                thirdHeaderClassName='thirdHeaderClassName'
+                restaurantClass='kara_fin'
+                restaurantName='Kara Fin'
+                description='Specialties: Sarma (wine leafs with rice)'
+                rating='No reviews yet'
+                buttons='Burgers'
               />
             }
           />
           <Route
-            path="/t-kuyltje"
+            path='/t-kuyltje'
             element={
               <WrappedComponent
-                restaurantClass="t-kuyltje"
-                restaurantName="T Kuyltje"
-                description="Specialties: Sarma (wine leafs with rice)"
-                rating="No reviews yet"
-                buttons="Desserts"
+                restaurantClass='t-kuyltje'
+                restaurantName='T Kuyltje'
+                description='Specialties: Sarma (wine leafs with rice)'
+                rating='No reviews yet'
+                buttons='Desserts'
               />
             }
           />
-          <Route path="/orderPage" element={<WrappedOrderPage />} />
-          <Route path="/success" element={<WrappedSuccessOrderPage />} />
+          <Route path='/orderPage' element={<WrappedOrderPage />} />
+          <Route path='/success' element={<WrappedSuccessOrderPage />} />
         </Routes>
       </BrowserRouter>
     </>
-  )
-}
+  );
+};
+
+export default Main;
