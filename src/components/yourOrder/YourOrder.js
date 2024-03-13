@@ -1,25 +1,23 @@
-import { calculateTotalPrice, cartItemsToParse } from "../../functionsForCart";
+import { useSelector } from "react-redux";
 
 import "../yourOrder/yourOrder.scss";
 
-export function YourOrder({ cartItems }) {
-  const parsedCartItems = cartItemsToParse(cartItems);
-  const totalPrice = calculateTotalPrice(parsedCartItems);
-
+export function YourOrder() {
+  const cartItems = useSelector((state) => state.counter.cartItems || []);
   return (
-    <div className="yourOrderCheckout">
+    <div className='yourOrderCheckout'>
       <h2>Your order</h2>
-      {parsedCartItems.map((item, index) => (
-        <div key={index} className="orderListCheckout">
+      {cartItems.map((item, index) => (
+        <div key={index} className='orderListCheckout'>
           <p>{item.quantity}</p>
           <p>{item.foodName}</p>
           <p>{`${item.foodPrice * item.quantity} $`}</p>
         </div>
       ))}
-      <p className="justLine"></p>
-      <div className="orderTotalCheckout">
+      <p className='justLine'></p>
+      <div className='orderTotalCheckout'>
         <h2>Total: </h2>
-        <h2>{totalPrice} $</h2>
+        <h2>{"$$$"} $</h2>
       </div>
     </div>
   );

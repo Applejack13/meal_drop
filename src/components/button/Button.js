@@ -11,7 +11,7 @@ export function Button({ ...props }) {
           style={props.style}
           onClick={props.onClick}
         >
-          <img src={props.img} alt="" />
+          <img src={props.img} alt='' />
           {props.text}
           <div>{props.foodName}</div>
           <div>{props.foodDescription}</div>

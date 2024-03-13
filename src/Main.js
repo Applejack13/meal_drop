@@ -8,7 +8,6 @@ import {
   TypeOfFood,
   RestaurantPage,
   CategoriesPage,
-  HOCWrapper,
   AllRestaurants,
 } from "./allPages";
 
@@ -22,11 +21,6 @@ function ScrollToTop() {
   return null;
 }
 
-const WrappedComponent = HOCWrapper(RestaurantPage);
-const WrappedFirstPage = HOCWrapper(FirstPage);
-const WrappedOrderPage = HOCWrapper(OrderPage);
-const WrappedSuccessOrderPage = HOCWrapper(SuccessOrderPage);
-
 const Main = () => {
   return (
     <>
@@ -34,7 +28,7 @@ const Main = () => {
         <ScrollToTop />
 
         <Routes>
-          <Route path='/' element={<WrappedFirstPage />} />
+          <Route path='/' element={<FirstPage />} />
           <Route path='/allRestaurants' element={<AllRestaurants />} />
           <Route path='/categories' element={<CategoriesPage />} />
           <Route
@@ -70,7 +64,7 @@ const Main = () => {
           <Route
             path='/mira'
             element={
-              <WrappedComponent
+              <RestaurantPage
                 restaurantClass='mira'
                 restaurantName='Mira'
                 description='Specialties: Sarma (wine leafs with rice)'
@@ -82,7 +76,7 @@ const Main = () => {
           <Route
             path='/kara-fin'
             element={
-              <WrappedComponent
+              <RestaurantPage
                 thirdHeaderClassName='thirdHeaderClassName'
                 restaurantClass='kara_fin'
                 restaurantName='Kara Fin'
@@ -95,7 +89,7 @@ const Main = () => {
           <Route
             path='/t-kuyltje'
             element={
-              <WrappedComponent
+              <RestaurantPage
                 restaurantClass='t-kuyltje'
                 restaurantName='T Kuyltje'
                 description='Specialties: Sarma (wine leafs with rice)'
@@ -104,8 +98,8 @@ const Main = () => {
               />
             }
           />
-          <Route path='/orderPage' element={<WrappedOrderPage />} />
-          <Route path='/success' element={<WrappedSuccessOrderPage />} />
+          <Route path='/orderPage' element={<OrderPage />} />
+          <Route path='/success' element={<SuccessOrderPage />} />
         </Routes>
       </BrowserRouter>
     </>

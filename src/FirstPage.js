@@ -7,13 +7,12 @@ import {
   Footer,
 } from "./allPages";
 
-export function FirstPage(props) {
-  const { cartItems, addToCart } = props;
+export function FirstPage() {
   return (
     <div className='FirstPage'>
-      <TopHeader isVisible={true} cartItems={cartItems} />
+      <TopHeader isVisible={true} />
       <Banner />
-      <OurFavouritePicks cartItems={cartItems} addToCart={addToCart} />
+      <OurFavouritePicks />
       <AwardWinningBanner />
       <Categories />
       <Footer />

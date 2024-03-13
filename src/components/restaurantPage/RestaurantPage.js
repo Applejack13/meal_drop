@@ -12,14 +12,8 @@ export function RestaurantPage({ ...props }) {
     <div className={props.restaurantPageClass}>
       <TopHeader cartItems={props.cartItems} isVisible={true} />
       <SecondHeader className={`secondHeaderClass ${props.restaurantClass}`} />
-      <ThirdHeader
-        thirdHeaderClassName={props.thirdHeaderClassName}
-        restaurantName={props.restaurantName}
-        description={props.description}
-        rating={props.rating}
-        buttons={props.buttons}
-      />
-      <RestaurantBody addToCart={props.addToCart} />
+      <ThirdHeader {...props} />
+      <RestaurantBody {...props} />
       <Footer />
     </div>
   );

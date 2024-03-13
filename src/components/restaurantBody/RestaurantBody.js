@@ -2,16 +2,14 @@ import { FoodButton, Products } from "../../allPages";
 
 import "../restaurantBody/restaurantBody.css";
 
-export function RestaurantBody({ ...props }) {
+export function RestaurantBody() {
   const renderFoodButtons = (foodCategory) => {
-    return foodCategory.map((product) => (
+    return foodCategory.map(({ ...props }) => (
       <FoodButton
-        key={product.id}
-        // fix ids
-        foodName={product.foodName}
-        foodDescription={product.foodDescription}
-        foodPrice={`${product.foodPrice} $`}
-        addToCart={props.addToCart}
+        key={props.id}
+        foodName={props.foodName}
+        foodDescription={props.foodDescription}
+        foodPrice={`${props.foodPrice} $`}
       />
     ));
   };

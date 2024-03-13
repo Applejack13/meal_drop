@@ -1,13 +1,17 @@
-import { useState } from "react";
-
 import ReactModal from "react-modal";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Button, ModalForOrder } from "../../allPages";
+import { addToCart } from "../../reducer/reducer";
 
 import "../foodButton/foodButton.scss";
 
 export function FoodButton({ ...props }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const quantity = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -43,16 +47,8 @@ export function FoodButton({ ...props }) {
           foodName={props.foodName}
           foodDescription={props.foodDescription}
           foodPrice={props.foodPrice}
-          count={props.count}
-          increment={props.increment}
-          decrement={props.decrement}
           onClick={() => {
-            props.addToCart({
-              foodName: props.foodName,
-              foodDescription: props.foodDescription,
-              foodPrice: props.foodPrice,
-              id: props.id,
-            });
+            console.log(dispatch(addToCart({ quantity, id: props.id })));
             closeModal();
           }}
         />

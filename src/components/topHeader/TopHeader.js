@@ -11,7 +11,7 @@ import "../topHeader/topHeader.scss";
 
 ReactModal.setAppElement("#root");
 
-export function TopHeader({ cartItems, isVisible }) {
+export function TopHeader({ isVisible }) {
   const [isToggleOn, setIsToggleOn] = useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -78,7 +78,6 @@ export function TopHeader({ cartItems, isVisible }) {
                 text='Checkout'
                 page='/orderPage'
                 clazz=' large-dark'
-                cartItems={cartItems}
               />
             )}
           </ReactModal>
