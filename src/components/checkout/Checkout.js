@@ -1,6 +1,5 @@
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
-import { useState, useEffect } from "react";
 
 import { Button, YourOrder } from "../../allPages";
 
@@ -8,15 +7,6 @@ import "../checkout/checkout.scss";
 
 const MyInput = ({ isVisible, label, ...props }) => {
   const [field, meta] = useField(props);
-  const [available, setAvailable] = useState(0);
-  //данные выводятся в консоль, но не так как мне это нужно
-  useEffect(() => {
-    if (!meta.error && field.value) {
-      setAvailable(available + 1);
-      console.log(available);
-    }
-    // eslint-disable-next-line
-  }, [field.value, field.meta]);
 
   return (
     <div className={isVisible}>
@@ -86,72 +76,71 @@ export function Checkout({ ...props }) {
                 .matches(/^[A-Za-z]+$/u, "Name must be in english"),
             })}
           >
-            <Form className='formClass'>
-              <MyInput
-                label='Your name'
-                id='firstName'
-                name='firstName'
-                type='text'
-                isVisible={props.isVisible ? "" : "hide"}
-              />
-              <MyInput
-                label='Your second name'
-                id='lastName'
-                name='lastName'
-                type='text'
-                isVisible={props.isVisible ? "" : "hide"}
-              />
-              <MyInput
-                label='Email'
-                id='email'
-                name='email'
-                type='email'
-                isVisible={props.isVisible ? "" : "hide"}
-              />
-              <MyInput
-                label='Phone number'
-                id='phoneNumber'
-                name='phoneNumber'
-                type='tel'
-                isVisible={props.isVisible ? "hide" : ""}
-              />
-              <MyInput
-                label='Street name and housenumber'
-                id='streetnameAndHousenumber'
-                name='streetnameAndHousenumber'
-                type='text'
-                isVisible={props.isVisible ? "hide" : ""}
-              />
-              <MyInput
-                label='City'
-                id='city'
-                name='city'
-                type='text'
-                isVisible={props.isVisible ? "hide" : ""}
-              />
+            {({ isValid }) => (
+              <Form className='formClass'>
+                <MyInput
+                  label='Your name'
+                  id='firstName'
+                  name='firstName'
+                  type='text'
+                  isVisible={props.isVisible ? "" : "hide"}
+                />
+                <MyInput
+                  label='Your second name'
+                  id='lastName'
+                  name='lastName'
+                  type='text'
+                  isVisible={props.isVisible ? "" : "hide"}
+                />
+                <MyInput
+                  label='Email'
+                  id='email'
+                  name='email'
+                  type='email'
+                  isVisible={props.isVisible ? "" : "hide"}
+                />
+                <MyInput
+                  label='Phone number'
+                  id='phoneNumber'
+                  name='phoneNumber'
+                  type='tel'
+                  isVisible={props.isVisible ? "" : "hide"}
+                />
+                <MyInput
+                  label='Street name and housenumber'
+                  id='streetnameAndHousenumber'
+                  name='streetnameAndHousenumber'
+                  type='text'
+                  isVisible={props.isVisible ? "" : "hide"}
+                />
+                <MyInput
+                  label='City'
+                  id='city'
+                  name='city'
+                  type='text'
+                  isVisible={props.isVisible ? "" : "hide"}
+                />
 
-              <p className={`${props.clazz2} smallText`}>
-                We’ll only use your phone to call you about your order
-              </p>
-              <div className={`${props.btnClass} btnContainer`}>
-                <div className={props.isHidden ? "hide" : ""}>
+                <p className={`${props.clazz2} smallText`}>
+                  We’ll only use your phone to call you about your order
+                </p>
+                <div className={`${props.btnClass} btnContainer`}>
+                  <div className={props.isHidden ? "hide" : ""}>
+                    <Button
+                      text={props.btnText2}
+                      onClick={props.onClick}
+                      className={`medium-ghost btn ${props.clazz3}`}
+                    />
+                  </div>
                   <Button
-                    text={props.btnText2}
                     onClick={props.onClick}
-                    className={`medium-ghost btn ${props.clazz3}`}
+                    text={props.btnText}
+                    page={props.page}
+                    className={`large-${isValid ? "dark" : "gray"}`}
                   />
                 </div>
-                <Button
-                  onClick={props.onClick}
-                  text={props.btnText}
-                  page={props.page}
-                  className={
-                    "large-dark"
-                    //  : "large-gray"
-                  }
-                />
-              </div>
-            </Form>
+              </Form>
+            )}
           </Formik>
         </div>
         <YourOrder cartItems={props.cartItems} className='yourOrder' />

@@ -5,7 +5,7 @@ import "../yourOrder/yourOrder.scss";
 export function YourOrder() {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const sum = useSelector((state) => state.cart.sum || 0);
-  console.log(cartItems);
+
   return (
     <div className='yourOrderCheckout'>
       <h2>Your order</h2>

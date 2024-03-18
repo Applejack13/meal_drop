@@ -23,6 +23,8 @@ export const counterSlice = createSlice({
   },
 });
 
+export const { increment, decrement, reset } = counterSlice.actions;
+
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {
@@ -64,5 +66,4 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { increment, decrement, reset } = counterSlice.actions;
 export const { addToCart } = cartSlice.actions;
