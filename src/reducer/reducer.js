@@ -8,10 +8,17 @@ export const counterSlice = createSlice({
   },
   reducers: {
     increment: (state) => {
-      state.value++;
+      if (state.value < 10) {
+        state.value++;
+      }
     },
     decrement: (state) => {
-      state.value--;
+      if (state.value > 1) {
+        state.value--;
+      }
+    },
+    reset: (state) => {
+      state.value = 1;
     },
   },
 });
@@ -24,7 +31,6 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { id, quantity } = action.payload;
-      console.log(id, quantity);
       const product = Products.find((p) => p.id === id);
 
       if (!product) {
@@ -32,20 +38,31 @@ export const cartSlice = createSlice({
         return;
       }
 
-      const existingItem = state.cartItems.find((item) => item.id === id);
+      const existingItem = state.cartItems.find(
+        (item) => item.product.id === id
+      );
 
       if (existingItem) {
         existingItem.quantity += quantity;
       } else {
-        state.cartItems.push({ ...product, quantity });
+        state.cartItems.push({ product, quantity });
       }
+
+      state.sum = state.cartItems.reduce((acc, item) => {
+        return acc + item.product.foodPrice * item.quantity;
+      }, 0);
     },
     // removeFromCart: (state, action) => {
     //   const id = action.payload;
     //   state.cartItems = state.cartItems.filter((item) => item.id !== id);
+
+    //   state.sum = state.cartItems.reduce((acc, item) => {
+    //     const product = Products.find((p) => p.id === item.id);
+    //     return acc + product.foodPrice * item.quantity;
+    //   }, 0);
     // },
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement, reset } = counterSlice.actions;
 export const { addToCart } = cartSlice.actions;

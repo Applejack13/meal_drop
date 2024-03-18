@@ -7,6 +7,7 @@ export function RestaurantBody() {
     return foodCategory.map(({ ...props }) => (
       <FoodButton
         key={props.id}
+        id={props.id}
         foodName={props.foodName}
         foodDescription={props.foodDescription}
         foodPrice={`${props.foodPrice} $`}

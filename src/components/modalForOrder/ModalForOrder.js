@@ -1,15 +1,15 @@
-import { decrement, increment, addToCart } from "../../reducer/reducer";
 import { useDispatch, useSelector } from "react-redux";
 
+import { decrement, increment, addToCart } from "../../reducer/reducer";
 import { Button } from "../button/Button";
 
 import "../modalForOrder/modalForOrder.scss";
 
 const ModalForOrder = ({ ...props }) => {
-  const quantity = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
-  let sum = parseFloat(props.foodPrice) * quantity;
+  const quantity = useSelector((state) => state.counter.value);
+  const sum = parseFloat(props.foodPrice) * quantity;
 
   return (
     <div className='mfoContainer'>
@@ -31,8 +31,10 @@ const ModalForOrder = ({ ...props }) => {
           <Button
             text={`add for ${sum} $`}
             className='large-dark'
-            onClick={() => dispatch(addToCart({ quantity, id: props.id }))}
-            // onClick={() => console.log(dispatch(addToCart({ quantity })))}
+            onClick={() => {
+              dispatch(addToCart({ quantity, id: props.id }));
+              props.closeModal();
+            }}
           />
         </div>
       </div>
