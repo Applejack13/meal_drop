@@ -31,8 +31,10 @@ import { YourOrder } from "./components/yourOrder/YourOrder";
 import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary";
 import { Loading } from "./components/loading/Loading";
 import { Products } from "./components/restaurantBody/Products";
+import { Inputs } from "./components/inputs/Inputs";
 
 export {
+  Inputs,
   Loading,
   FirstPage,
   OrderPage,
