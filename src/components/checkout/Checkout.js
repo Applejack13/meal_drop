@@ -68,7 +68,6 @@ export function Checkout({ ...props }) {
                 .matches(
                   /^[A-Za-z0-9\s]+$/u,
                   "Street name and house number must be valid"
-                  // I've to fix it later
                 ),
               city: Yup.string()
                 .required("This field is required")
@@ -76,7 +75,7 @@ export function Checkout({ ...props }) {
                 .matches(/^[A-Za-z]+$/u, "Name must be in english"),
             })}
           >
-            {({ isValid }) => (
+            {({ isValid, getFieldProps }) => (
               <Form className='formClass'>
                 <MyInput
                   label='Your name'
@@ -104,21 +103,21 @@ export function Checkout({ ...props }) {
                   id='phoneNumber'
                   name='phoneNumber'
                   type='tel'
-                  isVisible={props.isVisible ? "" : "hide"}
+                  isVisible={props.isVisible ? "hide" : ""}
                 />
                 <MyInput
                   label='Street name and housenumber'
                   id='streetnameAndHousenumber'
                   name='streetnameAndHousenumber'
                   type='text'
-                  isVisible={props.isVisible ? "" : "hide"}
+                  isVisible={props.isVisible ? "hide" : ""}
                 />
                 <MyInput
                   label='City'
                   id='city'
                   name='city'
                   type='text'
-                  isVisible={props.isVisible ? "" : "hide"}
+                  isVisible={props.isVisible ? "hide" : ""}
                 />
 
                 <p className={`${props.clazz2} smallText`}>
@@ -136,7 +135,20 @@ export function Checkout({ ...props }) {
                     onClick={props.onClick}
                     text={props.btnText}
                     page={props.page}
-                    className={`large-${isValid ? "dark" : "gray"}`}
+                    className={`large-${
+                      getFieldProps("phoneNumber").value &&
+                      getFieldProps("streetnameAndHousenumber").value &&
+                      getFieldProps("city").value
+                        ? "dark"
+                        : "gray"
+                    }`}
+                    disabled={
+                      !(
+                        getFieldProps("phoneNumber").value &&
+                        getFieldProps("streetnameAndHousenumber").value &&
+                        getFieldProps("city").value
+                      )
+                    }
                   />
                 </div>
               </Form>
