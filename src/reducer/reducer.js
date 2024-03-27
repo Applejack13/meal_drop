@@ -67,3 +67,17 @@ export const cartSlice = createSlice({
 });
 
 export const { addToCart } = cartSlice.actions;
+
+export const themeToggleSlice = createSlice({
+  name: "theme",
+  initialState: {
+    theme: "light",
+  },
+  reducers: {
+    toggleTheme: (state) => {
+      state.theme = state.theme === "light" ? "dark" : "light";
+    },
+  },
+});
+
+export const { toggleTheme } = themeToggleSlice.actions;

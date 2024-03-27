@@ -32,8 +32,10 @@ import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary";
 import { Loading } from "./components/loading/Loading";
 import { Products } from "./components/restaurantBody/Products";
 import { Inputs } from "./components/inputs/Inputs";
+import { ThemeToggle } from "./components/themeToggle/ThemeToggle";
 
 export {
+  ThemeToggle,
   Inputs,
   Loading,
   FirstPage,
