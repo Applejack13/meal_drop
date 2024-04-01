@@ -53,3 +53,13 @@
   // width: 2rem;
   // height: 2rem;
 }
+
+@mixin light-theme {
+  background-color: #fff;
+  color: #202020;
+}
+
+@mixin dark-theme {
+  background-color: #202020;
+  color: #fff;
+}
