@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactModal from "react-modal";
 import { useSelector } from "react-redux";
 
-import { Logo, Button, ModalWindow, ThemeToggle } from "../../allPages";
+import { Logo, Button, ModalWindow, ThemeToggle } from "../allPages";
 
 import shoppingCart from "../../images/shopping-cart 2.svg";
 

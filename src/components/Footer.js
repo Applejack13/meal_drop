@@ -1,4 +1,4 @@
-import { Logo, LinkInFooter } from "../../allPages";
+import { Logo, LinkInFooter } from "../allPages";
 import { useSelector } from "react-redux";
 
 import "./../footer/footer.scss";
