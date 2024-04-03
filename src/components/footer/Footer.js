@@ -1,15 +1,10 @@
 import { Logo, LinkInFooter } from "../../allPages";
-import { useSelector } from "react-redux";
 
 import "./../footer/footer.scss";
 
 export function Footer() {
-  const theme = useSelector((state) => state.themeToggle);
-
   return (
-    <div
-      className={`Footer ${theme === "light" ? "dark-theme" : "light-theme"}`}
-    >
+    <div className='footer'>
       <div className='footer-container'>
         <div>
           <Logo isSmall={false} />

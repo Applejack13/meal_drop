@@ -1,12 +1,12 @@
-.CategoriesWrapper {
-  padding: 3rem 5.5rem 4.5rem 5.5rem;
+.categoriesWrapper {
+  padding: 3rem 5.5rem 4.5rem ;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   flex-direction: column;
 }
 
-.Wrapper {
+.wrapper {
   display: grid;
   grid-template-columns: repeat(6, auto);
   gap: 3.5rem;

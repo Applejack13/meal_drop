@@ -10,7 +10,7 @@
   }
 }
 
-.AwardWinningBanner {
+.awardWinningBanner {
   display: flex;
   background-color: #e5f8bc;
   overflow: hidden;
@@ -19,18 +19,18 @@
   margin: 0 auto;
 }
 
-.banner {
+.awardBanner {
   @include firstDisplaySettings;
-  flex: 0.5 1 0%;
+  flex:  1;
   justify-content: center;
   align-items: flex-start;
 }
 
-.banner button {
+.awardBanner button {
   margin: 2rem 0 0;
 }
 
-.banner h2 {
+.awardBanner h2 {
   @include baseFontFamilyAndColor;
   font-size: 2.74688rem;
   font-style: normal;
@@ -43,5 +43,5 @@
   background: url(../../images/awardWinningRestaurants.png) repeat-y;
   height: 5076px;
   animation: 60s linear 0s infinite normal none running slide;
-  flex: 0.5 1 0%;
+  flex: 1 ;
 }

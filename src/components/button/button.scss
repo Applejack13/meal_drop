@@ -1,20 +1,5 @@
 @import "../mixins.scss";
 
-$CommonButtonStyles: (
-  display: inline-flex ,
-  padding: 1.7rem 1rem  ,
-  border-radius: 0.25rem ,
-  justify-content: center ,
-  align-items: center ,
-  flex-shrink: 0 ,
-  cursor: pointer
-);
-
-@mixin CommonButtonStyles {
-  @each $key, $value in $CommonButtonStyles {
-    #{$key}: $value;
-  }
-}
 
 button {
   outline: none !important;
@@ -27,21 +12,16 @@ button:focus {
 
 
 .large-dark {
-  @include CommonButtonStyles;
   background-color: #202020 !important;
   color: #fff !important;
-  padding: 1.5rem 1rem !important;
 }
 
 .large-gray {
-  @include CommonButtonStyles;
   background-color: gray !important;
   color: #fff !important;
 }
 
 .medium-ghost {
-  @include CommonButtonStyles;
   border: 0 !important;
   background: #fff !important;
-  padding: 1.5rem 1rem !important;
 }

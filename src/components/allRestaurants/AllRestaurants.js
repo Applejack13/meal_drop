@@ -1,18 +1,9 @@
-import {
-  ExchangeRates,
-  Footer,
-  TopHeader,
-  // ErrorBoundary,
-  // Loading,
-} from "../../allPages";
+import { Footer, TopHeader } from "../../allPages";
 
 export function AllRestaurants() {
   return (
-    <div className="allRestaurants">
+    <div className='allRestaurants'>
       <TopHeader />
-      <ExchangeRates />
-      {/* <ErrorBoundary />
-      <Loading /> */}
       <Footer />
     </div>
   );
