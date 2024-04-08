@@ -9,7 +9,6 @@ import { CategoriesBody } from "./components/categoriesBody/CategoriesBody";
 import { CategoriesPage } from "./components/categoriesPage/CategoriesPage";
 import { CategoriesWindow } from "./components/categoriesWindow/CategoriesWindow";
 import { Checkout } from "./components/checkout/Checkout";
-import { ExchangeRates } from "./components/exchangeRates/ExchangeRates";
 import { FirstPage } from "./FirstPage";
 import { FoodButton } from "./components/foodButton/FoodButton";
 import { FoodCategory } from "./components/foodCategory/FoodCategory";
@@ -28,11 +27,14 @@ import { ThirdHeader } from "./components/thirdHeader/ThirdHeader";
 import { TopHeader } from "./components/topHeader/TopHeader";
 import { TypeOfFood } from "./components/typeOfFood/TypeOfFood";
 import { YourOrder } from "./components/yourOrder/YourOrder";
-import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary";
 import { Loading } from "./components/loading/Loading";
 import { Products } from "./components/restaurantBody/Products";
+import { Inputs } from "./components/inputs/Inputs";
+import { ThemeToggle } from "./components/themeToggle/ThemeToggle";
 
 export {
+  ThemeToggle,
+  Inputs,
   Loading,
   FirstPage,
   OrderPage,
@@ -52,7 +54,6 @@ export {
   CategoriesBody,
   CategoriesWindow,
   Checkout,
-  ExchangeRates,
   FoodButton,
   FoodCategory,
   LinkInFooter,
@@ -63,7 +64,6 @@ export {
   OurFavouritePicks,
   ThirdHeader,
   RestaurantBody,
-  ErrorBoundary,
   CarouselItems,
   Products,
 };

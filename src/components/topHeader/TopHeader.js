@@ -1,23 +1,16 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
+import { useSelector } from "react-redux";
 
-import { Logo, Button, ModalWindow } from "../../allPages";
+import { Logo, Button, ModalWindow, ThemeToggle } from "../../allPages";
 
 import shoppingCart from "../../images/shopping-cart 2.svg";
-import theSun from "../../images/theSun.svg";
-import theMoon from "../../images/theMoon.svg";
 
 import "../topHeader/topHeader.scss";
 
-ReactModal.setAppElement("#root");
-
 export function TopHeader({ isVisible }) {
-  const [isToggleOn, setIsToggleOn] = useState(true);
+  const theme = useSelector((state) => state.themeToggle);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const handleToggleClick = () => {
-    setIsToggleOn(!isToggleOn);
-  };
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -28,17 +21,17 @@ export function TopHeader({ isVisible }) {
   };
 
   return (
-    <div className='Top-header'>
+    <div
+      className={`Top-header ${
+        theme === "light" ? "dark-theme" : "light-theme"
+      }`}
+    >
       <div className='Top-header__logo'>
         <Logo link='/' isSmall={true} />
       </div>
       {isVisible ? (
         <div className='Top-header__search'>
-          <Button
-            onClick={() => handleToggleClick()}
-            img={isToggleOn ? theMoon : theSun}
-            className='theme-button'
-          />
+          <ThemeToggle />
 
           <Button page='/' text='Home' className='medium-ghost' />
 

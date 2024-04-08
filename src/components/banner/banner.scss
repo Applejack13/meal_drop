@@ -1,12 +1,12 @@
 @import "../mixins.scss";
 
-.Banner {
+.banner {
   @include firstDisplaySettings;
   background-color: #b1dde4;
 }
 
 
-.Banner > h2 {
+.banner > h2 {
   @include baseFontFamilyAndColor;
   text-align: center;
   font-size: 2.2rem;
@@ -15,15 +15,12 @@
   margin: 5.5rem 0 2rem;
 }
 
-.Banner h2 span {
+.banner h2 span {
   @include baseFontFamilyAndColor;
   font-weight: 600;
 }
 
 .images {
-@include firstDisplaySettings
+  @include firstDisplaySettings
 }
 
-.ladies {
-  width: 70%;
-}

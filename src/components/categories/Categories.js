@@ -11,31 +11,31 @@ import "./../categories/categories.scss";
 
 export function Categories() {
   return (
-    <div className="CategoriesWrapper">
-      <div className="textContainer">
+    <div className='categoriesWrapper'>
+      <div className='textContainer'>
         <h2>Categories</h2>
         <Button
-          text="View all categories"
-          page="/categories"
-          className="medium-ghost"
+          text='View all categories'
+          page='/categories'
+          className='medium-ghost'
         />
       </div>
-      <div className="Wrapper">
-        <FoodCategory img={img1} alt="food1" title="Pizza" link="/pizza" />
-        <FoodCategory img={img2} alt="food1" title="Burgers" link="/burgers" />
+      <div className='wrapper'>
+        <FoodCategory img={img1} alt='food1' title='Pizza' link='/pizza' />
+        <FoodCategory img={img2} alt='food1' title='Burgers' link='/burgers' />
         <FoodCategory
           img={img3}
-          alt="food1"
-          title="Desserts"
-          link="/desserts"
+          alt='food1'
+          title='Desserts'
+          link='/desserts'
         />
-        <FoodCategory img={img4} alt="food1" title="Sushi" link="/sushi" />
-        <FoodCategory img={img5} alt="food1" title="Asian" link="/asian" />
+        <FoodCategory img={img4} alt='food1' title='Sushi' link='/sushi' />
+        <FoodCategory img={img5} alt='food1' title='Asian' link='/asian' />
         <FoodCategory
           img={img6}
-          alt="food1"
-          title="Comfort food"
-          link="/comfort"
+          alt='food1'
+          title='Comfort food'
+          link='/comfort'
         />
       </div>
     </div>
