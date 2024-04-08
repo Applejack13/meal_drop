@@ -8,6 +8,8 @@ import shoppingCart from "../../images/shopping-cart 2.svg";
 
 import "../topHeader/topHeader.scss";
 
+ReactModal.setAppElement("#root");
+
 export function TopHeader({ isVisible }) {
   const theme = useSelector((state) => state.themeToggle);
   const [modalIsOpen, setModalIsOpen] = useState(false);
