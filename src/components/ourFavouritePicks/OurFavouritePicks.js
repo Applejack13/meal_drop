@@ -1,13 +1,13 @@
-import { CarouselSlider, CarouselItems } from "../../allPages"
+import { CarouselSlider, CarouselItems } from "../../allPages";
 
-import "./../ourFavouritePicks/ourFavouritePicks.css"
+import "./../ourFavouritePicks/ourFavouritePicks.scss";
 
 export function OurFavouritePicks() {
   const customStyles = {
     carouselContainer: "carouselContainer",
     carouselItem: "carouselItem",
     customText: "customText",
-  }
+  };
 
   const responsive = {
     superLargeDesktop: {
@@ -26,11 +26,11 @@ export function OurFavouritePicks() {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
-  }
+  };
 
   return (
-    <div className="OurFavouritePicks">
-      <div className="OurFavouritePicks__title">
+    <div className='OurFavouritePicks'>
+      <div className='OurFavouritePicks__title'>
         <h2>Our favourite picks</h2>
       </div>
       <CarouselSlider
@@ -42,11 +42,11 @@ export function OurFavouritePicks() {
         responsive={responsive}
         ssr={false}
         infinite={false}
-        customTransition="transform 400ms ease-in-out"
+        customTransition='transform 400ms ease-in-out'
         transitionDuration={500}
-        containerClass="carousel-container"
+        containerClass='carousel-container'
         removeArrowOnDeviceType={["tablet", "mobile"]}
       />
     </div>
-  )
+  );
 }

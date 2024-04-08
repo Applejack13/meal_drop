@@ -24,15 +24,15 @@ export function TopHeader({ isVisible }) {
 
   return (
     <div
-      className={`Top-header ${
+      className={`top-header ${
         theme === "light" ? "dark-theme" : "light-theme"
       }`}
     >
-      <div className='Top-header__logo'>
+      <div className='top-header__logo'>
         <Logo link='/' isSmall={true} />
       </div>
       {isVisible ? (
-        <div className='Top-header__search'>
+        <div className='top-header__search'>
           <ThemeToggle />
 
           <Button page='/' text='Home' className='medium-ghost' />
