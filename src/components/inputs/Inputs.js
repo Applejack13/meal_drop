@@ -18,6 +18,23 @@ const MyInput = ({ label, ...props }) => {
 };
 
 export function Inputs() {
+  const isButtonDisabled = (getFieldProps) => {
+    return !(
+      getFieldProps("phoneNumber").value &&
+      getFieldProps("streetnameAndHousenumber").value &&
+      getFieldProps("city").value &&
+      getFieldProps("phoneNumber").value &&
+      getFieldProps("streetnameAndHousenumber").value &&
+      getFieldProps("city").value
+    );
+  };
+
+  const handleButtonClick = (e, getFieldProps) => {
+    if (isButtonDisabled(getFieldProps)) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div>
       <Formik
@@ -100,24 +117,18 @@ export function Inputs() {
               We’ll only use your phone to call you about your order
             </p>
 
-            <div className={`btnClass btnContainer`}>
+            <div className='btnClass btnContainer'>
               <div className=''>
                 <Button text='Come back' className='large-dark' />
               </div>
               <Button
                 text='Complete order'
                 className={`large-${
-                  getFieldProps("phoneNumber").value &&
-                  getFieldProps("streetnameAndHousenumber").value &&
-                  getFieldProps("city").value &&
-                  getFieldProps("phoneNumber").value &&
-                  getFieldProps("streetnameAndHousenumber").value &&
-                  getFieldProps("city").value
-                    ? "dark"
-                    : "gray"
+                  isButtonDisabled(getFieldProps) ? "gray" : "dark"
                 }`}
                 page='/success'
-                // How can I configure accessibility?
+                disabled={isButtonDisabled(getFieldProps)}
+                onClick={(e) => handleButtonClick(e, getFieldProps)}
               />
             </div>
           </Form>
