@@ -4,24 +4,40 @@
 button {
   outline: none !important;
   border: none !important;
-}
 
-button:focus {
-  box-shadow: none !important;
+  &:focus {
+    box-shadow: none !important;
+  }
 }
 
 
 .large-dark {
   background-color: #202020 !important;
   color: #fff !important;
+
+  &:hover {
+    box-shadow: 0 0 3px 0 rgba($color: #070735, $alpha: 1.0);
+    border: solid 3px transparent;
+
+  }
 }
 
 .large-gray {
   background-color: gray !important;
   color: #fff !important;
+  
+  &:hover {
+    box-shadow: 0 0 3px 0 rgba($color: #72728a, $alpha: 1.0);
+    border: solid 3px transparent;
+  }
 }
 
 .medium-ghost {
   border: 0 !important;
   background: #fff !important;
+
+  &:hover {
+    box-shadow: 0 0 3px 0 rgba($color: #72728a, $alpha: 1.0);
+    border: solid 3px transparent;
+  }
 }

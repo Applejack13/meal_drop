@@ -2,7 +2,7 @@
 
 .top-header {
   justify-content: space-between;
-  padding:  1rem 3rem;
+  margin:  1rem 3rem;
 }
 
 .top-header__logo,
@@ -10,6 +10,7 @@
 .top-header {
   @include firstDisplaySettings;
   flex-direction: row;
+  gap: 1rem;
 }
 
 .ReactModal__Overlay > .modalContainer {

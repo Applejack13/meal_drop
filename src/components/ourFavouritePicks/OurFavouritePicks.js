@@ -29,8 +29,8 @@ export function OurFavouritePicks() {
   };
 
   return (
-    <div className='OurFavouritePicks'>
-      <div className='OurFavouritePicks__title'>
+    <div className='ourFavouritePicks'>
+      <div className='ourFavouritePicks__title'>
         <h2>Our favourite picks</h2>
       </div>
       <CarouselSlider

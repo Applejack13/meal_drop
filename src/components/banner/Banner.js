@@ -7,7 +7,7 @@ import "../banner/banner.scss";
 export function Banner() {
   return (
     <div className='banner'>
-      <h2>
+      <h2 className='gradient-text-animation'>
         Hungry?<span> Find your next meal</span>
       </h2>
       <Button
