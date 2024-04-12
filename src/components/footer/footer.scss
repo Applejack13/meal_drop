@@ -6,6 +6,8 @@
   height: 28rem;
   color: #fff;
   justify-items: left;
+  min-height: 15vh;
+  display: flex;
 }
 
 .footer-container {
@@ -39,3 +41,14 @@
   margin: 0;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
