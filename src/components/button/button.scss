@@ -15,29 +15,20 @@ button {
   background-color: #202020 !important;
   color: #fff !important;
 
-  &:hover {
-    box-shadow: 0 0 3px 0 rgba($color: #070735, $alpha: 1.0);
-    border: solid 3px transparent;
-
-  }
 }
 
 .large-gray {
   background-color: gray !important;
   color: #fff !important;
-  
-  &:hover {
-    box-shadow: 0 0 3px 0 rgba($color: #72728a, $alpha: 1.0);
-    border: solid 3px transparent;
-  }
+
 }
 
 .medium-ghost {
   border: 0 !important;
   background: #fff !important;
-
+  
   &:hover {
-    box-shadow: 0 0 3px 0 rgba($color: #72728a, $alpha: 1.0);
-    border: solid 3px transparent;
+    color: rgba(46, 87, 252, 0.9) !important;
+    transition: .6s all ease !important;  
   }
 }

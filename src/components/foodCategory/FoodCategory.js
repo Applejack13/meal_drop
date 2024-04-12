@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./../foodCategory/foodCategory.css";
+import "./../foodCategory/foodCategory.scss";
 
 export function FoodCategory({ ...props }) {
   return (
