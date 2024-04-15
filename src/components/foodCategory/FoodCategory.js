@@ -5,7 +5,7 @@ import "./../foodCategory/foodCategory.scss";
 export function FoodCategory({ ...props }) {
   return (
     <Link to={props.link}>
-      <div className='foodCategory'>
+      <div className={`foodCategory ${props.className}`}>
         <img src={props.img} alt={props.alt} />
         <p>{props.title}</p>
       </div>
