@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Logo, LinkInFooter } from "../../allPages";
+
 import "./../footer/footer.scss";
 
 export function Footer() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [
+    isVisible,
+    // eslint-disable-next-line
+    setIsVisible,
+  ] = useState(false);
 
   useEffect(() => {
     function reveal() {
@@ -27,13 +32,6 @@ export function Footer() {
     return () => {
       window.removeEventListener("scroll", reveal);
     };
-  }, []);
-
-  useEffect(() => {
-    setIsVisible(true);
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 1000);
   }, []);
 
   return (
