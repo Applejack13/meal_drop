@@ -1,19 +1,41 @@
+import React, { useEffect, useState } from "react";
 import { Logo, LinkInFooter } from "../../allPages";
-import { useSelector } from "react-redux";
 
 import "./../footer/footer.scss";
 
 export function Footer() {
-  const theme = useSelector((state) => state.themeToggle);
+  const [
+    isVisible,
+    // eslint-disable-next-line
+    setIsVisible,
+  ] = useState(false);
+
+  useEffect(() => {
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 20;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    return () => {
+      window.removeEventListener("scroll", reveal);
+    };
+  }, []);
 
   return (
-<<<<<<< HEAD
-    <div className='footer'>
-=======
-    <div
-      className={`Footer ${theme === "light" ? "dark-theme" : "light-theme"}`}
-    >
->>>>>>> 40439d27b6de02bc3ff546582ab8ccb5125f1e96
+    <div className={`footer ${isVisible ? "reveal active" : "reveal"}`}>
       <div className='footer-container'>
         <div>
           <Logo isSmall={false} />
@@ -30,16 +52,16 @@ export function Footer() {
         <div>
           <h2>Our social media</h2>
           <ul>
-            <LinkInFooter text='Facebook' />
-            <LinkInFooter text='Instagram' />
-            <LinkInFooter text='Twitter' />
+            <LinkInFooter text='Facebook' link='https://www.facebook.com/' />
+            <LinkInFooter text='Instagram' link='https://www.instagram.com/' />
+            <LinkInFooter text='Twitter' link='https://twitter.com/' />
           </ul>
         </div>
         <div>
           <h2>Check our apps</h2>
           <ul>
-            <LinkInFooter text='Apple Store' />
-            <LinkInFooter text='Google Play' />
+            <LinkInFooter text='Apple Store' link='https://apps.apple.com/' />
+            <LinkInFooter text='Google Play' link='https://play.google.com/' />
           </ul>
         </div>
       </div>

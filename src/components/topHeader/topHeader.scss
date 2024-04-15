@@ -1,15 +1,16 @@
 @import "../mixins.scss";
 
-.Top-header {
+.top-header {
   justify-content: space-between;
-  padding:  0 3rem;
+  margin:  1rem 3rem;
 }
 
-.Top-header__logo,
-.Top-header__search,
-.Top-header {
+.top-header__logo,
+.top-header__search,
+.top-header {
   @include firstDisplaySettings;
   flex-direction: row;
+  gap: 1rem;
 }
 
 .ReactModal__Overlay > .modalContainer {

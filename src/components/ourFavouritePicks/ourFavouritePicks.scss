@@ -1,10 +1,10 @@
-.OurFavouritePicks {
+.ourFavouritePicks {
   width: 90%;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-.OurFavouritePicks h2 {
+.ourFavouritePicks h2 {
   color: #2c2c2c;
   font-size: 2.1975rem;
   font-style: normal;
@@ -26,15 +26,15 @@
 }
 
 .react-multiple-carousel__arrow--left {
-  left: calc(5% - 4.5rem) !important;
-  top: calc(47.5% + 1rem) !important;
-  background-color: #202020 !important;
+  left: calc(5% - 4.5rem) ;
+  top: calc(47.5% + 1rem) ;
+  background-color: #202020 ;
 }
 
 .react-multiple-carousel__arrow--right {
-  right: calc(5% - 4.5rem) !important;
-  top: calc(47.5% + 1rem) !important;
-  background-color: #202020 !important;
+  right: calc(5% - 4.5rem) ;
+  top: calc(47.5% + 1rem) ;
+  background-color: #202020 ;
 }
 
 .carousel-container > ul > li:hover {

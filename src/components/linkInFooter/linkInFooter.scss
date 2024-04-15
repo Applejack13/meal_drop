@@ -6,9 +6,19 @@
   margin: 1rem 0;
   font-size: 1.125rem;
   text-align: left;
+
 }
 
 .Link-in-footer li > a {
   color: #fff;
   text-decoration: none;
+  
+  &:hover {
+    color: #df6544;
+    transition: all 0.2s ease-in-out;
+}
+  &:active {
+    color: #ea3705;
+    transition: all 0.2s ease-in-out;
+  }
 }

@@ -4,24 +4,46 @@
 button {
   outline: none !important;
   border: none !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
 }
 
-button:focus {
-  box-shadow: none !important;
+.gradient_btn {
+  --colorA: #000;
+  --colorB: #838383;
+  background: linear-gradient(120deg, var(--colorA) 0%, var(--colorB) 50%, var(--colorA) 100%);
+  background-size: 200% auto;
+  background-position: 100% center;
+  transition: background-position .7s ease-in-out; 
 }
+
+.gradient_btn:hover {
+  background-position: -150% center; 
+}
+
 
 
 .large-dark {
   background-color: #202020 !important;
   color: #fff !important;
+
 }
 
 .large-gray {
   background-color: gray !important;
   color: #fff !important;
+
 }
 
 .medium-ghost {
   border: 0 !important;
   background: #fff !important;
+  
+  &:hover {
+    color: rgba(46, 87, 252, 0.9) !important;
+    transition: .3s all ease !important;  
+  }
 }
+

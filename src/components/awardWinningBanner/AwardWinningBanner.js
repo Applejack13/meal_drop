@@ -6,12 +6,12 @@ export function AwardWinningBanner() {
   return (
     <div className='awardWinningBanner'>
       <div className='awardBanner'>
-        <h2>Award winning </h2>
-        <h2>The best restaurants near you!</h2>
+        <h2 className='gradient'>Award winning </h2>
+        <h2 className='gradient'>The best restaurants near you!</h2>
         <Button
           text='Explore the best restaurants'
           page='/categories'
-          className='large-dark'
+          className='large-dark gradient_btn gradient_btn'
         />
       </div>
       <div className='restaurantsCardsBanner' />

@@ -8,6 +8,8 @@ import shoppingCart from "../../images/shopping-cart 2.svg";
 
 import "../topHeader/topHeader.scss";
 
+ReactModal.setAppElement("#root");
+
 export function TopHeader({ isVisible }) {
   const theme = useSelector((state) => state.themeToggle);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -22,15 +24,15 @@ export function TopHeader({ isVisible }) {
 
   return (
     <div
-      className={`Top-header ${
+      className={`top-header ${
         theme === "light" ? "dark-theme" : "light-theme"
       }`}
     >
-      <div className='Top-header__logo'>
+      <div className='top-header__logo'>
         <Logo link='/' isSmall={true} />
       </div>
       {isVisible ? (
-        <div className='Top-header__search'>
+        <div className='top-header__search'>
           <ThemeToggle />
 
           <Button page='/' text='Home' className='medium-ghost' />
@@ -42,7 +44,7 @@ export function TopHeader({ isVisible }) {
           />
 
           <Button
-            className='large-dark'
+            className='large-dark gradient_btn'
             onClick={openModal}
             img={shoppingCart}
           />
@@ -70,7 +72,7 @@ export function TopHeader({ isVisible }) {
               <ModalWindow
                 text='Checkout'
                 page='/orderPage'
-                clazz=' large-dark'
+                clazz=' large-dark gradient_btn'
               />
             )}
           </ReactModal>

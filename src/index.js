@@ -6,9 +6,6 @@ import Main from "./Main";
 import store from "./store/index";
 
 import "./index.scss";
-// or
-// import "../scss/light-theme"
-// import "../scss/dark-theme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
