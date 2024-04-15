@@ -30,7 +30,7 @@ const ModalForOrder = ({ ...props }) => {
         <div className='btn'>
           <Button
             text={`add for ${sum} $`}
-            className='large-dark'
+            className='large-dark gradient_btn'
             onClick={() => {
               dispatch(addToCart({ quantity, id: props.id }));
               props.closeModal();

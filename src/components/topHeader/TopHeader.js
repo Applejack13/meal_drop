@@ -44,7 +44,7 @@ export function TopHeader({ isVisible }) {
           />
 
           <Button
-            className='large-dark'
+            className='large-dark gradient_btn'
             onClick={openModal}
             img={shoppingCart}
           />
@@ -72,7 +72,7 @@ export function TopHeader({ isVisible }) {
               <ModalWindow
                 text='Checkout'
                 page='/orderPage'
-                clazz=' large-dark'
+                clazz=' large-dark gradient_btn'
               />
             )}
           </ReactModal>

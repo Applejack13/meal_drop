@@ -13,7 +13,7 @@ export function Banner() {
       <Button
         text='View all restaurants'
         page='/allRestaurants'
-        className='large-dark'
+        className='large-dark gradient_btn'
       />
       <div className='images'>
         <img src={ladies} alt='ladies_img' />

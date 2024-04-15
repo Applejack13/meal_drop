@@ -129,14 +129,14 @@ export function Inputs() {
               <div>
                 <Button
                   text='Come back'
-                  className='large-dark'
+                  className='large-dark gradient_btn'
                   onClick={handleGoBack}
                 />
               </div>
               <Button
                 text='Complete order'
                 className={`large-${
-                  isButtonDisabled(getFieldProps) ? "gray" : "dark"
+                  isButtonDisabled(getFieldProps) ? "gray" : "dark gradient_btn"
                 }`}
                 page='/success'
                 disabled={isButtonDisabled(getFieldProps)}

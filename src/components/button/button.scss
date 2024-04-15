@@ -10,6 +10,20 @@ button {
   }
 }
 
+.gradient_btn {
+  --colorA: #000;
+  --colorB: #838383;
+  background: linear-gradient(120deg, var(--colorA) 0%, var(--colorB) 50%, var(--colorA) 100%);
+  background-size: 200% auto;
+  background-position: 100% center;
+  transition: background-position .7s ease-in-out; 
+}
+
+.gradient_btn:hover {
+  background-position: -150% center; 
+}
+
+
 
 .large-dark {
   background-color: #202020 !important;
@@ -32,3 +46,4 @@ button {
     transition: .3s all ease !important;  
   }
 }
+

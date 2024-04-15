@@ -11,7 +11,7 @@ export function AwardWinningBanner() {
         <Button
           text='Explore the best restaurants'
           page='/categories'
-          className='large-dark'
+          className='large-dark gradient_btn gradient_btn'
         />
       </div>
       <div className='restaurantsCardsBanner' />
