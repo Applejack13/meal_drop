@@ -46,6 +46,7 @@ export function OurFavouritePicks() {
         transitionDuration={500}
         containerClass='carousel-container'
         removeArrowOnDeviceType={["tablet", "mobile"]}
+        autoPlay={false}
       />
     </div>
   );

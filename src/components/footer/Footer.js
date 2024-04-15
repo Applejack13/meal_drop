@@ -52,16 +52,16 @@ export function Footer() {
         <div>
           <h2>Our social media</h2>
           <ul>
-            <LinkInFooter text='Facebook' />
-            <LinkInFooter text='Instagram' />
-            <LinkInFooter text='Twitter' />
+            <LinkInFooter text='Facebook' link='https://www.facebook.com/' />
+            <LinkInFooter text='Instagram' link='https://www.instagram.com/' />
+            <LinkInFooter text='Twitter' link='https://twitter.com/' />
           </ul>
         </div>
         <div>
           <h2>Check our apps</h2>
           <ul>
-            <LinkInFooter text='Apple Store' />
-            <LinkInFooter text='Google Play' />
+            <LinkInFooter text='Apple Store' link='https://apps.apple.com/' />
+            <LinkInFooter text='Google Play' link='https://play.google.com/' />
           </ul>
         </div>
       </div>

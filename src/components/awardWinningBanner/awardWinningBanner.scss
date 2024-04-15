@@ -39,6 +39,26 @@
   letter-spacing: -0.15rem;
 }
 
+.gradient {
+    --colorA: #000;
+    --colorB: #fff;
+    cursor: default;
+    position: relative;
+    background-image: linear-gradient(120deg, var(--colorA) 0%, var(--colorB) 50%, var(--colorA) 100%);
+    background-origin: padding-box;
+    background-size: 200%;
+    box-decoration-break: clone;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: unset;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    overflow: visible;
+    animation: 3s linear 0s infinite normal forwards running nextui-k-dAFEPd;  
+}
+
 .restaurantsCardsBanner {
   background: url(../../images/awardWinningRestaurants.png) repeat-y;
   height: 5076px;
@@ -46,3 +66,8 @@
   flex: 1 ;
 }
 
+@keyframes nextui-k-dAFEPd {
+	100% {
+		background-position: -200% center
+	}
+}
