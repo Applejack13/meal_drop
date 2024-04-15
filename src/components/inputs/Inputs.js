@@ -1,4 +1,5 @@
 import { Formik, Form, useField } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 
 import { Button } from "../../allPages";
@@ -33,6 +34,13 @@ export function Inputs() {
     if (isButtonDisabled(getFieldProps)) {
       e.preventDefault();
     }
+  };
+
+  const navigate = useNavigate();
+
+  const handleGoBack = (e) => {
+    e.preventDefault();
+    navigate(-1);
   };
 
   return (
@@ -118,8 +126,12 @@ export function Inputs() {
             </p>
 
             <div className='btnClass btnContainer'>
-              <div className=''>
-                <Button text='Come back' className='large-dark' />
+              <div>
+                <Button
+                  text='Come back'
+                  className='large-dark'
+                  onClick={handleGoBack}
+                />
               </div>
               <Button
                 text='Complete order'

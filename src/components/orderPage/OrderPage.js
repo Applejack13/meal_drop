@@ -1,7 +1,7 @@
 import React from "react";
 
 import { TopHeader, Checkout } from "../../allPages";
-import "../orderPage/orderPage.css";
+import "../orderPage/orderPage.scss";
 
 export function OrderPage() {
   return (
