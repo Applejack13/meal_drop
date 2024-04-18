@@ -1,7 +1,7 @@
-import image2 from "../../images/RestaurantForCard1.webp"
-import image3 from "../../images/RestaurantForCard2.jpeg"
-import image4 from "../../images/RestaurantForCard3.avif"
-import closedRestaurant from "../../images/closedRestaurant.jpg"
+import image2 from "../../images/RestaurantForCard1.webp";
+import image3 from "../../images/RestaurantForCard2.jpeg";
+import image4 from "../../images/RestaurantForCard3.avif";
+import closedRestaurant from "../../images/closedRestaurant.jpg";
 
 export const CarouselItems = [
   {
@@ -24,7 +24,6 @@ export const CarouselItems = [
   },
   {
     image: closedRestaurant,
-    text: "This restaurant is closed",
     alt: "",
     description: "‘T Kuyltje",
     description2: "★ 4.2  Very Good",
@@ -77,4 +76,4 @@ export const CarouselItems = [
     description4: "Comfort food",
     link: "/kara-fin",
   },
-]
+];
