@@ -19,10 +19,10 @@ export function ModalWindow({ ...props }) {
       <div className='orderListContainer'>
         {cartItems.map((item, index) => (
           <div key={index} className='orderList'>
-            <p>{item.product.foodName}</p>
-            <div className='remove_btn'>
+            <div className='text_and_button'>
+              <p>{item.product.foodName}</p>
               <Button
-                className='remove'
+                className='remove_btn'
                 img={deleteItem}
                 onClick={() => {
                   dispatch(removeFromCart(item.product.id));

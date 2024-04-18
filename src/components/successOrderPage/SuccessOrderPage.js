@@ -32,9 +32,11 @@ export function SuccessOrderPage({ cartItems }) {
         <div className='yourOrderWrapper'>
           <YourOrder cartItems={cartItems} />
         </div>
-        <div className='go_home_btn'>
-          <Button text='Go home' link='/' className='large-dark gradient_btn' />
-        </div>
+        <Button
+          text='Go home'
+          page='/'
+          className='go_home_btn large-dark gradient_btn'
+        />
       </div>
       <div className='ladiesImg'>
         <img src={img} alt='' className='ladies2' />
