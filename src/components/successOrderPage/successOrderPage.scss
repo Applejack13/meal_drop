@@ -1,5 +1,15 @@
 @import "../mixins.scss";
 
+.go_home_btn {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5rem;
+  &  button {
+    width: 320px;
+  }
+}
+
+
 .secondHeader {
   @include firstDisplaySettings;
   justify-content: center;
@@ -51,5 +61,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 0 10rem;
+  padding: 1.5rem 0 3rem;
 }

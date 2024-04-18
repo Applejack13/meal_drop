@@ -35,6 +35,20 @@
   position: inherit;
 }
 
+.remove_btn button {
+  display: flex;
+  top: -2.5rem;
+  right: -21rem;
+}
+
+button.remove {
+  padding: .5rem;
+  transition: ease-in-out .3s ;
+  
+  &:hover {
+    transform: scale(1.1)
+  }
+}
 
 .total1 {
   @include secondDisplaySettings;
