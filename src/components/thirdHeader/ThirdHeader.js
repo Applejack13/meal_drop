@@ -1,4 +1,4 @@
-import "../thirdHeader/thirdHeader.css";
+import "../thirdHeader/thirdHeader.scss";
 
 export function ThirdHeader({ ...props }) {
   return (

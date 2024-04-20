@@ -98,6 +98,43 @@ const Main = () => {
               />
             }
           />
+          <Route
+            path='/bessarabia'
+            element={
+              <RestaurantPage
+                restaurantClass='bessarabia'
+                restaurantName='Bessarabia'
+                description='Specialties: Sarma (wine leafs with rice)'
+                rating='No reviews yet'
+                buttons='Home food'
+              />
+            }
+          />
+          <Route
+            path='/hurma'
+            element={
+              <RestaurantPage
+                restaurantClass='hurma'
+                restaurantName='Hurma'
+                description='Specialties: Sarma (wine leafs with rice)'
+                rating='No reviews yet'
+                buttons='Turkish food'
+              />
+            }
+          />
+          <Route
+            path='/japanese'
+            element={
+              <RestaurantPage
+                restaurantClass='japanese'
+                restaurantName='Kioto'
+                description='Specialties: Sarma (wine leafs with rice)'
+                rating='No reviews yet'
+                buttons='Sushi'
+              />
+            }
+          />
+
           <Route path='/orderPage' element={<OrderPage />} />
           <Route path='/success' element={<SuccessOrderPage />} />
         </Routes>
