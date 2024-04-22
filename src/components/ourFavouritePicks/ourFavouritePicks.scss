@@ -29,12 +29,14 @@
   left: calc(5% - 4.5rem) ;
   top: calc(47.5% + 1rem) ;
   background-color: #202020 ;
+  z-index: 0;
 }
 
 .react-multiple-carousel__arrow--right {
   right: calc(5% - 4.5rem) ;
   top: calc(47.5% + 1rem) ;
   background-color: #202020 ;
+  z-index: 0;
 }
 
 .carousel-container > ul > li:hover {

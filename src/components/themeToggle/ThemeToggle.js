@@ -28,7 +28,7 @@ export const ThemeToggle = () => {
   };
 
   const setThemePreference = () => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       enableDarkMode();
     } else {
       enableLightMode();
