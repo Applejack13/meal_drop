@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Products } from "../allPages";
 
-import { createTheme } from "@mui/material";
-
 export const counterSlice = createSlice({
   name: "counter",
   initialState: {
@@ -80,37 +78,13 @@ export const { resetCart } = cartSlice.actions;
 export const themeToggleSlice = createSlice({
   name: "theme",
   initialState: {
-    darkTheme: false,
+    theme: "light",
   },
   reducers: {
     toggleTheme: (state) => {
-      state.darkTheme = !state.darkTheme;
+      state.theme = state.theme === "light" ? "dark" : "light";
     },
   },
 });
 
 export const { toggleTheme } = themeToggleSlice.actions;
-
-export const lightTheme = createTheme({
-  palette: {
-    mode: "light",
-    background: {
-      paper: "#f2f2f2",
-    },
-    text: {
-      primary: "#11111",
-    },
-  },
-});
-
-export const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-    background: {
-      paper: "#222",
-    },
-    text: {
-      primary: "#fff",
-    },
-  },
-});

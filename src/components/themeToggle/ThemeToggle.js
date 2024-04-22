@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../../reducer/reducer";
+
 import "./themeToggle.scss";
 
 export const ThemeToggle = () => {
@@ -26,19 +27,6 @@ export const ThemeToggle = () => {
       setIsAnimating(false);
     }, 500); // Adjust the animation duration to match your CSS
   };
-
-  const setThemePreference = () => {
-    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-      enableDarkMode();
-    } else {
-      enableLightMode();
-    }
-  };
-
-  useEffect(() => {
-    setThemePreference();
-    // eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     const themeToggle = document.querySelector("#switch-theme");
