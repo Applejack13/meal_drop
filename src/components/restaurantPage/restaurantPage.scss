@@ -1,33 +1,43 @@
 @import "../_mixins.scss";
 
 .secondHeaderClass {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   color: #fff;
   font-family: Montserrat;
-  font-size: 2.74688rem;
+  font-size: 1.74688rem;
   font-style: normal;
   font-weight: 700;
   line-height: 4rem;
   letter-spacing: -0.15rem;
-  height: 15rem;
-  margin-bottom: 2rem;
+  height: 25rem;
 }
 
 .kara_fin {
-  background-image: url("../../images/RestaurantForCard1.webp");
+  background-image: url("../../images/GreeceRestaurant.jpg");
   @include RestaurantBgcSettings;
 }
 
 .mira {
-  background-image: url("../../images/RestaurantForCard3.avif");
+  background-image: url("../../images/BurgerRatsurant.jpg");
   @include RestaurantBgcSettings;
 
 }
 
 .t-kuyltje {
   background-image: url("../../images/RestaurantForCard2.jpeg");
+  @include RestaurantBgcSettings;
+}
+
+.bessarabia {
+  background-image: url("../../images/HomeRestaurant.jpg");
+  @include RestaurantBgcSettings;
+}
+
+.hurma {
+  background-image: url("../../images/TurkishRestaurant.jpg");
+  @include RestaurantBgcSettings;
+}
+
+.japanese {
+  background: url("../../images/JapaneseRestaurant.jpg") ;
   @include RestaurantBgcSettings;
 }

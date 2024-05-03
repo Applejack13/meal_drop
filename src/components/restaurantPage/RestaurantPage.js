@@ -1,7 +1,6 @@
 import {
   TopHeader,
   SecondHeader,
-  ThirdHeader,
   Footer,
   RestaurantBody,
 } from "../../allPages";
@@ -11,8 +10,10 @@ export function RestaurantPage({ ...props }) {
   return (
     <div className={props.restaurantPageClass}>
       <TopHeader cartItems={props.cartItems} isVisible={true} />
-      <SecondHeader className={`secondHeaderClass ${props.restaurantClass}`} />
-      <ThirdHeader {...props} />
+      <SecondHeader
+        className={`secondHeaderClass ${props.restaurantClass}`}
+        {...props}
+      />
       <RestaurantBody {...props} />
       <Footer />
     </div>

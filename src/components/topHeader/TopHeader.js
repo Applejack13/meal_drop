@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
-import { useSelector } from "react-redux";
 
 import { Logo, Button, ModalWindow, ThemeToggle } from "../../allPages";
 
@@ -11,7 +10,6 @@ import "../topHeader/topHeader.scss";
 ReactModal.setAppElement("#root");
 
 export function TopHeader({ isVisible }) {
-  const theme = useSelector((state) => state.themeToggle);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -23,11 +21,7 @@ export function TopHeader({ isVisible }) {
   };
 
   return (
-    <div
-      className={`top-header ${
-        theme === "light" ? "dark-theme" : "light-theme"
-      }`}
-    >
+    <div className='top-header'>
       <div className='top-header__logo'>
         <Logo link='/' isSmall={true} />
       </div>
@@ -53,7 +47,7 @@ export function TopHeader({ isVisible }) {
             closeTimeoutMS={500}
             style={{
               overlay: {
-                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                backgroundColor: "rgba(0, 0, 0, 0.7)",
               },
               content: {
                 right: "0",

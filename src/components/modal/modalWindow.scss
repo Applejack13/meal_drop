@@ -1,5 +1,25 @@
 @import "../mixins.scss";
 
+.text_and_button {
+& p {
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  font-size: 1.15rem;
+}
+
+& div {
+    height: 0;
+  }
+
+& button {
+    padding: .5rem;
+    transition: ease-in-out .3s ;
+     
+&:hover {
+      transform: scale(1.1)
+    }
+  }}
+
 .orderList,
 .total2 {
   width: 100%;
@@ -15,12 +35,7 @@
 .orderList > p,
 .total1 h2,
 .orderTotal > h2 {
-  padding: 1rem;
-}
-
-.orderList > p:first-child {
-  font-weight: 700;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
 }
 
 .orderList p:last-child {
@@ -35,6 +50,12 @@
   position: inherit;
 }
 
+.remove_btn  {
+  height: 0;
+  display: flex;
+  top: -2.4rem;
+  right: -20rem;
+}
 
 .total1 {
   @include secondDisplaySettings;
@@ -43,7 +64,7 @@
 }
 
 .total2 button {
-  width: 280%;
+  width: 305%;
   margin: 1rem;
 }
 

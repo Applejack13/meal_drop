@@ -1,7 +1,9 @@
-import image2 from "../../images/RestaurantForCard1.webp"
-import image3 from "../../images/RestaurantForCard2.jpeg"
-import image4 from "../../images/RestaurantForCard3.avif"
-import closedRestaurant from "../../images/closedRestaurant.jpg"
+import image2 from "../../images/GreeceRestaurant.jpg";
+import image3 from "../../images/HomeRestaurant.jpg";
+import image4 from "../../images/BurgerRatsurant.jpg";
+import image5 from "../../images/TurkishRestaurant.jpg";
+import image6 from "../../images/JapaneseRestaurant.jpg";
+import closedRestaurant from "../../images/closedRestaurant.jpg";
 
 export const CarouselItems = [
   {
@@ -17,64 +19,45 @@ export const CarouselItems = [
     image: image2,
     alt: "",
     description: "Kara Fin",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
+    description2: "★ 4.4  Very Good",
+    description3: "Greece Restaurant",
+    description4: "Greece food",
     link: "/kara-fin",
   },
   {
     image: closedRestaurant,
-    text: "This restaurant is closed",
     alt: "",
     description: "‘T Kuyltje",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
+    description2: "★ 3.7  Good",
+    description3: "Place to eat delicious meat",
+    description4: "Meat",
     link: "",
-  },
-  {
-    image: image2,
-    alt: "",
-    description: "Kara Fin",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
-    link: "/kara-fin",
-  },
-  {
-    image: image4,
-    alt: "",
-    description: "Mira",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
-    link: "/mira",
-  },
-  {
-    image: image2,
-    alt: "",
-    description: "Kara Fin",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
-    link: "/kara-fin",
   },
   {
     image: image3,
     alt: "",
-    description: "‘T Kuyltje",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
-    link: "/t-kuyltje",
+    description: "Bessarabia",
+    description2: "★ 4.8  Delicious",
+    description3: "Try local food and wines",
+    description4: "Home food",
+    link: "/bessarabia",
   },
   {
-    image: image2,
+    image: image5,
     alt: "",
-    description: "Kara Fin",
-    description2: "★ 4.2  Very Good",
-    description3: "Nicest place for burgers",
-    description4: "Comfort food",
-    link: "/kara-fin",
+    description: "Hurma",
+    description2: "★ 4.1  Perfect",
+    description3: "Nicest place for turkish food",
+    description4: "Turkish food",
+    link: "/hurma",
   },
-]
+  {
+    image: image6,
+    alt: "",
+    description: "Kioto",
+    description2: "★ 4.8  Very Good",
+    description3: "Nicest place for sushi",
+    description4: "Japanese food",
+    link: "/japanese",
+  },
+];

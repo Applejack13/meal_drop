@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import { TopHeader } from "../topHeader/TopHeader";
-import { SecondHeader, YourOrder } from "../../allPages";
+import { useDispatch } from "react-redux";
+import { resetCart } from "../../reducer/reducer";
+import {
+  SecondHeader,
+  YourOrder,
+  Button,
+  // TopHeader
+} from "../../allPages";
 
 import img from "../../images/successPageImg.svg";
 
@@ -17,11 +23,13 @@ export function SuccessOrderPage({ cartItems }) {
     setDeliveryTime({ hours, minutes });
   }, []);
 
+  const dispatch = useDispatch();
+
   return (
-    <div className="successOrderPage">
-      <TopHeader />
-      <SecondHeader text="Order confirmed" className="secondHeader" />
-      <div className="timeAndOrder">
+    <div className='successOrderPage'>
+      {/* <TopHeader /> */}
+      <SecondHeader text='Order confirmed' className='secondHeader' />
+      <div className='timeAndOrder'>
         <h4>Estimated delivery</h4>
         <h2>
           {deliveryTime.hours === 23
@@ -29,12 +37,18 @@ export function SuccessOrderPage({ cartItems }) {
             : deliveryTime.hours + 1}
           :{deliveryTime.minutes} today
         </h2>
-        <div className="yourOrderWrapper">
-          <YourOrder cartItems={cartItems} />
+        <div className='yourOrderWrapper'>
+          <YourOrder />
         </div>
+        <Button
+          text='Go home'
+          page='/'
+          className='go_home_btn large-dark gradient_btn'
+          onClick={() => dispatch(resetCart())}
+        />
       </div>
-      <div className="ladiesImg">
-        <img src={img} alt="" className="ladies2" />
+      <div className='ladiesImg'>
+        <img src={img} alt='' className='ladies2' />
       </div>
     </div>
   );

@@ -1,0 +1,41 @@
+.otherStyles {
+  margin: 8rem 1rem;
+  padding: 0 1.5rem; 
+  background-color: rgb(245, 246, 246, .7);
+  max-width: 25rem;
+  width: auto;
+  height: auto;
+  border-radius: 0.5rem;
+  z-index: 0;
+  position: absolute;
+}
+
+.otherStyles p,
+ .otherStyles h2 {
+  letter-spacing: -1px;
+}
+
+.otherStyles h2 {
+  color: #202020;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.otherStyles p {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.otherStyles p:first-of-type {
+  font-size: 1.2rem;
+  color:black;
+}
+
+.otherStyles p:nth-child(3) {
+  font-size: 1rem;
+  color: rgb(89 111 114);
+}
+
+.otherStyles p:last-child {
+  color: rgb(70, 69, 69);
+}

@@ -1,6 +1,9 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
+import { removeFromCart } from "../../reducer/reducer";
 import { Button } from "../button/Button";
+
+import deleteItem from "../../images/deleteItem.svg";
 
 import "../modal/modalWindow.scss";
 
@@ -8,13 +11,24 @@ export function ModalWindow({ ...props }) {
   const cartItems = useSelector((state) => state.cart.cartItems || []);
   const sum = useSelector((state) => state.cart.sum || 0);
 
+  const dispatch = useDispatch();
+
   return (
     <div className='modalContainer'>
       <h2>Your order</h2>
       <div className='orderListContainer'>
         {cartItems.map((item, index) => (
           <div key={index} className='orderList'>
-            <p>{item.product.foodName}</p>
+            <div className='text_and_button'>
+              <p>{item.product.foodName}</p>
+              <Button
+                className='remove_btn'
+                img={deleteItem}
+                onClick={() => {
+                  dispatch(removeFromCart(item.product.id));
+                }}
+              />
+            </div>
             {item.product.foodDescription !== undefined ? (
               <p>{item.product.foodDescription}</p>
             ) : null}

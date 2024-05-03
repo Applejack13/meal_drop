@@ -15,14 +15,14 @@
 
 .ReactModal__Overlay > .modalContainer {
   transform: translateX(100%); 
-  transition: all 500ms ;  
+  transition: ease-in-out 500ms ;  
 }
 
 .ReactModal__Overlay--after-open > .modalContainer {
   transform: translateX(0);
+  
 }
 
 .ReactModal__Overlay--before-close > .modalContainer {
   transform: translateX(100%); 
 }
-

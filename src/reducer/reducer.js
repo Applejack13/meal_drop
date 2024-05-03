@@ -54,19 +54,26 @@ export const cartSlice = createSlice({
         return acc + item.product.foodPrice * item.quantity;
       }, 0);
     },
-    // removeFromCart: (state, action) => {
-    //   const id = action.payload;
-    //   state.cartItems = state.cartItems.filter((item) => item.id !== id);
+    removeFromCart: (state, action) => {
+      const id = action.payload;
+      state.cartItems = state.cartItems.filter(
+        (item) => item.product.id !== id
+      );
 
-    //   state.sum = state.cartItems.reduce((acc, item) => {
-    //     const product = Products.find((p) => p.id === item.id);
-    //     return acc + product.foodPrice * item.quantity;
-    //   }, 0);
-    // },
+      state.sum = state.cartItems.reduce((acc, item) => {
+        return acc + item.product.foodPrice * item.quantity;
+      }, 0);
+    },
+    resetCart: (state) => {
+      state.cartItems = [];
+      state.sum = 0;
+    },
   },
 });
 
 export const { addToCart } = cartSlice.actions;
+export const { removeFromCart } = cartSlice.actions;
+export const { resetCart } = cartSlice.actions;
 
 export const themeToggleSlice = createSlice({
   name: "theme",
