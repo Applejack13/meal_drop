@@ -1,89 +1,89 @@
-:root {
-	--sun-clr: #f3d05e;
-	--dark-clr: hsl(246, 23%, 16%);
-	--light-clr: hsl(240, 100%, 98%);
-}
-
-#switch-theme {
-	cursor: pointer;
-    background-color: white;
-    width: 4rem;
-    padding: 0;
-}
-
-.moon-mask,
-.sun-core,
-.sun-rays {
-	transition: 750ms ease-out;
-	transform-origin: center center;
-}
-
-.dark-theme .moon-mask {
-	r: 9;
-	cx: 12;
-	cy: 4;
-}
-
-.light-theme .moon-mask {
-	r: 5;
-	transform: rotate(-90deg);
-	cx: 20;
-	cy: 0;
-}
-
-.dark-theme .sun-core {
-	transform: rotate(-40deg);
-}
-
-.dark-theme .sun-rays {
-	transform: rotate(-180deg);
-	opacity: 0;
-}
-
-@keyframes pulseToLight {
-	0% {
-		transform: scale(0);
-		opacity: 0.5;
+	:root {
+		--sun-clr: #f3d05e;
+		--dark-clr: hsl(246, 23%, 16%);
+		--light-clr: hsl(240, 100%, 98%);
 	}
-	10% {
-		transform: scale(1);
+
+	.switch-theme {
+		cursor: pointer;
+		background-color: white;
+		width: 4rem;
+		padding: 0;
 	}
-	75% {
-		opacity: 1;
+
+	.moon-mask,
+	.sun-core,
+	.sun-rays {
+		transition: 650ms ease-out;
+		transform-origin: center center;
 	}
-	100% {
+
+	.dark-theme .moon-mask {
+		r: 9;
+		cx: 12;
+		cy: 4;
+	}
+
+	.light-theme .moon-mask {
+		r: 5;
+		transform: rotate(-90deg);
+		cx: 20;
+		cy: 0;
+	}
+
+	.dark-theme .sun-core {
+		transform: rotate(-40deg);
+	}
+
+	.dark-theme .sun-rays {
+		transform: rotate(-180deg);
 		opacity: 0;
-		transform: scale(1);
 	}
-}
 
-@keyframes pulseToDark {
-	0% {
-		transform: scale(0);
-		opacity: 0.5;
+	@keyframes pulseToLight {
+		0% {
+			transform: scale(0);
+			opacity: 0.5;
+		}
+		10% {
+			transform: scale(1);
+		}
+		75% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			transform: scale(1);
+		}
 	}
-	10% {
-		transform: scale(1);
-	}
-	75% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1);
-	}
-}
 
-.light-theme .toggle-sun {
-	transform: rotate(0.5turn);
-}
+	@keyframes pulseToDark {
+		0% {
+			transform: scale(0);
+			opacity: 0.5;
+		}
+		10% {
+			transform: scale(1);
+		}
+		75% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			transform: scale(1);
+		}
+	}
 
-.light-theme .img .toggle-sun {
-	transform: rotate(0.5turn);
-}
+	.light-theme .toggle-sun {
+		transform: rotate(0.5turn);
+	}
 
-.light-theme .sun-rays,
-.light-theme .sun-core {
-	color: var(--sun-clr);
-	fill: var(--sun-clr);
-}
+	.light-theme .img .toggle-sun {
+		transform: rotate(0.5turn);
+	}
+
+	.light-theme .sun-rays,
+	.light-theme .sun-core {
+		color: var(--sun-clr);
+		fill: var(--sun-clr);
+	}

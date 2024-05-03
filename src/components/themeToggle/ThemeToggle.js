@@ -1,57 +1,25 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../reducer/reducer";
 
 import "./themeToggle.scss";
 
 export const ThemeToggle = () => {
   const dispatch = useDispatch();
-  const [theme, setTheme] = useState("light");
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const enableDarkMode = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setTheme("dark");
-      setIsDarkMode(true);
-      setIsAnimating(false);
-    }, 500); // Adjust the animation duration to match your CSS
+  const theme = useSelector((state) => state.themeToggle.theme);
+
+  const handleClick = () => {
+    dispatch(toggleTheme());
   };
-
-  const enableLightMode = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setTheme("light");
-      setIsDarkMode(false);
-      setIsAnimating(false);
-    }, 500); // Adjust the animation duration to match your CSS
-  };
-
-  useEffect(() => {
-    const themeToggle = document.querySelector("#switch-theme");
-
-    const handleClick = () => {
-      theme === "light" ? enableDarkMode() : enableLightMode();
-      dispatch(toggleTheme());
-    };
-
-    themeToggle.addEventListener("click", handleClick);
-
-    return () => {
-      themeToggle.removeEventListener("click", handleClick);
-    };
-    // eslint-disable-next-line
-  }, [theme, dispatch]);
 
   return (
     <div
-      className={`container ${isAnimating ? "animating" : ""} ${
-        isDarkMode ? "dark-theme" : "light-theme"
-      }`}
+      className={`container
+       ${theme === "dark" ? "dark-theme" : "light-theme"}
+      `}
     >
       <div className='img'>
-        <button id='switch-theme'>
+        <button className='switch-theme' onClick={handleClick}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='80%'
